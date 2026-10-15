@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Spot the Difference</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="header" class="screen-header"></header>
+  <main id="main">
+    <section id="start-screen" class="screen">
+      <h1>Spot the Difference</h1>
+      <div id="mode-buttons"></div>
+      <button id="stats-link" class="text-btn">My test stats</button>
+    </section>
+    <section id="game-screen" class="screen hidden">
+      <div id="game-header" class="compact-header"></div>
+      <div id="images-wrap">
+        <div id="image-a-wrap" class="img-wrap">
+          <img id="img-a" alt="" draggable="false">
+          <div id="overlay-a" class="overlay"></div>
+        </div>
+        <div id="image-b-wrap" class="img-wrap">
+          <img id="img-b" alt="" draggable="false">
+          <div id="overlay-b" class="overlay"></div>
+        </div>
+      </div>
+      <div id="toggle-bar" class="hidden">
+        <button id="show-a" class="toggle-btn">Show original</button>
+        <button id="show-b" class="toggle-btn">Show changed</button>
+      </div>
+      <div id="status-line"></div>
+      <div id="controls" class="controls-bar">
+        <button id="hint-btn">Hint</button>
+        <button id="reset-btn">Reset</button>
+        <button id="next-btn">Next</button>
+        <button id="back-btn" class="text-btn">Back to modes</button>
+      </div>
+      <div id="timeup-panel" class="hidden panel">
+        <p>Time's up</p>
+        <button id="reveal-btn">Reveal all</button>
+        <button id="retry-btn">Retry</button>
+        <button id="timeup-next-btn">Next</button>
+      </div>
+      <div id="success-panel" class="hidden panel">
+        <p id="success-msg"></p>
+        <button id="success-next-btn">Next</button>
+      </div>
+      <div id="credit" class="credit"></div>
+    </section>
+    <section id="stats-screen" class="screen hidden">
+      <h2>My test stats</h2>
+      <div id="stats-body"></div>
+      <button id="copy-stats">Copy stats</button>
+      <p class="note">Paste this into the <a id="stats-feedback" href="#feedback-link-pending" target="_blank" rel="noopener">feedback form</a> (adults only).</p>
+      <button id="clear-counters">Clear my counters</button>
+      <button id="stats-back" class="text-btn">Back</button>
+    </section>
+  </main>
+  <footer id="footer">
+    <p>Test prototype – not a product. Images: CC0 / public domain, see <a href="LICENSES.csv" target="_blank" rel="noopener">credits</a>.</p>
+    <p>This game keeps a few anonymous play counters on this device only (puzzles started/completed, first-play date, days played) so you can report them in the feedback form. Nothing is sent anywhere. <button id="footer-stats" class="text-btn">My test stats</button></p>
+    <p><a id="feedback-link" href="#feedback-link-pending" target="_blank" rel="noopener">Give feedback (adults only)</a> <span class="note">[FORM LINK — to be added]</span></p>
+    <p class="note">Adults only – parents, please fill this in yourself; do not enter anything about your child.</p>
+  </footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
