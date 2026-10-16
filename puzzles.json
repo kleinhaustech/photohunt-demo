@@ -3,12 +3,12 @@
  "hitRadiusUnits": "fraction of image width",
  "modes": {
   "adult": {
-   "name": "SpotRush",
+   "name": "Adult test",
    "timed": true,
    "timeLimitSec": 90
   },
   "kids": {
-   "name": "Spot It Kids (working title)",
+   "name": "Kids test",
    "timed": false
   }
  },
