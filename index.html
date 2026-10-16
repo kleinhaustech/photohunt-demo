@@ -7,130 +7,216 @@
   <title>Spot the Difference – test</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="theme-neutral">
   <div id="app">
-    <!-- Home -->
-    <section id="screen-home" class="screen" hidden>
+    <!-- Non-blocking notice when localStorage is blocked/unavailable -->
+    <div id="storage-notice" class="storage-notice" role="status" aria-live="polite" hidden>
+      Note: Browser storage is blocked — progress won't be saved after closing this tab.
+    </div>
+
+    <!-- 1. Home Screen -->
+    <section id="screen-home" class="screen" aria-label="Choose a game mode">
       <header class="home-header">
+        <p class="home-eyebrow">Picture Puzzle Playtest</p>
         <h1>Spot the Difference</h1>
+        <p class="home-subtitle">Compare two pictures and tap the 5 changes</p>
       </header>
+
       <div class="home-cards">
         <button type="button" class="mode-card kids-card" id="btn-kids">
+          <span class="card-badge" aria-hidden="true">Ages 6–8 • Untimed</span>
+          <span class="card-icon kids-icon" aria-hidden="true">★</span>
           <span class="card-title">Kids test</span>
-          <span class="card-stars" id="home-kids-stars">0 stars</span>
+          <span class="card-desc">Friendly hints, no clock, gentle play</span>
+          <span class="card-stars-pill">
+            <span class="star-glyph" aria-hidden="true">★</span>
+            <span class="card-stars" id="home-kids-stars">0 stars</span>
+          </span>
         </button>
+
         <button type="button" class="mode-card adult-card" id="btn-adult">
+          <span class="card-badge" aria-hidden="true">90s Challenge</span>
+          <span class="card-icon adult-icon" aria-hidden="true">◎</span>
           <span class="card-title">Adult test</span>
-          <span class="card-stars" id="home-adult-stars">0 stars</span>
+          <span class="card-desc">Beat the 90-second clock with 2 hints</span>
+          <span class="card-stars-pill">
+            <span class="star-glyph" aria-hidden="true">★</span>
+            <span class="card-stars" id="home-adult-stars">0 stars</span>
+          </span>
         </button>
       </div>
-      <button type="button" class="grownups-btn" id="btn-grownups-home">Grown-ups</button>
+
+      <footer class="home-footer">
+        <button type="button" class="grownups-btn" id="btn-grownups-home">
+          Grown-ups
+        </button>
+      </footer>
     </section>
 
-    <!-- Picker -->
-    <section id="screen-picker" class="screen" hidden>
+    <!-- 2. Picker Screen -->
+    <section id="screen-picker" class="screen" aria-label="Puzzle selection" hidden>
       <header class="picker-header">
         <button type="button" class="back-btn" id="btn-back-home" aria-label="Back to home">←</button>
-        <h2 id="picker-title">Kids test</h2>
+        <div class="picker-title-group">
+          <h2 id="picker-title">Kids test</h2>
+          <p class="picker-progress" id="picker-progress">0 of 50 stars collected</p>
+        </div>
       </header>
-      <button type="button" class="play-next-btn" id="btn-play-next">Play next</button>
-      <div class="puzzle-grid" id="puzzle-grid"></div>
+
+      <div class="picker-cta-wrap">
+        <button type="button" class="play-next-btn" id="btn-play-next">Play next</button>
+      </div>
+
+      <div class="puzzle-grid" id="puzzle-grid" role="list"></div>
     </section>
 
-    <!-- Game -->
-    <section id="screen-game" class="screen" hidden>
+    <!-- 3. Game Screen -->
+    <section id="screen-game" class="screen" aria-label="Puzzle game" hidden>
       <header class="hud" id="hud">
-        <button type="button" class="back-btn" id="btn-back-picker" aria-label="Back">←</button>
+        <button type="button" class="back-btn hud-back-btn" id="btn-back-picker" aria-label="Back to puzzles">←</button>
         <h2 class="hud-title" id="game-title"></h2>
         <div class="star-progress" id="star-progress" aria-hidden="true">
-          <span class="star-slot"></span><span class="star-slot"></span><span class="star-slot"></span><span class="star-slot"></span><span class="star-slot"></span>
+          <span class="star-slot"></span>
+          <span class="star-slot"></span>
+          <span class="star-slot"></span>
+          <span class="star-slot"></span>
+          <span class="star-slot"></span>
         </div>
         <div class="hud-controls" id="hud-controls"></div>
       </header>
+
       <div class="images-wrap" id="images-wrap">
         <div class="image-box" id="box-a">
+          <span class="img-tag" aria-hidden="true">A</span>
           <img id="img-a" alt="Original picture" draggable="false">
           <div class="marks" id="marks-a"></div>
           <div class="quadrant-glow" id="quad-a"></div>
         </div>
         <div class="image-box" id="box-b">
+          <span class="img-tag" aria-hidden="true">B</span>
           <img id="img-b" alt="Changed picture" draggable="false">
           <div class="marks" id="marks-b"></div>
           <div class="quadrant-glow" id="quad-b"></div>
         </div>
       </div>
-      <div class="message-area" id="message-area" aria-live="polite"></div>
-      <div class="confetti" id="confetti" hidden></div>
-      <!-- Onboarding overlay -->
-      <div class="overlay coach" id="coach-overlay" hidden>
+
+      <div class="message-area" id="message-area" aria-live="polite" aria-atomic="true"></div>
+      <div class="confetti" id="confetti" aria-hidden="true" hidden></div>
+
+      <!-- Onboarding Coach Overlay -->
+      <div class="overlay coach" id="coach-overlay" role="dialog" aria-modal="true" aria-labelledby="coach-text" hidden>
         <div class="coach-card">
-          <p id="coach-text">Look at both pictures</p>
+          <div class="coach-dots" id="coach-dots" aria-hidden="true">
+            <span class="coach-dot active"></span>
+            <span class="coach-dot"></span>
+            <span class="coach-dot"></span>
+          </div>
+          <p class="coach-step-label" id="coach-step-label">Step 1 of 3</p>
+          <p class="coach-text" id="coach-text">Look at both pictures</p>
           <button type="button" class="primary-btn" id="btn-coach-next">Next</button>
           <button type="button" class="link-btn" id="btn-coach-skip">Skip</button>
         </div>
       </div>
-      <!-- Win / time-up overlay -->
-      <div class="overlay result" id="result-overlay" hidden>
+
+      <!-- Win / Time-up Overlay (reflows in-flow below images when docked) -->
+      <div class="overlay result" id="result-overlay" role="dialog" aria-modal="true" aria-labelledby="result-message" hidden>
         <div class="result-card">
-          <p id="result-message"></p>
-          <div id="result-buttons"></div>
+          <div class="result-stars" id="result-stars" aria-hidden="true">★★★★★</div>
+          <p class="result-message" id="result-message"></p>
+          <div class="result-buttons" id="result-buttons"></div>
         </div>
       </div>
     </section>
 
-    <!-- Grown-ups gate -->
-    <div class="overlay gate" id="gate-overlay" hidden>
+    <!-- 4. Grown-ups Gate Modal -->
+    <div class="overlay gate" id="gate-overlay" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
       <div class="gate-card">
-        <p id="gate-question">What is 7 + 5, then minus 3?</p>
+        <div class="gate-header">
+          <h2 id="gate-title" class="gate-title">Grown-ups Check</h2>
+          <button type="button" class="gate-close-btn" id="btn-gate-close" aria-label="Close">✕</button>
+        </div>
+        <p class="gate-sub">Step 1: Tap the right answer</p>
+        <p class="gate-question" id="gate-question">What is 7 + 5, then minus 3?</p>
         <div class="gate-answers" id="gate-answers"></div>
-        <button type="button" class="hold-btn" id="btn-hold">Press and hold for 2 seconds</button>
-        <p id="gate-status"></p>
+
+        <p class="gate-sub">Step 2: Hold button for 2 seconds</p>
+        <button type="button" class="hold-btn" id="btn-hold">
+          <span class="hold-fill" id="hold-fill" aria-hidden="true"></span>
+          <span class="hold-label">Press and hold for 2 seconds</span>
+        </button>
+        <p class="gate-status" id="gate-status" aria-live="polite"></p>
       </div>
     </div>
 
-    <!-- Grown-ups area -->
-    <section id="screen-grownups" class="screen" hidden>
-      <header>
-        <button type="button" class="back-btn" id="btn-grownups-back" aria-label="Back">←</button>
+    <!-- 5. Grown-ups Area -->
+    <section id="screen-grownups" class="screen" aria-label="Grown-ups settings and stats" hidden>
+      <header class="grownups-header">
+        <button type="button" class="back-btn" id="btn-grownups-back" aria-label="Back to home">←</button>
         <h2>Grown-ups</h2>
       </header>
+
       <div class="grownups-content">
-        <h3>Test stats</h3>
-        <pre id="stats-pre" readonly></pre>
-        <button type="button" id="btn-copy-stats">Copy stats</button>
-        <p id="copy-status"></p>
-        <p id="feedback-link-wrap"></p>
-        <h3>Credits</h3>
-        <div id="credits-list"></div>
-        <p id="licenses-link-wrap"></p>
-        <p class="privacy-note">A few anonymous play counters are kept on this device only so you can report them in the feedback form. Nothing is sent anywhere. Parents: please fill the form yourself; enter nothing about your child.</p>
-        <h3>Report a problem with puzzle…</h3>
-        <select id="report-puzzle"></select>
-        <div class="report-reasons">
-          <button type="button" data-reason="cant-find">Can't find a difference</button>
-          <button type="button" data-reason="not-marked">A difference isn't marked</button>
-          <button type="button" data-reason="tap-not-counted">Tap not counted</button>
-          <button type="button" data-reason="picture-problem">Picture problem</button>
+        <div class="grownups-panel">
+          <p class="privacy-note">A few anonymous play counters are kept on this device only so you can report them in the feedback form. Nothing is sent anywhere. Parents: please fill the form yourself; enter nothing about your child.</p>
+
+          <h3>Test stats</h3>
+          <pre id="stats-pre" tabindex="0" readonly></pre>
+          <div class="stats-actions">
+            <button type="button" class="secondary-action-btn" id="btn-copy-stats">Copy stats</button>
+            <p id="copy-status" class="status-inline" aria-live="polite"></p>
+          </div>
+          <p id="feedback-link-wrap" class="feedback-cta-wrap"></p>
         </div>
-        <p id="report-status"></p>
-        <button type="button" id="btn-clear-counters">Clear my counters</button>
-        <div id="clear-confirm" hidden>
-          <p>Clear all counters on this device?</p>
-          <button type="button" id="btn-clear-yes">Yes, clear</button>
-          <button type="button" id="btn-clear-no">Cancel</button>
+
+        <div class="grownups-panel">
+          <h3>Preferences</h3>
+          <label class="sound-toggle">
+            <input type="checkbox" id="sound-toggle">
+            <span>Sound effects (gentle chime on find)</span>
+          </label>
         </div>
-        <label class="sound-toggle">
-          <input type="checkbox" id="sound-toggle">
-          Sound
-        </label>
+
+        <div class="grownups-panel">
+          <h3>Report a problem with puzzle…</h3>
+          <label class="field-label" for="report-puzzle">Select puzzle:</label>
+          <select id="report-puzzle" class="puzzle-select"></select>
+          <p class="field-label">Tap a reason to append to stats:</p>
+          <div class="report-reasons">
+            <button type="button" data-reason="cant-find">Can't find a difference</button>
+            <button type="button" data-reason="not-marked">A difference isn't marked</button>
+            <button type="button" data-reason="tap-not-counted">Tap not counted</button>
+            <button type="button" data-reason="picture-problem">Picture problem</button>
+          </div>
+          <p id="report-status" class="status-inline" aria-live="polite"></p>
+        </div>
+
+        <div class="grownups-panel">
+          <h3>Image Credits &amp; Licenses</h3>
+          <div id="credits-list" class="credits-list"></div>
+          <p id="licenses-link-wrap" class="licenses-wrap"></p>
+        </div>
+
+        <div class="grownups-panel danger-panel">
+          <h3>Reset Device Data</h3>
+          <button type="button" class="danger-outline-btn" id="btn-clear-counters">Clear my counters</button>
+          <div id="clear-confirm" class="clear-confirm-box" hidden>
+            <p>Clear all counters on this device?</p>
+            <div class="confirm-actions">
+              <button type="button" class="danger-btn" id="btn-clear-yes">Yes, clear</button>
+              <button type="button" class="secondary-action-btn" id="btn-clear-no">Cancel</button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Kids celebration -->
-    <section id="screen-celebration" class="screen" hidden>
+    <!-- 6. Kids All-10 Celebration Screen -->
+    <section id="screen-celebration" class="screen" aria-label="Celebration" hidden>
       <div class="celebration">
+        <div class="celebration-badge" aria-hidden="true">★★★★★</div>
         <h2>Great Job Exploring Today!</h2>
-        <button type="button" class="primary-btn" id="btn-celebration-home">Back home</button>
+        <p class="celebration-sub">You found the differences in all 10 pictures!</p>
+        <button type="button" class="primary-btn celebration-btn" id="btn-celebration-home">Back home</button>
       </div>
     </section>
   </div>
