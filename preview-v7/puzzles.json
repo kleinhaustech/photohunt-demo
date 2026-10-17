@@ -1,0 +1,1135 @@
+{
+  "version": 3,
+  "hitRadiusUnits": "fraction of image width",
+  "modes": {
+    "untimed": {
+      "name": "Untimed Mode",
+      "timed": false
+    },
+    "timed": {
+      "name": "Timed Mode",
+      "timed": true,
+      "timeLimitSec": 90,
+      "stepDecaySec": 6,
+      "minTimeLimitSec": 40
+    }
+  },
+  "categories": {
+    "kids": [
+      {
+        "id": "animals",
+        "label": "Animals"
+      },
+      {
+        "id": "sea-sky",
+        "label": "Sea & Sky"
+      },
+      {
+        "id": "vehicles-space",
+        "label": "Vehicles & Space"
+      }
+    ]
+  },
+  "puzzles": [
+    {
+      "id": "kids-04",
+      "mode": "kids",
+      "level": 1,
+      "category": "vehicles-space",
+      "categoryConfidence": "high",
+      "title": "Toy train",
+      "imageA": "img/kids-04-a.jpg",
+      "imageB": "img/kids-04-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.3125,
+          "y": 0.2875,
+          "r": 0.1342,
+          "type": "recolor",
+          "what": "chimney colour"
+        },
+        {
+          "x": 0.2908,
+          "y": 0.6959,
+          "r": 0.0868,
+          "type": "recolor",
+          "what": "left wheel colour"
+        },
+        {
+          "x": 0.5153,
+          "y": 0.6938,
+          "r": 0.143,
+          "type": "recolor",
+          "what": "wood base colour"
+        },
+        {
+          "x": 0.6702,
+          "y": 0.2014,
+          "r": 0.1511,
+          "type": "recolor",
+          "what": "cab roof colour"
+        },
+        {
+          "x": 0.7393,
+          "y": 0.6963,
+          "r": 0.088,
+          "type": "recolor",
+          "what": "right wheel colour"
+        }
+      ],
+      "credit": {
+        "author": "gnokii at openclipart.org",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Toy_train.svg"
+      },
+      "daily": true
+    },
+    {
+      "id": "kids-01",
+      "mode": "kids",
+      "level": 2,
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon fish",
+      "imageA": "img/kids-01-a.jpg",
+      "imageB": "img/kids-01-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.5618,
+          "y": 0.2618,
+          "r": 0.0693,
+          "type": "recolor",
+          "what": "top fin colour"
+        },
+        {
+          "x": 0.6607,
+          "y": 0.3543,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.549,
+          "y": 0.7122,
+          "r": 0.0586,
+          "type": "recolor",
+          "what": "bottom fin colour"
+        },
+        {
+          "x": 0.4898,
+          "y": 0.482,
+          "r": 0.158,
+          "type": "recolor",
+          "what": "stripe colour"
+        },
+        {
+          "x": 0.2415,
+          "y": 0.5014,
+          "r": 0.1911,
+          "type": "recolor",
+          "what": "tail colour"
+        }
+      ],
+      "credit": {
+        "author": "Kurtkaiser",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Cartoon_fish_yellow.png"
+      },
+      "daily": true
+    },
+    {
+      "id": "kids-03",
+      "mode": "kids",
+      "level": 3,
+      "category": "vehicles-space",
+      "categoryConfidence": "high",
+      "title": "Cartoon space rocket",
+      "imageA": "img/kids-03-a.jpg",
+      "imageB": "img/kids-03-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.6464,
+          "y": 0.3134,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "window colour"
+        },
+        {
+          "x": 0.7765,
+          "y": 0.1506,
+          "r": 0.1008,
+          "type": "recolor",
+          "what": "nose colour"
+        },
+        {
+          "x": 0.4029,
+          "y": 0.3718,
+          "r": 0.1112,
+          "type": "recolor",
+          "what": "fin colour"
+        },
+        {
+          "x": 0.3327,
+          "y": 0.7304,
+          "r": 0.2022,
+          "type": "recolor",
+          "what": "flame colour"
+        },
+        {
+          "x": 0.5981,
+          "y": 0.6382,
+          "r": 0.1119,
+          "type": "recolor",
+          "what": "right fin colour"
+        }
+      ],
+      "credit": {
+        "author": "Rygle, based on Purzen",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Cartoon_space_rocket.png"
+      },
+      "daily": true
+    },
+    {
+      "id": "kids-02",
+      "mode": "kids",
+      "level": 4,
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon turtle",
+      "imageA": "img/kids-02-a.jpg",
+      "imageB": "img/kids-02-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.844,
+          "y": 0.384,
+          "r": 0.077,
+          "type": "remove"
+        },
+        {
+          "x": 0.4333,
+          "y": 0.7413,
+          "r": 0.087,
+          "type": "recolor"
+        },
+        {
+          "x": 0.4986,
+          "y": 0.1794,
+          "r": 0.1185,
+          "type": "recolor"
+        },
+        {
+          "x": 0.6074,
+          "y": 0.8538,
+          "r": 0.045,
+          "type": "remove"
+        },
+        {
+          "x": 0.2494,
+          "y": 0.5012,
+          "r": 0.1173,
+          "type": "recolor"
+        }
+      ],
+      "credit": {
+        "author": "badaman",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Turtle_clip_art.svg"
+      },
+      "daily": true
+    },
+    {
+      "id": "kids-08",
+      "mode": "kids",
+      "level": 5,
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon walrus",
+      "imageA": "img/kids-08-a.jpg",
+      "imageB": "img/kids-08-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.4282,
+          "y": 0.1642,
+          "r": 0.0511,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.4374,
+          "y": 0.4658,
+          "r": 0.0652,
+          "type": "recolor",
+          "what": "tusk colour"
+        },
+        {
+          "x": 0.345,
+          "y": 0.8509,
+          "r": 0.073,
+          "type": "recolor",
+          "what": "fish colour"
+        },
+        {
+          "x": 0.8123,
+          "y": 0.4947,
+          "r": 0.1115,
+          "type": "recolor",
+          "what": "flipper colour"
+        },
+        {
+          "x": 0.561,
+          "y": 0.1643,
+          "r": 0.0509,
+          "type": "recolor",
+          "what": "right eye colour"
+        }
+      ],
+      "credit": {
+        "author": "StudioFibonacci@openclipart.org",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Lemmling_walrus.svg"
+      },
+      "daily": true
+    },
+    {
+      "id": "kids-06",
+      "mode": "kids",
+      "level": 6,
+      "category": "animals",
+      "categoryConfidence": "high",
+      "title": "Cartoon snail",
+      "imageA": "img/kids-06-a.jpg",
+      "imageB": "img/kids-06-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.2418,
+          "y": 0.7518,
+          "r": 0.0773,
+          "type": "recolor",
+          "what": "cheek colour"
+        },
+        {
+          "x": 0.1782,
+          "y": 0.2615,
+          "r": 0.0668,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.6107,
+          "y": 0.4218,
+          "r": 0.2813,
+          "type": "recolor",
+          "what": "shell colour"
+        },
+        {
+          "x": 0.0537,
+          "y": 0.2675,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "small eye colour"
+        },
+        {
+          "x": 0.8173,
+          "y": 0.8661,
+          "r": 0.085,
+          "type": "clone",
+          "what": "add spot on tail"
+        }
+      ],
+      "credit": {
+        "author": "Sarka Slukova / Machovka",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Machovka_snail.svg"
+      },
+      "daily": true
+    },
+    {
+      "id": "kids-07",
+      "mode": "kids",
+      "level": 7,
+      "category": "animals",
+      "categoryConfidence": "high",
+      "title": "Cartoon monkey",
+      "imageA": "img/kids-07-a.jpg",
+      "imageB": "img/kids-07-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.4738,
+          "y": 0.5235,
+          "r": 0.0514,
+          "type": "recolor",
+          "what": "nose colour"
+        },
+        {
+          "x": 0.2271,
+          "y": 0.3512,
+          "r": 0.0546,
+          "type": "recolor",
+          "what": "left ear colour"
+        },
+        {
+          "x": 0.7406,
+          "y": 0.2932,
+          "r": 0.0564,
+          "type": "recolor",
+          "what": "right ear colour"
+        },
+        {
+          "x": 0.3434,
+          "y": 0.3838,
+          "r": 0.065,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.5833,
+          "y": 0.3871,
+          "r": 0.079,
+          "type": "recolor",
+          "what": "right eye colour"
+        }
+      ],
+      "credit": {
+        "author": "Nicu Buculei & odder",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Sailor_monkey_without_hat.svg"
+      },
+      "daily": true
+    },
+    {
+      "id": "kids-10",
+      "mode": "kids",
+      "level": 8,
+      "category": "animals",
+      "categoryConfidence": "high",
+      "title": "Cartoon lion",
+      "imageA": "img/kids-10-a.jpg",
+      "imageB": "img/kids-10-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.2113,
+          "y": 0.3602,
+          "r": 0.1825,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.9543,
+          "y": 0.6482,
+          "r": 0.0457,
+          "type": "recolor",
+          "what": "tail tuft colour"
+        },
+        {
+          "x": 0.0697,
+          "y": 0.7667,
+          "r": 0.0536,
+          "type": "recolor",
+          "what": "paw colour"
+        },
+        {
+          "x": 0.0809,
+          "y": 0.5648,
+          "r": 0.073,
+          "type": "recolor",
+          "what": "lower mane colour"
+        },
+        {
+          "x": 0.7148,
+          "y": 0.8106,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "back paw colour"
+        }
+      ],
+      "credit": {
+        "author": "Francesco 'Architetto' Rollandin",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Leone_02_architetto_fran_01.svg"
+      },
+      "daily": true
+    },
+    {
+      "id": "kids-05",
+      "mode": "kids",
+      "level": 9,
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon owl",
+      "imageA": "img/kids-05-a.jpg",
+      "imageB": "img/kids-05-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.5306,
+          "y": 0.3131,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "beak colour"
+        },
+        {
+          "x": 0.4794,
+          "y": 0.7811,
+          "r": 0.0482,
+          "type": "recolor",
+          "what": "foot colour"
+        },
+        {
+          "x": 0.529,
+          "y": 0.5473,
+          "r": 0.1444,
+          "type": "recolor",
+          "what": "belly colour"
+        },
+        {
+          "x": 0.5851,
+          "y": 0.7805,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "right foot colour"
+        },
+        {
+          "x": 0.5642,
+          "y": 0.2514,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "eye colour"
+        }
+      ],
+      "credit": {
+        "author": "Kurt Kaiser",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Owl_Animation_Clip_Art_-_Low_Poly_Sprite.png"
+      },
+      "daily": true
+    },
+    {
+      "id": "kids-09",
+      "mode": "kids",
+      "level": 10,
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon bat",
+      "imageA": "img/kids-09-a.jpg",
+      "imageB": "img/kids-09-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.4322,
+          "y": 0.2594,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "ear colour"
+        },
+        {
+          "x": 0.5005,
+          "y": 0.3099,
+          "r": 0.0598,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.473,
+          "y": 0.7926,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "feet colour"
+        },
+        {
+          "x": 0.7551,
+          "y": 0.5059,
+          "r": 0.115,
+          "type": "recolor",
+          "what": "wing colour"
+        },
+        {
+          "x": 0.2441,
+          "y": 0.5061,
+          "r": 0.1151,
+          "type": "recolor",
+          "what": "left wing colour"
+        }
+      ],
+      "credit": {
+        "author": "StudioFibonacci",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:StudioFibonacci_Cartoon_Bat.png"
+      },
+      "daily": true
+    },
+    {
+      "id": "kids-04-m",
+      "mode": "kids",
+      "category": "vehicles-space",
+      "categoryConfidence": "high",
+      "title": "Toy train",
+      "imageA": "img/kids-04-a.jpg",
+      "imageB": "img/kids-04-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.3125,
+          "y": 0.2875,
+          "r": 0.1342,
+          "type": "recolor",
+          "what": "chimney colour"
+        },
+        {
+          "x": 0.2908,
+          "y": 0.6959,
+          "r": 0.0868,
+          "type": "recolor",
+          "what": "left wheel colour"
+        },
+        {
+          "x": 0.5153,
+          "y": 0.6938,
+          "r": 0.143,
+          "type": "recolor",
+          "what": "wood base colour"
+        },
+        {
+          "x": 0.6702,
+          "y": 0.2014,
+          "r": 0.1511,
+          "type": "recolor",
+          "what": "cab roof colour"
+        },
+        {
+          "x": 0.7393,
+          "y": 0.6963,
+          "r": 0.088,
+          "type": "recolor",
+          "what": "right wheel colour"
+        }
+      ],
+      "credit": {
+        "author": "gnokii at openclipart.org",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Toy_train.svg"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-04",
+      "daily": true
+    },
+    {
+      "id": "kids-01-m",
+      "mode": "kids",
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon fish",
+      "imageA": "img/kids-01-a.jpg",
+      "imageB": "img/kids-01-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.5618,
+          "y": 0.2618,
+          "r": 0.0693,
+          "type": "recolor",
+          "what": "top fin colour"
+        },
+        {
+          "x": 0.6607,
+          "y": 0.3543,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.549,
+          "y": 0.7122,
+          "r": 0.0586,
+          "type": "recolor",
+          "what": "bottom fin colour"
+        },
+        {
+          "x": 0.4898,
+          "y": 0.482,
+          "r": 0.158,
+          "type": "recolor",
+          "what": "stripe colour"
+        },
+        {
+          "x": 0.2415,
+          "y": 0.5014,
+          "r": 0.1911,
+          "type": "recolor",
+          "what": "tail colour"
+        }
+      ],
+      "credit": {
+        "author": "Kurtkaiser",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Cartoon_fish_yellow.png"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-01",
+      "daily": true
+    },
+    {
+      "id": "kids-03-m",
+      "mode": "kids",
+      "category": "vehicles-space",
+      "categoryConfidence": "high",
+      "title": "Cartoon space rocket",
+      "imageA": "img/kids-03-a.jpg",
+      "imageB": "img/kids-03-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.6464,
+          "y": 0.3134,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "window colour"
+        },
+        {
+          "x": 0.7765,
+          "y": 0.1506,
+          "r": 0.1008,
+          "type": "recolor",
+          "what": "nose colour"
+        },
+        {
+          "x": 0.4029,
+          "y": 0.3718,
+          "r": 0.1112,
+          "type": "recolor",
+          "what": "fin colour"
+        },
+        {
+          "x": 0.3327,
+          "y": 0.7304,
+          "r": 0.2022,
+          "type": "recolor",
+          "what": "flame colour"
+        },
+        {
+          "x": 0.5981,
+          "y": 0.6382,
+          "r": 0.1119,
+          "type": "recolor",
+          "what": "right fin colour"
+        }
+      ],
+      "credit": {
+        "author": "Rygle, based on Purzen",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Cartoon_space_rocket.png"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-03",
+      "daily": true
+    },
+    {
+      "id": "kids-02-m",
+      "mode": "kids",
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon turtle",
+      "imageA": "img/kids-02-a.jpg",
+      "imageB": "img/kids-02-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.844,
+          "y": 0.384,
+          "r": 0.077,
+          "type": "remove"
+        },
+        {
+          "x": 0.4333,
+          "y": 0.7413,
+          "r": 0.087,
+          "type": "recolor"
+        },
+        {
+          "x": 0.4986,
+          "y": 0.1794,
+          "r": 0.1185,
+          "type": "recolor"
+        },
+        {
+          "x": 0.6074,
+          "y": 0.8538,
+          "r": 0.045,
+          "type": "remove"
+        },
+        {
+          "x": 0.2494,
+          "y": 0.5012,
+          "r": 0.1173,
+          "type": "recolor"
+        }
+      ],
+      "credit": {
+        "author": "badaman",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Turtle_clip_art.svg"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-02",
+      "daily": true
+    },
+    {
+      "id": "kids-08-m",
+      "mode": "kids",
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon walrus",
+      "imageA": "img/kids-08-a.jpg",
+      "imageB": "img/kids-08-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.4282,
+          "y": 0.1642,
+          "r": 0.0511,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.4374,
+          "y": 0.4658,
+          "r": 0.0652,
+          "type": "recolor",
+          "what": "tusk colour"
+        },
+        {
+          "x": 0.345,
+          "y": 0.8509,
+          "r": 0.073,
+          "type": "recolor",
+          "what": "fish colour"
+        },
+        {
+          "x": 0.8123,
+          "y": 0.4947,
+          "r": 0.1115,
+          "type": "recolor",
+          "what": "flipper colour"
+        },
+        {
+          "x": 0.561,
+          "y": 0.1643,
+          "r": 0.0509,
+          "type": "recolor",
+          "what": "right eye colour"
+        }
+      ],
+      "credit": {
+        "author": "StudioFibonacci@openclipart.org",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Lemmling_walrus.svg"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-08",
+      "daily": true
+    },
+    {
+      "id": "kids-06-m",
+      "mode": "kids",
+      "category": "animals",
+      "categoryConfidence": "high",
+      "title": "Cartoon snail",
+      "imageA": "img/kids-06-a.jpg",
+      "imageB": "img/kids-06-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.2418,
+          "y": 0.7518,
+          "r": 0.0773,
+          "type": "recolor",
+          "what": "cheek colour"
+        },
+        {
+          "x": 0.1782,
+          "y": 0.2615,
+          "r": 0.0668,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.6107,
+          "y": 0.4218,
+          "r": 0.2813,
+          "type": "recolor",
+          "what": "shell colour"
+        },
+        {
+          "x": 0.0537,
+          "y": 0.2675,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "small eye colour"
+        },
+        {
+          "x": 0.8173,
+          "y": 0.8661,
+          "r": 0.085,
+          "type": "clone",
+          "what": "add spot on tail"
+        }
+      ],
+      "credit": {
+        "author": "Sarka Slukova / Machovka",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Machovka_snail.svg"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-06",
+      "daily": true
+    },
+    {
+      "id": "kids-07-m",
+      "mode": "kids",
+      "category": "animals",
+      "categoryConfidence": "high",
+      "title": "Cartoon monkey",
+      "imageA": "img/kids-07-a.jpg",
+      "imageB": "img/kids-07-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.4738,
+          "y": 0.5235,
+          "r": 0.0514,
+          "type": "recolor",
+          "what": "nose colour"
+        },
+        {
+          "x": 0.2271,
+          "y": 0.3512,
+          "r": 0.0546,
+          "type": "recolor",
+          "what": "left ear colour"
+        },
+        {
+          "x": 0.7406,
+          "y": 0.2932,
+          "r": 0.0564,
+          "type": "recolor",
+          "what": "right ear colour"
+        },
+        {
+          "x": 0.3434,
+          "y": 0.3838,
+          "r": 0.065,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.5833,
+          "y": 0.3871,
+          "r": 0.079,
+          "type": "recolor",
+          "what": "right eye colour"
+        }
+      ],
+      "credit": {
+        "author": "Nicu Buculei & odder",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Sailor_monkey_without_hat.svg"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-07",
+      "daily": true
+    },
+    {
+      "id": "kids-10-m",
+      "mode": "kids",
+      "category": "animals",
+      "categoryConfidence": "high",
+      "title": "Cartoon lion",
+      "imageA": "img/kids-10-a.jpg",
+      "imageB": "img/kids-10-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.2113,
+          "y": 0.3602,
+          "r": 0.1825,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.9543,
+          "y": 0.6482,
+          "r": 0.0457,
+          "type": "recolor",
+          "what": "tail tuft colour"
+        },
+        {
+          "x": 0.0697,
+          "y": 0.7667,
+          "r": 0.0536,
+          "type": "recolor",
+          "what": "paw colour"
+        },
+        {
+          "x": 0.0809,
+          "y": 0.5648,
+          "r": 0.073,
+          "type": "recolor",
+          "what": "lower mane colour"
+        },
+        {
+          "x": 0.7148,
+          "y": 0.8106,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "back paw colour"
+        }
+      ],
+      "credit": {
+        "author": "Francesco 'Architetto' Rollandin",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Leone_02_architetto_fran_01.svg"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-10",
+      "daily": true
+    },
+    {
+      "id": "kids-05-m",
+      "mode": "kids",
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon owl",
+      "imageA": "img/kids-05-a.jpg",
+      "imageB": "img/kids-05-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.5306,
+          "y": 0.3131,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "beak colour"
+        },
+        {
+          "x": 0.4794,
+          "y": 0.7811,
+          "r": 0.0482,
+          "type": "recolor",
+          "what": "foot colour"
+        },
+        {
+          "x": 0.529,
+          "y": 0.5473,
+          "r": 0.1444,
+          "type": "recolor",
+          "what": "belly colour"
+        },
+        {
+          "x": 0.5851,
+          "y": 0.7805,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "right foot colour"
+        },
+        {
+          "x": 0.5642,
+          "y": 0.2514,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "eye colour"
+        }
+      ],
+      "credit": {
+        "author": "Kurt Kaiser",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Owl_Animation_Clip_Art_-_Low_Poly_Sprite.png"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-05",
+      "daily": true
+    },
+    {
+      "id": "kids-09-m",
+      "mode": "kids",
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon bat",
+      "imageA": "img/kids-09-a.jpg",
+      "imageB": "img/kids-09-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.4322,
+          "y": 0.2594,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "ear colour"
+        },
+        {
+          "x": 0.5005,
+          "y": 0.3099,
+          "r": 0.0598,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.473,
+          "y": 0.7926,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "feet colour"
+        },
+        {
+          "x": 0.7551,
+          "y": 0.5059,
+          "r": 0.115,
+          "type": "recolor",
+          "what": "wing colour"
+        },
+        {
+          "x": 0.2441,
+          "y": 0.5061,
+          "r": 0.1151,
+          "type": "recolor",
+          "what": "left wing colour"
+        }
+      ],
+      "credit": {
+        "author": "StudioFibonacci",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:StudioFibonacci_Cartoon_Bat.png"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-09",
+      "daily": true
+    }
+  ]
+}
