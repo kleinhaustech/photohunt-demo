@@ -69,7 +69,11 @@ const state = {
   testSessionFlagged: false,
   lastDailyDuel: null,
   stickerReturnView: "homeView",
-  playMoreOpen: false
+  playMoreOpen: false,
+  suppressNextClick: false,
+  suppressClickHandle: null,
+  endRunConfirmUntil: 0,
+  endRunConfirmHandle: null
 };
 
 function $(id) {
@@ -724,18 +728,44 @@ function yesterdayOf(day) {
   return dateKey(new Date(y,m-1,d-1));
 }
 
-function closePlayMore() {
+function resetEndRunConfirm() {
+  window.clearTimeout(state.endRunConfirmHandle);
+  state.endRunConfirmHandle = null;
+  state.endRunConfirmUntil = 0;
+  if (els.stopButton) els.stopButton.textContent = "End run";
+}
+
+function closePlayMore(restoreFocus = false) {
   if (!els.playMoreMenu || !els.playMoreButton) return;
   state.playMoreOpen = false;
   els.playMoreMenu.hidden = true;
   els.playMoreButton.setAttribute("aria-expanded", "false");
+  resetEndRunConfirm();
+  if (restoreFocus && state.view === "gameView") els.playMoreButton.focus();
 }
 
 function togglePlayMore() {
   if (!state.run || state.view !== "gameView") return;
-  state.playMoreOpen = !state.playMoreOpen;
-  els.playMoreMenu.hidden = !state.playMoreOpen;
-  els.playMoreButton.setAttribute("aria-expanded", String(state.playMoreOpen));
+  if (state.playMoreOpen) {
+    closePlayMore(true);
+    return;
+  }
+  state.playMoreOpen = true;
+  els.playMoreMenu.hidden = false;
+  els.playMoreButton.setAttribute("aria-expanded", "true");
+}
+
+function confirmEndRun() {
+  if (!state.run || state.run.phase !== "playing") return;
+  if (state.endRunConfirmUntil && performance.now() < state.endRunConfirmUntil) {
+    resetEndRunConfirm();
+    finishRun("stopped");
+    return;
+  }
+  resetEndRunConfirm();
+  state.endRunConfirmUntil = performance.now() + 3000;
+  els.stopButton.textContent = "Tap again to end run";
+  state.endRunConfirmHandle = window.setTimeout(resetEndRunConfirm, 3000);
 }
 
 function renderStickerBook() {
@@ -2420,20 +2450,45 @@ function bindUI() {
     event => tapImage(event, "B")
   );
 
+  // Move the three commands into visual and keyboard order, without changing index.html.
+  const revealLine = node("div", "reveal-menu-line");
+  revealLine.append(els.revealButton, els.revealStatus);
+  els.playMoreMenu.append(els.menuTipsButton, revealLine, els.stopButton);
+  els.stopButton.setAttribute("aria-live", "polite");
+
   els.playMoreButton.addEventListener("click", togglePlayMore);
   els.menuTipsButton.addEventListener("click", openTips);
+
+  // Capture and cancel the entire dismiss gesture before an image receives its click.
   document.addEventListener("pointerdown", event => {
-    if (state.playMoreOpen && !els.playMoreWrap.contains(event.target)) closePlayMore();
-  });
+    if (!state.playMoreOpen || els.playMoreWrap.contains(event.target)) return;
+    event.preventDefault();
+    event.stopPropagation();
+    state.suppressNextClick = true;
+    window.clearTimeout(state.suppressClickHandle);
+    state.suppressClickHandle = window.setTimeout(() => {
+      state.suppressNextClick = false;
+      state.suppressClickHandle = null;
+    }, 400);
+    closePlayMore();
+  }, true);
+  document.addEventListener("click", event => {
+    if (!state.suppressNextClick) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    state.suppressNextClick = false;
+    window.clearTimeout(state.suppressClickHandle);
+    state.suppressClickHandle = null;
+  }, true);
   document.addEventListener("keydown", event => {
-    if (event.key === "Escape" && state.playMoreOpen) closePlayMore();
+    if (event.key !== "Escape" || !state.playMoreOpen) return;
+    event.preventDefault();
+    closePlayMore(true);
   });
+
   els.hintButton.addEventListener("click", useHint);
   els.revealButton.addEventListener("click", revealAll);
-  els.stopButton.addEventListener(
-    "click",
-    () => finishRun("stopped")
-  );
+  els.stopButton.addEventListener("click", confirmEndRun);
 
   els.nextLevelButton.addEventListener(
     "click",
