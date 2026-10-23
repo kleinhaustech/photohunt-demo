@@ -514,3 +514,39 @@ body.playing-screen #tipsNav {display:none !important;}
 /* Keep the alternative start action secondary: Play now is the only solid home CTA. */
 #startButton {background:#ffffff;border:2px solid var(--card-border);color:var(--fg);box-shadow:none;font-size:1rem;}
 #startButton:hover:not(:disabled) {background:var(--bg-elevated);border-color:var(--secondary);}
+
+/* FIX-9 L1: anchor the compact menu in the upper-left puzzle area on phones,
+   outside Picture B. Retain the 44px rows, 14px type and >=8px gaps. */
+@media (max-width:819px) {
+  body.playing-screen .play-more-menu {
+    position:fixed;
+    top:104px;
+    left:8px;
+    right:auto;
+    bottom:auto;
+    max-height:min(260px,calc(100svh - 116px));
+  }
+}
+/* FIX-9 L2: neutral, asset-free mystery sticker with a centered high-contrast ?. */
+.sticker-slot.tomorrow .sticker-circle {
+  background:repeating-linear-gradient(135deg,#f1f5f9 0 10px,#dce6ee 10px 20px);
+  border:2px dashed #64748b;
+}
+.sticker-slot.tomorrow .sticker-image {display:none;}
+.sticker-slot.tomorrow .sticker-question {
+  top:15px;
+  left:50%;
+  transform:translateX(-50%);
+  width:72px;
+  height:72px;
+  min-width:72px;
+  padding:0;
+  border:0;
+  border-radius:50%;
+  background:transparent;
+  box-shadow:none;
+  color:#0f172a;
+  font-size:2.5rem;
+  font-weight:900;
+  line-height:1;
+}
