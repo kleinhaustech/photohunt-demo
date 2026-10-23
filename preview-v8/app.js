@@ -727,7 +727,6 @@ function yesterdayOf(day) {
   const [y,m,d] = day.split("-").map(Number);
   return dateKey(new Date(y,m-1,d-1));
 }
-
 function resetEndRunConfirm() {
   window.clearTimeout(state.endRunConfirmHandle);
   state.endRunConfirmHandle = null;
@@ -862,7 +861,7 @@ function newRun(options = {}) {
   state.run = {
     mode, kind: duel ? "duel" : daily ? "daily" : "levels", category: duel || daily || mode === "timed" || Number.isInteger(options.startIndex) ? "all" : state.selectedCategory,
     list, levelIndex: mode === "timed" || daily ? 0 : (options.startIndex || 0), phase:"loading", found:new Set(), levelsCleared:0,
-    totalFinds:0, totalMisses:0, totalHints:0, score:0, timeRemaining:0, timeLimit:0,
+    totalFinds:0, totalMisses:0, totalHints:0, score:0, levelScore:0, timeRemaining:0, timeLimit:0,
     missTimes:[], cooldownUntil:0, mashed:false, highMisses:false, finalized:false, revealed:false,
     hintAvailable:true, hintElapsedMs:0, hintUses:0, lastFindAt:null, noFindElapsedMs:0,
     modeFirstAttempt: !duel && !state.counters[mode].firstPuzzleStarted,
@@ -905,6 +904,7 @@ function startLevel() {
   run.lastFindAt = null;
   run.firstLevelMisses = 0;
   run.levelMisses = 0;
+  run.levelScore = 0;
   run.noFindElapsedMs = 0;
   closePlayMore();
   run.betweenElapsedMs = 0;
@@ -920,7 +920,8 @@ function startLevel() {
   els.levelCount.textContent = `${run.levelIndex + 1} / ${run.list.length}`;
   els.timerPanel.hidden = run.mode !== "timed";
   els.duelClock.hidden = run.kind !== "duel";
-  els.scoreMetric.hidden = run.mode !== "timed";
+  els.scoreMetric.hidden = run.kind === "duel";
+  els.scoreMetric.querySelector(".metric-name").textContent = "Total";
   els.missingImagesNotice.hidden = true;
 
   els.imageA.classList.toggle("is-mirrored", puzzle.mirrored === true);
@@ -1268,8 +1269,13 @@ function markFound(index) {
 
   if (run.mode === "timed") {
     const now = performance.now();
-    run.score += run.lastFindAt !== null && now - run.lastFindAt <= 3000 ? 150 : 100;
+    const points = run.lastFindAt !== null && now - run.lastFindAt <= 3000 ? 150 : 100;
+    run.score += points;
+    run.levelScore += points;
     run.lastFindAt = now;
+  } else if (run.kind !== "duel") {
+    run.score += 100;
+    run.levelScore += 100;
   }
   run.firstFindMade = true;
   window.clearTimeout(state.hintGlowHandle);
@@ -1288,86 +1294,65 @@ function markFound(index) {
   if (run.found.size === 5) clearLevel();
 }
 
+function visualRingSize(difference, stageWidth, stageHeight) {
+  // Visual-only sizing: never used to accept or reject taps.
+  const maxDiameter = Math.min(stageWidth, stageHeight) * 0.45;
+  const ellipse = Number.isFinite(difference.rx) && difference.rx > 0 &&
+    Number.isFinite(difference.ry) && difference.ry > 0;
+  const diameterX = 2 * (ellipse ? difference.rx : difference.r) * stageWidth;
+  const diameterY = ellipse ? 2 * difference.ry * stageHeight : diameterX;
+  return {
+    width: clamp(diameterX, 28, maxDiameter),
+    height: clamp(diameterY, 28, maxDiameter)
+  };
+}
+
+function visualRingPosition(difference, width, height) {
+  const size = visualRingSize(difference, width, height);
+  const halfX = Math.min(size.width / 2, width / 2);
+  const halfY = Math.min(size.height / 2, height / 2);
+  return {
+    left: clamp(displayX(difference) * width, halfX, width - halfX),
+    top: clamp(difference.y * height, halfY, height - halfY),
+    ...size
+  };
+}
+
 function addRing(difference, revealed) {
   for (const [stage, marks] of [
     [els.imageStageA, els.marksA],
     [els.imageStageB, els.marksB]
   ]) {
-    const width = stage.clientWidth;
-    const height = stage.clientHeight;
-    const diameter = clamp(
-      width * 0.085,
-      38,
-      65
-    );
-
-    const halfX = Math.min(
-      diameter / 2,
-      width / 2
-    );
-    const halfY = Math.min(
-      diameter / 2,
-      height / 2
-    );
-
-    const centerX = clamp(
-      displayX(difference) * width,
-      halfX,
-      width - halfX
-    );
-    const centerY = clamp(
-      difference.y * height,
-      halfY,
-      height - halfY
-    );
-
-    const ring = node(
-      "span",
-      `find-ring${revealed ? " revealed" : ""}`
-    );
-
-    ring.style.left = `${centerX}px`;
-    ring.style.top = `${centerY}px`;
-    ring.style.width = `${diameter}px`;
-    ring.style.height = `${diameter}px`;
-
+    const position = visualRingPosition(difference, stage.clientWidth, stage.clientHeight);
+    const ring = node("span", `find-ring${revealed ? " revealed" : ""}`);
+    ring.style.left = `${position.left}px`;
+    ring.style.top = `${position.top}px`;
+    ring.style.width = `${position.width}px`;
+    ring.style.height = `${position.height}px`;
     marks.append(ring);
   }
 }
 
 function redrawRings() {
   const run = state.run;
-  if (
-    !run ||
-    !run.list[run.levelIndex]
-  ) return;
-
+  if (!run || !run.list[run.levelIndex]) return;
   els.marksA.replaceChildren();
   els.marksB.replaceChildren();
-
-  const diffs =
-    run.list[run.levelIndex].differences;
-
-  for (const index of run.found) {
-    addRing(diffs[index], run.revealed);
-  }
+  const diffs = run.list[run.levelIndex].differences;
+  for (const index of run.found) addRing(diffs[index], run.revealed);
 }
 
 function pulseFirstFind(difference) {
   window.clearTimeout(state.hintGlowHandle);
   els.glowA.replaceChildren();
   els.glowB.replaceChildren();
-  for (const [stage,layer] of [[els.imageStageA,els.glowA],[els.imageStageB,els.glowB]]) {
-    const width = stage.clientWidth;
-    const height = stage.clientHeight;
-    const diameter = clamp(width * 0.085,38,65);
-    const centerX = clamp(displayX(difference) * width, diameter/2, width-diameter/2);
-    const centerY = clamp(difference.y * height, diameter/2, height-diameter/2);
+  for (const [stage, layer] of [[els.imageStageA, els.glowA], [els.imageStageB, els.glowB]]) {
+    const position = visualRingPosition(difference, stage.clientWidth, stage.clientHeight);
     const ring = node("span", "find-ring coaching-pulse");
-    ring.style.left = `${centerX}px`;
-    ring.style.top = `${centerY}px`;
-    ring.style.width = `${diameter}px`;
-    ring.style.height = `${diameter}px`;
+    ring.style.left = `${position.left}px`;
+    ring.style.top = `${position.top}px`;
+    ring.style.width = `${position.width}px`;
+    ring.style.height = `${position.height}px`;
     layer.append(ring);
   }
   state.hintGlowHandle = window.setTimeout(() => {
@@ -1478,8 +1463,9 @@ function clearLevel() {
   }
 
   if (run.mode === "timed") {
-    run.score +=
-      Math.floor(run.timeRemaining) * 10;
+    const bonus = Math.floor(run.timeRemaining) * 10;
+    run.score += bonus;
+    run.levelScore += bonus;
   }
 
   updateHUD();
@@ -1496,10 +1482,7 @@ function clearLevel() {
     els.betweenSummary.textContent =
       `${run.levelsCleared} level${run.levelsCleared === 1 ? "" : "s"} cleared. ${run.totalFinds} differences found so far.`;
 
-    els.betweenScore.textContent =
-      run.mode === "timed"
-        ? `${run.score} points`
-        : "Keep exploring!";
+    els.betweenScore.textContent = `Level +${run.levelScore} · Total ${run.score}`;
 
     showView("betweenView");
   }
@@ -1669,9 +1652,9 @@ function finishRun(reason) {
           : "You can play again any time.";
 
   els.resultScore.textContent =
-    run.kind === "duel" ? `Fox ${duelTime(run.childElapsedMs)} vs Owl ${duelTime(run.duelElapsedMs)}` : run.mode === "timed"
-      ? `${run.score} points`
-      : `${run.levelsCleared} levels cleared`;
+    run.kind === "duel"
+      ? `Fox ${duelTime(run.childElapsedMs)} vs Owl ${duelTime(run.duelElapsedMs)}`
+      : `${run.score} points total`;
 
   els.resultLevel.textContent =
     String(run.levelIndex + 1);
@@ -2418,15 +2401,18 @@ function bindUI() {
   els.boardsNav.addEventListener("click", showBoards);
   els.grownNav.addEventListener("click", openGrownArea);
 
-  els.modeUntimed.addEventListener(
-    "click",
-    () => chooseMode("untimed")
-  );
-
-  els.modeTimed.addEventListener(
-    "click",
-    () => chooseMode("timed")
-  );
+  // Direct card-to-game navigation. The view guard prevents double-starts
+  // from a second click after the home view has already been hidden.
+  els.modeUntimed.addEventListener("click", () => {
+    if (state.view !== "homeView") return;
+    chooseMode("untimed");
+    newRun();
+  });
+  els.modeTimed.addEventListener("click", () => {
+    if (state.view !== "homeView") return;
+    chooseMode("timed");
+    newRun();
+  });
 
   els.startButton.addEventListener("click", () => newRun());
   els.playNowButton.addEventListener("click", playNow);
@@ -2450,16 +2436,13 @@ function bindUI() {
     event => tapImage(event, "B")
   );
 
-  // Move the three commands into visual and keyboard order, without changing index.html.
+  // Keep FIX-8 menu ordering, click-through protection and two-tap end confirmation.
   const revealLine = node("div", "reveal-menu-line");
   revealLine.append(els.revealButton, els.revealStatus);
   els.playMoreMenu.append(els.menuTipsButton, revealLine, els.stopButton);
   els.stopButton.setAttribute("aria-live", "polite");
-
   els.playMoreButton.addEventListener("click", togglePlayMore);
   els.menuTipsButton.addEventListener("click", openTips);
-
-  // Capture and cancel the entire dismiss gesture before an image receives its click.
   document.addEventListener("pointerdown", event => {
     if (!state.playMoreOpen || els.playMoreWrap.contains(event.target)) return;
     event.preventDefault();
@@ -2485,7 +2468,6 @@ function bindUI() {
     event.preventDefault();
     closePlayMore(true);
   });
-
   els.hintButton.addEventListener("click", useHint);
   els.revealButton.addEventListener("click", revealAll);
   els.stopButton.addEventListener("click", confirmEndRun);
