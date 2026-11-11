@@ -1,0 +1,4241 @@
+{
+  "version": 5,
+  "hitRadiusUnits": "fraction of image width",
+  "modes": {
+    "untimed": {
+      "name": "Untimed Mode",
+      "timed": false
+    },
+    "timed": {
+      "name": "Timed Mode",
+      "timed": true,
+      "timeLimitSec": 90,
+      "stepDecaySec": 6,
+      "minTimeLimitSec": 40
+    }
+  },
+  "categories": {
+    "kids": [
+      {
+        "id": "animals",
+        "label": "Animals"
+      },
+      {
+        "id": "sea-sky",
+        "label": "Sea & Sky"
+      },
+      {
+        "id": "vehicles-space",
+        "label": "Vehicles & Space"
+      }
+    ]
+  },
+  "puzzles": [
+    {
+      "id": "kids-04",
+      "mode": "kids",
+      "level": 1,
+      "category": "vehicles-space",
+      "categoryConfidence": "high",
+      "title": "Toy train",
+      "imageA": "img/kids-04-a.jpg",
+      "imageB": "img/kids-04-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.3125,
+          "y": 0.2875,
+          "r": 0.1342,
+          "type": "recolor",
+          "what": "chimney colour"
+        },
+        {
+          "x": 0.2908,
+          "y": 0.6959,
+          "r": 0.0868,
+          "type": "recolor",
+          "what": "left wheel colour"
+        },
+        {
+          "x": 0.5153,
+          "y": 0.6938,
+          "r": 0.143,
+          "type": "recolor",
+          "what": "wood base colour"
+        },
+        {
+          "x": 0.6702,
+          "y": 0.2014,
+          "r": 0.1511,
+          "type": "recolor",
+          "what": "cab roof colour"
+        },
+        {
+          "x": 0.7393,
+          "y": 0.6963,
+          "r": 0.088,
+          "type": "recolor",
+          "what": "right wheel colour"
+        }
+      ],
+      "credit": {
+        "author": "gnokii at openclipart.org",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Toy_train.svg"
+      },
+      "daily": true,
+      "sets": [
+        {
+          "id": 1,
+          "imageB": "img/kids-04-b1.jpg",
+          "differences": [
+            {
+              "x": 0.70424,
+              "y": 0.50916,
+              "r": 0.05338,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.26721,
+              "y": 0.77675,
+              "r": 0.05479,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.57983,
+              "y": 0.35376,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.71635,
+              "y": 0.25334,
+              "r": 0.06574,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.32878,
+              "y": 0.51315,
+              "r": 0.05203,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "imageB": "img/kids-04-b2.jpg",
+          "differences": [
+            {
+              "x": 0.505,
+              "y": 0.78578,
+              "r": 0.06393,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.58693,
+              "y": 0.51561,
+              "r": 0.10754,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.67663,
+              "y": 0.72415,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.21027,
+              "y": 0.54333,
+              "r": 0.09254,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.66402,
+              "y": 0.25333,
+              "r": 0.07368,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "imageB": "img/kids-04-b3.jpg",
+          "differences": [
+            {
+              "x": 0.42556,
+              "y": 0.51999,
+              "r": 0.07326,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.31365,
+              "y": 0.21591,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.585,
+              "y": 0.81454,
+              "r": 0.05452,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.31352,
+              "y": 0.35279,
+              "r": 0.05109,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.59016,
+              "y": 0.61373,
+              "r": 0.05173,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "imageB": "img/kids-04-b4.jpg",
+          "differences": [
+            {
+              "x": 0.66483,
+              "y": 0.51301,
+              "r": 0.05269,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.61442,
+              "y": 0.26277,
+              "r": 0.05813,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.23231,
+              "y": 0.67488,
+              "r": 0.05073,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.4651,
+              "y": 0.51568,
+              "r": 0.05265,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.80755,
+              "y": 0.72325,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        }
+      ],
+      "variants": {
+        "easy": {
+          "imageB": "img/kids-04-b-easy.jpg",
+          "differences": [
+            {
+              "x": 0.33811,
+              "y": 0.26083,
+              "r": 0.05002,
+              "type": "add-object",
+              "what": "an extra yellow spot is on the chimney",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.59937,
+              "y": 0.51417,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the cab wall moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.78938,
+              "y": 0.70417,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the back wheel moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.16272,
+              "y": 0.69308,
+              "r": 0.05151,
+              "type": "strong-recolor",
+              "what": "the front wheel is green now",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.33811,
+              "y": 0.64083,
+              "r": 0.05002,
+              "type": "add-object",
+              "what": "an extra yellow spot is on the front wheel",
+              "difficulty": "easy"
+            }
+          ]
+        },
+        "medium": {
+          "imageB": "img/kids-04-b-medium.jpg",
+          "differences": [
+            {
+              "x": 0.33813,
+              "y": 0.54583,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the boiler is flipped",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.52812,
+              "y": 0.54583,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the boiler is teal now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.62313,
+              "y": 0.60917,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the wood base is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.31438,
+              "y": 0.35583,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the chimney moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.24313,
+              "y": 0.60917,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the front wheel is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.31438,
+              "y": 0.7675,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the front wheel is turned",
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "hard": {
+          "imageB": "img/kids-04-b-hard.jpg",
+          "differences": [
+            {
+              "x": 0.38562,
+              "y": 0.64083,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the boiler is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.29063,
+              "y": 0.5775,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the front wheel is green now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.38562,
+              "y": 0.4825,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the boiler is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.57563,
+              "y": 0.5775,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the wood base is flipped",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.76562,
+              "y": 0.6725,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the back wheel is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.31438,
+              "y": 0.32417,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the chimney is yellow now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.16272,
+              "y": 0.69308,
+              "r": 0.05151,
+              "type": "subtle-recolor",
+              "what": "the front wheel is a different shade of green",
+              "difficulty": "hard"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "kids-01",
+      "mode": "kids",
+      "level": 2,
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon fish",
+      "imageA": "img/kids-01-a.jpg",
+      "imageB": "img/kids-01-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.5618,
+          "y": 0.2618,
+          "r": 0.0693,
+          "type": "recolor",
+          "what": "top fin colour"
+        },
+        {
+          "x": 0.6607,
+          "y": 0.3543,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.549,
+          "y": 0.7122,
+          "r": 0.0586,
+          "type": "recolor",
+          "what": "bottom fin colour"
+        },
+        {
+          "x": 0.4898,
+          "y": 0.482,
+          "r": 0.158,
+          "type": "recolor",
+          "what": "stripe colour"
+        },
+        {
+          "x": 0.2415,
+          "y": 0.5014,
+          "r": 0.1911,
+          "type": "recolor",
+          "what": "tail colour"
+        }
+      ],
+      "credit": {
+        "author": "Kurtkaiser",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Cartoon_fish_yellow.png"
+      },
+      "daily": true,
+      "sets": [
+        {
+          "id": 1,
+          "imageB": "img/kids-01-b1.jpg",
+          "differences": [
+            {
+              "x": 0.73941,
+              "y": 0.50983,
+              "r": 0.05073,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.5843,
+              "y": 0.67248,
+              "r": 0.05322,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.55524,
+              "y": 0.40549,
+              "r": 0.05106,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.23147,
+              "y": 0.56373,
+              "r": 0.05074,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.42199,
+              "y": 0.57346,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "imageB": "img/kids-01-b2.jpg",
+          "differences": [
+            {
+              "x": 0.58713,
+              "y": 0.45997,
+              "r": 0.05095,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.77674,
+              "y": 0.56618,
+              "r": 0.05221,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.73047,
+              "y": 0.40295,
+              "r": 0.05347,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.42917,
+              "y": 0.51336,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.22193,
+              "y": 0.61949,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "imageB": "img/kids-01-b3.jpg",
+          "differences": [
+            {
+              "x": 0.70529,
+              "y": 0.46065,
+              "r": 0.05281,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.65984,
+              "y": 0.65833,
+              "r": 0.05667,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.35305,
+              "y": 0.58061,
+              "r": 0.05225,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.48194,
+              "y": 0.40547,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.47873,
+              "y": 0.62192,
+              "r": 0.05047,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "imageB": "img/kids-01-b4.jpg",
+          "differences": [
+            {
+              "x": 0.585,
+              "y": 0.62,
+              "r": 0.05252,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.34592,
+              "y": 0.46606,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.48067,
+              "y": 0.35268,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.70643,
+              "y": 0.36047,
+              "r": 0.05265,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.70332,
+              "y": 0.61699,
+              "r": 0.05425,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        }
+      ],
+      "variants": {
+        "easy": {
+          "imageB": "img/kids-01-b-easy.jpg",
+          "differences": [
+            {
+              "x": 0.45687,
+              "y": 0.45083,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the middle stripe moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.35581,
+              "y": 0.58162,
+              "r": 0.06966,
+              "type": "strong-recolor",
+              "what": "the back stripe is orange now",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.48061,
+              "y": 0.60917,
+              "r": 0.05002,
+              "type": "add-object",
+              "what": "an extra orange spot is on the middle stripe",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.70142,
+              "y": 0.64775,
+              "r": 0.0924,
+              "type": "remove-object",
+              "what": "one spot on the mouth is missing",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.69584,
+              "y": 0.38825,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the eye is flipped",
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "medium": {
+          "imageB": "img/kids-01-b-medium.jpg",
+          "differences": [
+            {
+              "x": 0.48063,
+              "y": 0.64083,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the bottom fin is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.43312,
+              "y": 0.4825,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the back stripe is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.69437,
+              "y": 0.41917,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the eye moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.52812,
+              "y": 0.35583,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the middle stripe moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.55188,
+              "y": 0.54583,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the middle stripe is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.24313,
+              "y": 0.4825,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the tail fin is missing",
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "hard": {
+          "imageB": "img/kids-01-b-hard.jpg",
+          "differences": [
+            {
+              "x": 0.48063,
+              "y": 0.41917,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the middle stripe is yellow now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.69437,
+              "y": 0.4825,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the mouth is red now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.3541,
+              "y": 0.58229,
+              "r": 0.05315,
+              "type": "remove-thin-detail",
+              "what": "a stripe on the back stripe is missing",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.56893,
+              "y": 0.25728,
+              "r": 0.08352,
+              "type": "subtle-recolor",
+              "what": "the top fin is a different shade of green",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.48065,
+              "y": 0.60917,
+              "r": 0.05002,
+              "type": "tiny-add",
+              "what": "a small orange spot is on the middle stripe",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.24313,
+              "y": 0.4825,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the tail fin is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.59937,
+              "y": 0.5775,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the middle stripe is missing",
+              "difficulty": "medium"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "kids-03",
+      "mode": "kids",
+      "level": 3,
+      "category": "vehicles-space",
+      "categoryConfidence": "high",
+      "title": "Cartoon space rocket",
+      "imageA": "img/kids-03-a.jpg",
+      "imageB": "img/kids-03-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.6464,
+          "y": 0.3134,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "window colour"
+        },
+        {
+          "x": 0.7765,
+          "y": 0.1506,
+          "r": 0.1008,
+          "type": "recolor",
+          "what": "nose colour"
+        },
+        {
+          "x": 0.4029,
+          "y": 0.3718,
+          "r": 0.1112,
+          "type": "recolor",
+          "what": "fin colour"
+        },
+        {
+          "x": 0.3327,
+          "y": 0.7304,
+          "r": 0.2022,
+          "type": "recolor",
+          "what": "flame colour"
+        },
+        {
+          "x": 0.5981,
+          "y": 0.6382,
+          "r": 0.1119,
+          "type": "recolor",
+          "what": "right fin colour"
+        }
+      ],
+      "credit": {
+        "author": "Rygle, based on Purzen",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Cartoon_space_rocket.png"
+      },
+      "daily": true,
+      "sets": [
+        {
+          "id": 1,
+          "imageB": "img/kids-03-b1.jpg",
+          "differences": [
+            {
+              "x": 0.76901,
+              "y": 0.07375,
+              "r": 0.07732,
+              "type": "remove",
+              "what": "subject remove of coloured detail"
+            },
+            {
+              "x": 0.54962,
+              "y": 0.55083,
+              "r": 0.05965,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.28362,
+              "y": 0.75342,
+              "r": 0.05033,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.58093,
+              "y": 0.24342,
+              "r": 0.05559,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.74599,
+              "y": 0.29973,
+              "r": 0.05153,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "imageB": "img/kids-03-b2.jpg",
+          "differences": [
+            {
+              "x": 0.62273,
+              "y": 0.45685,
+              "r": 0.05381,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.50925,
+              "y": 0.35575,
+              "r": 0.05445,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.348,
+              "y": 0.67903,
+              "r": 0.05073,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.6627,
+              "y": 0.16258,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.73732,
+              "y": 0.34881,
+              "r": 0.05403,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "imageB": "img/kids-03-b3.jpg",
+          "differences": [
+            {
+              "x": 0.77437,
+              "y": 0.15351,
+              "r": 0.11117,
+              "type": "remove",
+              "what": "subject remove of coloured detail"
+            },
+            {
+              "x": 0.40578,
+              "y": 0.3641,
+              "r": 0.10983,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.57456,
+              "y": 0.29813,
+              "r": 0.06298,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.70125,
+              "y": 0.40428,
+              "r": 0.0552,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.42742,
+              "y": 0.64691,
+              "r": 0.08264,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        }
+      ],
+      "variants": {
+        "easy": {
+          "imageB": "img/kids-03-b-easy.jpg",
+          "differences": [
+            {
+              "x": 0.36126,
+              "y": 0.673,
+              "r": 0.05002,
+              "type": "add-object",
+              "what": "an extra green spot is on the flame",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.44601,
+              "y": 0.49503,
+              "r": 0.05002,
+              "type": "remove-object",
+              "what": "one spot on the rocket body is missing",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.7691,
+              "y": 0.14135,
+              "r": 0.10555,
+              "type": "strong-recolor",
+              "what": "the nose cone is green now",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.59315,
+              "y": 0.65344,
+              "r": 0.09375,
+              "type": "change-count",
+              "what": "one mark on the bottom fin is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.63176,
+              "y": 0.29713,
+              "r": 0.05692,
+              "type": "rotate-subrect",
+              "what": "the mark on the window is turned",
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "medium": {
+          "imageB": "img/kids-03-b-medium.jpg",
+          "differences": [
+            {
+              "x": 0.78938,
+              "y": 0.16583,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the nose cone is flipped",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.42821,
+              "y": 0.64745,
+              "r": 0.08028,
+              "type": "change-count",
+              "what": "one mark on the flame is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.6037,
+              "y": 0.58099,
+              "r": 0.07079,
+              "type": "mirror-subrect",
+              "what": "the mark on the bottom fin is flipped",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.40467,
+              "y": 0.36741,
+              "r": 0.10897,
+              "type": "change-count",
+              "what": "one mark on the top fin is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.63176,
+              "y": 0.29713,
+              "r": 0.05692,
+              "type": "rotate-subrect",
+              "what": "the mark on the window is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.3033,
+              "y": 0.76972,
+              "r": 0.0711,
+              "type": "pattern-swap",
+              "what": "the pattern on the flame is green now",
+              "difficulty": "hard"
+            }
+          ]
+        },
+        "hard": {
+          "imageB": "img/kids-03-b-hard.jpg",
+          "differences": [
+            {
+              "x": 0.53627,
+              "y": 0.5106,
+              "r": 0.04457,
+              "type": "pattern-swap",
+              "what": "the pattern on the rocket body is grey now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.78938,
+              "y": 0.13417,
+              "r": 0.03922,
+              "type": "mirror-subrect",
+              "what": "the mark on the nose cone is flipped",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.42821,
+              "y": 0.64745,
+              "r": 0.08028,
+              "type": "remove-thin-detail",
+              "what": "a stripe on the flame is missing",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.72954,
+              "y": 0.40996,
+              "r": 0.06559,
+              "type": "mirror-subrect",
+              "what": "the mark on the window is flipped",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.40576,
+              "y": 0.36893,
+              "r": 0.11614,
+              "type": "remove-thin-detail",
+              "what": "a stripe on the top fin is missing",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.61906,
+              "y": 0.28019,
+              "r": 0.04268,
+              "type": "change-count",
+              "what": "one mark on the window is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.30452,
+              "y": 0.76836,
+              "r": 0.07078,
+              "type": "pattern-swap",
+              "what": "the pattern on the flame is green now",
+              "difficulty": "hard"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "kids-02",
+      "mode": "kids",
+      "level": 4,
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon turtle",
+      "imageA": "img/kids-02-a.jpg",
+      "imageB": "img/kids-02-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.844,
+          "y": 0.384,
+          "r": 0.077,
+          "type": "remove"
+        },
+        {
+          "x": 0.4333,
+          "y": 0.7413,
+          "r": 0.087,
+          "type": "recolor"
+        },
+        {
+          "x": 0.4986,
+          "y": 0.1794,
+          "r": 0.1185,
+          "type": "recolor"
+        },
+        {
+          "x": 0.6074,
+          "y": 0.8538,
+          "r": 0.045,
+          "type": "remove"
+        },
+        {
+          "x": 0.2494,
+          "y": 0.5012,
+          "r": 0.1173,
+          "type": "recolor"
+        }
+      ],
+      "credit": {
+        "author": "badaman",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Turtle_clip_art.svg"
+      },
+      "daily": true,
+      "sets": [
+        {
+          "id": 1,
+          "imageB": "img/kids-02-b1.jpg",
+          "differences": [
+            {
+              "x": 0.34512,
+              "y": 0.35321,
+              "r": 0.05264,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.58568,
+              "y": 0.56662,
+              "r": 0.0532,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.5136,
+              "y": 0.40728,
+              "r": 0.05899,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.5435,
+              "y": 0.19428,
+              "r": 0.05402,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.89604,
+              "y": 0.16978,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "imageB": "img/kids-02-b2.jpg",
+          "differences": [
+            {
+              "x": 0.42345,
+              "y": 0.35289,
+              "r": 0.05221,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.86512,
+              "y": 0.30107,
+              "r": 0.05265,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.54667,
+              "y": 0.45834,
+              "r": 0.05333,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.41014,
+              "y": 0.83954,
+              "r": 0.05396,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.23468,
+              "y": 0.78937,
+              "r": 0.11679,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "imageB": "img/kids-02-b3.jpg",
+          "differences": [
+            {
+              "x": 0.93141,
+              "y": 0.23545,
+              "r": 0.05002,
+              "type": "shrink-grow",
+              "what": "subject shrink-grow of coloured detail"
+            },
+            {
+              "x": 0.74494,
+              "y": 0.45984,
+              "r": 0.05258,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.16922,
+              "y": 0.82665,
+              "r": 0.05638,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.63762,
+              "y": 0.58019,
+              "r": 0.05542,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.19891,
+              "y": 0.33396,
+              "r": 0.10688,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "imageB": "img/kids-02-b4.jpg",
+          "differences": [
+            {
+              "x": 0.74553,
+              "y": 0.40775,
+              "r": 0.0517,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.45693,
+              "y": 0.82551,
+              "r": 0.05607,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.62403,
+              "y": 0.35296,
+              "r": 0.05349,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.42043,
+              "y": 0.52008,
+              "r": 0.05425,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.36463,
+              "y": 0.17462,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        }
+      ],
+      "variants": {
+        "easy": {
+          "imageB": "img/kids-02-b-easy.jpg",
+          "differences": [
+            {
+              "x": 0.19562,
+              "y": 0.60917,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the back leg moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.33831,
+              "y": 0.63731,
+              "r": 0.07464,
+              "type": "remove-object",
+              "what": "one spot on the back leg is missing",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.84625,
+              "y": 0.37872,
+              "r": 0.06877,
+              "type": "strong-recolor",
+              "what": "the head is purple now",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.45687,
+              "y": 0.2925,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the top shell panel is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.67061,
+              "y": 0.73583,
+              "r": 0.05002,
+              "type": "add-object",
+              "what": "an extra red spot is on the front leg",
+              "difficulty": "easy"
+            }
+          ]
+        },
+        "medium": {
+          "imageB": "img/kids-02-b-medium.jpg",
+          "differences": [
+            {
+              "x": 0.81312,
+              "y": 0.3875,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the head is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.38561,
+              "y": 0.54583,
+              "r": 0.05002,
+              "type": "resize-object",
+              "what": "the spot on the middle shell panel changed size",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.64687,
+              "y": 0.70417,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the front leg is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.29063,
+              "y": 0.26083,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the back shell panel moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.52812,
+              "y": 0.64083,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the front leg moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.26687,
+              "y": 0.54583,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the back leg is turned",
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "hard": {
+          "imageB": "img/kids-02-b-hard.jpg",
+          "differences": [
+            {
+              "x": 0.40937,
+              "y": 0.60917,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the middle shell panel is teal now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.67653,
+              "y": 0.70077,
+              "r": 0.09848,
+              "type": "subtle-recolor",
+              "what": "the front leg is a different shade of green",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.48063,
+              "y": 0.3875,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the top shell panel is blue now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.83688,
+              "y": 0.32417,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the head is flipped",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.18663,
+              "y": 0.41689,
+              "r": 0.0896,
+              "type": "subtle-recolor",
+              "what": "the back shell panel is a different shade of green",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.43315,
+              "y": 0.22917,
+              "r": 0.05002,
+              "type": "tiny-add",
+              "what": "a small green spot is on the top shell panel",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.26687,
+              "y": 0.6725,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the back leg is missing",
+              "difficulty": "medium"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "kids-08",
+      "mode": "kids",
+      "level": 5,
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon walrus",
+      "imageA": "img/kids-08-a.jpg",
+      "imageB": "img/kids-08-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.4282,
+          "y": 0.1642,
+          "r": 0.0511,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.4374,
+          "y": 0.4658,
+          "r": 0.0652,
+          "type": "recolor",
+          "what": "tusk colour"
+        },
+        {
+          "x": 0.345,
+          "y": 0.8509,
+          "r": 0.073,
+          "type": "recolor",
+          "what": "fish colour"
+        },
+        {
+          "x": 0.8123,
+          "y": 0.4947,
+          "r": 0.1115,
+          "type": "recolor",
+          "what": "flipper colour"
+        },
+        {
+          "x": 0.561,
+          "y": 0.1643,
+          "r": 0.0509,
+          "type": "recolor",
+          "what": "right eye colour"
+        }
+      ],
+      "credit": {
+        "author": "StudioFibonacci@openclipart.org",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Lemmling_walrus.svg"
+      },
+      "daily": true,
+      "sets": [
+        {
+          "id": 1,
+          "imageB": "img/kids-08-b1.jpg",
+          "differences": [
+            {
+              "x": 0.305,
+              "y": 0.51333,
+              "r": 0.05252,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.785,
+              "y": 0.83333,
+              "r": 0.05252,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.41129,
+              "y": 0.33795,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.70471,
+              "y": 0.51336,
+              "r": 0.05223,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.49629,
+              "y": 0.47092,
+              "r": 0.05414,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "imageB": "img/kids-08-b2.jpg",
+          "differences": [
+            {
+              "x": 0.42984,
+              "y": 0.6668,
+              "r": 0.05758,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.25437,
+              "y": 0.83499,
+              "r": 0.05492,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.54457,
+              "y": 0.57236,
+              "r": 0.05314,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.74401,
+              "y": 0.56466,
+              "r": 0.05353,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.82056,
+              "y": 0.86535,
+              "r": 0.05201,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "imageB": "img/kids-08-b3.jpg",
+          "differences": [
+            {
+              "x": 0.5037,
+              "y": 0.30707,
+              "r": 0.05422,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.745,
+              "y": 0.83333,
+              "r": 0.05252,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.62763,
+              "y": 0.7799,
+              "r": 0.05515,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.43966,
+              "y": 0.08724,
+              "r": 0.06894,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.345,
+              "y": 0.62,
+              "r": 0.05252,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "imageB": "img/kids-08-b4.jpg",
+          "differences": [
+            {
+              "x": 0.6293,
+              "y": 0.51956,
+              "r": 0.05189,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.665,
+              "y": 0.72667,
+              "r": 0.05252,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.345,
+              "y": 0.51333,
+              "r": 0.05252,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.22584,
+              "y": 0.78183,
+              "r": 0.05338,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.62696,
+              "y": 0.29783,
+              "r": 0.05451,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        }
+      ],
+      "variants": {
+        "easy": {
+          "imageB": "img/kids-08-b-easy.jpg",
+          "differences": [
+            {
+              "x": 0.55231,
+              "y": 0.46537,
+              "r": 0.06504,
+              "type": "remove-object",
+              "what": "one spot on the tusk is missing",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.42831,
+              "y": 0.16418,
+              "r": 0.05002,
+              "type": "remove-object",
+              "what": "one spot on the left eye is missing",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.43471,
+              "y": 0.32416,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the whiskers is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.76748,
+              "y": 0.51329,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the flipper is flipped",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.56123,
+              "y": 0.16402,
+              "r": 0.05002,
+              "type": "strong-recolor",
+              "what": "the right eye is grey now",
+              "difficulty": "easy"
+            }
+          ]
+        },
+        "medium": {
+          "imageB": "img/kids-08-b-medium.jpg",
+          "differences": [
+            {
+              "x": 0.36188,
+              "y": 0.73583,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the fish moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.76763,
+              "y": 0.51446,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the flipper is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.64687,
+              "y": 0.51417,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the belly is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.6941,
+              "y": 0.70438,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the belly moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.33514,
+              "y": 0.38934,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the whiskers is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.50378,
+              "y": 0.5462,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the tusk is missing",
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "hard": {
+          "imageB": "img/kids-08-b-hard.jpg",
+          "differences": [
+            {
+              "x": 0.42831,
+              "y": 0.16418,
+              "r": 0.05002,
+              "type": "remove-thin-detail",
+              "what": "a stripe on the left eye is missing",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.67188,
+              "y": 0.38902,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the flipper is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.48064,
+              "y": 0.57751,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the belly is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.38424,
+              "y": 0.76712,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the fish is green now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.50522,
+              "y": 0.3526,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the tusk is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.25992,
+              "y": 0.63813,
+              "r": 0.0537,
+              "type": "resize-object",
+              "what": "the spot on the fish changed size",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.33734,
+              "y": 0.45071,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the whiskers is green now",
+              "difficulty": "hard"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "kids-06",
+      "mode": "kids",
+      "level": 6,
+      "category": "animals",
+      "categoryConfidence": "high",
+      "title": "Cartoon snail",
+      "imageA": "img/kids-06-a.jpg",
+      "imageB": "img/kids-06-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.2418,
+          "y": 0.7518,
+          "r": 0.0773,
+          "type": "recolor",
+          "what": "cheek colour"
+        },
+        {
+          "x": 0.1782,
+          "y": 0.2615,
+          "r": 0.0668,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.6107,
+          "y": 0.4218,
+          "r": 0.2813,
+          "type": "recolor",
+          "what": "shell colour"
+        },
+        {
+          "x": 0.0537,
+          "y": 0.2675,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "small eye colour"
+        },
+        {
+          "x": 0.8173,
+          "y": 0.8661,
+          "r": 0.085,
+          "type": "clone",
+          "what": "add spot on tail"
+        }
+      ],
+      "credit": {
+        "author": "Sarka Slukova / Machovka",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Machovka_snail.svg"
+      },
+      "daily": true,
+      "sets": [
+        {
+          "id": 1,
+          "imageB": "img/kids-06-b1.jpg",
+          "differences": [
+            {
+              "x": 0.34419,
+              "y": 0.67361,
+              "r": 0.05263,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.42515,
+              "y": 0.88367,
+              "r": 0.05272,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.70375,
+              "y": 0.19537,
+              "r": 0.0538,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.225,
+              "y": 0.67333,
+              "r": 0.05252,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.36895,
+              "y": 0.41829,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "imageB": "img/kids-06-b2.jpg",
+          "differences": [
+            {
+              "x": 0.385,
+              "y": 0.78,
+              "r": 0.05252,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.865,
+              "y": 0.83333,
+              "r": 0.05252,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.38825,
+              "y": 0.51242,
+              "r": 0.05166,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.25544,
+              "y": 0.41125,
+              "r": 0.05286,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.7048,
+              "y": 0.56645,
+              "r": 0.05272,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "imageB": "img/kids-06-b3.jpg",
+          "differences": [
+            {
+              "x": 0.70517,
+              "y": 0.83384,
+              "r": 0.05269,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.66636,
+              "y": 0.46016,
+              "r": 0.05388,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.705,
+              "y": 0.67333,
+              "r": 0.05252,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.1892,
+              "y": 0.62077,
+              "r": 0.05147,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.85399,
+              "y": 0.45877,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "imageB": "img/kids-06-b4.jpg",
+          "differences": [
+            {
+              "x": 0.62518,
+              "y": 0.83821,
+              "r": 0.05284,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.42623,
+              "y": 0.56584,
+              "r": 0.05375,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.82306,
+              "y": 0.73036,
+              "r": 0.05454,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.62347,
+              "y": 0.61708,
+              "r": 0.05375,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.31078,
+              "y": 0.55937,
+              "r": 0.05097,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        }
+      ],
+      "variants": {
+        "easy": {
+          "imageB": "img/kids-06-b-easy.jpg",
+          "differences": [
+            {
+              "x": 0.36188,
+              "y": 0.6725,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the snail body is flipped",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.69437,
+              "y": 0.6725,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the shell band is flipped",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.23082,
+              "y": 0.4015,
+              "r": 0.10086,
+              "type": "strong-recolor",
+              "what": "the right eyestalk is grey now",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.67247,
+              "y": 0.38632,
+              "r": 0.05002,
+              "type": "add-object",
+              "what": "an extra green spot is on the spiral shell",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.55186,
+              "y": 0.54377,
+              "r": 0.05002,
+              "type": "add-object",
+              "what": "an extra green spot is on the spiral shell",
+              "difficulty": "easy"
+            }
+          ]
+        },
+        "medium": {
+          "imageB": "img/kids-06-b-medium.jpg",
+          "differences": [
+            {
+              "x": 0.45703,
+              "y": 0.70389,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the snail body is flipped",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.67047,
+              "y": 0.32452,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the spiral shell is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.59937,
+              "y": 0.1975,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the spiral shell is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.62087,
+              "y": 0.48109,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the spiral shell is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.59957,
+              "y": 0.73476,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the snail body is flipped",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.26687,
+              "y": 0.64083,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the cheek is turned",
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "hard": {
+          "imageB": "img/kids-06-b-hard.jpg",
+          "differences": [
+            {
+              "x": 0.50438,
+              "y": 0.41917,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the spiral shell is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.26687,
+              "y": 0.73583,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the cheek is green now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.48075,
+              "y": 0.60905,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the snail body is green now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.64657,
+              "y": 0.48234,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the shell band is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.62377,
+              "y": 0.32202,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the spiral shell is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.17997,
+              "y": 0.26161,
+              "r": 0.06302,
+              "type": "remove-thin-detail",
+              "what": "a stripe on the right eyestalk is missing",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.50438,
+              "y": 0.22917,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the spiral shell is flipped",
+              "difficulty": "medium"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "kids-07",
+      "mode": "kids",
+      "level": 7,
+      "category": "animals",
+      "categoryConfidence": "high",
+      "title": "Cartoon monkey",
+      "imageA": "img/kids-07-a.jpg",
+      "imageB": "img/kids-07-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.4738,
+          "y": 0.5235,
+          "r": 0.0514,
+          "type": "recolor",
+          "what": "nose colour"
+        },
+        {
+          "x": 0.2271,
+          "y": 0.3512,
+          "r": 0.0546,
+          "type": "recolor",
+          "what": "left ear colour"
+        },
+        {
+          "x": 0.7406,
+          "y": 0.2932,
+          "r": 0.0564,
+          "type": "recolor",
+          "what": "right ear colour"
+        },
+        {
+          "x": 0.3434,
+          "y": 0.3838,
+          "r": 0.065,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.5833,
+          "y": 0.3871,
+          "r": 0.079,
+          "type": "recolor",
+          "what": "right eye colour"
+        }
+      ],
+      "credit": {
+        "author": "Nicu Buculei & odder",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Sailor_monkey_without_hat.svg"
+      },
+      "daily": true,
+      "sets": [
+        {
+          "id": 1,
+          "imageB": "img/kids-07-b1.jpg",
+          "differences": [
+            {
+              "x": 0.23039,
+              "y": 0.72593,
+              "r": 0.05002,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.705,
+              "y": 0.72667,
+              "r": 0.05252,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.70919,
+              "y": 0.49917,
+              "r": 0.05592,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.30952,
+              "y": 0.5299,
+              "r": 0.05615,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.67569,
+              "y": 0.35253,
+              "r": 0.05257,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "imageB": "img/kids-07-b2.jpg",
+          "differences": [
+            {
+              "x": 0.50484,
+              "y": 0.72629,
+              "r": 0.05268,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.385,
+              "y": 0.67333,
+              "r": 0.05252,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.67181,
+              "y": 0.46124,
+              "r": 0.05265,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.5024,
+              "y": 0.29847,
+              "r": 0.05427,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.64645,
+              "y": 0.77041,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "imageB": "img/kids-07-b3.jpg",
+          "differences": [
+            {
+              "x": 0.54025,
+              "y": 0.24022,
+              "r": 0.0687,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.42381,
+              "y": 0.83949,
+              "r": 0.05392,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.58246,
+              "y": 0.86928,
+              "r": 0.05518,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.62465,
+              "y": 0.61988,
+              "r": 0.05219,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.29456,
+              "y": 0.8373,
+              "r": 0.05491,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "imageB": "img/kids-07-b4.jpg",
+          "differences": [
+            {
+              "x": 0.505,
+              "y": 0.19333,
+              "r": 0.05252,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.35875,
+              "y": 0.18167,
+              "r": 0.05127,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.46854,
+              "y": 0.44046,
+              "r": 0.05299,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.74096,
+              "y": 0.77562,
+              "r": 0.05548,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.57965,
+              "y": 0.72059,
+              "r": 0.05699,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        }
+      ],
+      "variants": {
+        "easy": {
+          "imageB": "img/kids-07-b-easy.jpg",
+          "differences": [
+            {
+              "x": 0.21936,
+              "y": 0.32417,
+              "r": 0.05002,
+              "type": "add-object",
+              "what": "an extra green spot is on the left ear",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.59071,
+              "y": 0.33643,
+              "r": 0.05474,
+              "type": "remove-object",
+              "what": "one spot on the right eye is missing",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.57563,
+              "y": 0.64083,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the smile is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.50438,
+              "y": 0.73583,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the smile moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.52811,
+              "y": 0.45083,
+              "r": 0.05002,
+              "type": "add-object",
+              "what": "an extra grey spot is on the nose",
+              "difficulty": "easy"
+            }
+          ]
+        },
+        "medium": {
+          "imageB": "img/kids-07-b-medium.jpg",
+          "differences": [
+            {
+              "x": 0.31438,
+              "y": 0.60917,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the muzzle is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.24313,
+              "y": 0.70417,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the muzzle moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.50438,
+              "y": 0.1975,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the right eye is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.40937,
+              "y": 0.70417,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the smile moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.67307,
+              "y": 0.35553,
+              "r": 0.05002,
+              "type": "tiny-add",
+              "what": "a small green spot is on the right ear",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.33813,
+              "y": 0.22917,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the left eye is flipped",
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "hard": {
+          "imageB": "img/kids-07-b-hard.jpg",
+          "differences": [
+            {
+              "x": 0.29065,
+              "y": 0.3875,
+              "r": 0.05002,
+              "type": "tiny-add",
+              "what": "a small green spot is on the left eye",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.62313,
+              "y": 0.5775,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the right eye moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.43312,
+              "y": 0.1975,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the left eye is green now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.55188,
+              "y": 0.1975,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the right eye is flipped",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.74075,
+              "y": 0.29316,
+              "r": 0.05316,
+              "type": "subtle-recolor",
+              "what": "the right ear is a different shade of green",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.69437,
+              "y": 0.4825,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the right eye is green now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.21968,
+              "y": 0.76713,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the muzzle is flipped",
+              "difficulty": "medium"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "kids-10",
+      "mode": "kids",
+      "level": 8,
+      "category": "animals",
+      "categoryConfidence": "high",
+      "title": "Cartoon lion",
+      "imageA": "img/kids-10-a.jpg",
+      "imageB": "img/kids-10-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.2113,
+          "y": 0.3602,
+          "r": 0.1825,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.9543,
+          "y": 0.6482,
+          "r": 0.0457,
+          "type": "recolor",
+          "what": "tail tuft colour"
+        },
+        {
+          "x": 0.0697,
+          "y": 0.7667,
+          "r": 0.0536,
+          "type": "recolor",
+          "what": "paw colour"
+        },
+        {
+          "x": 0.0809,
+          "y": 0.5648,
+          "r": 0.073,
+          "type": "recolor",
+          "what": "lower mane colour"
+        },
+        {
+          "x": 0.7148,
+          "y": 0.8106,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "back paw colour"
+        }
+      ],
+      "credit": {
+        "author": "Francesco 'Architetto' Rollandin",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Leone_02_architetto_fran_01.svg"
+      },
+      "daily": true,
+      "sets": [
+        {
+          "id": 1,
+          "imageB": "img/kids-10-b1.jpg",
+          "differences": [
+            {
+              "x": 0.50392,
+              "y": 0.61398,
+              "r": 0.05381,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.32297,
+              "y": 0.19899,
+              "r": 0.06016,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.70697,
+              "y": 0.73488,
+              "r": 0.05346,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.21158,
+              "y": 0.78994,
+              "r": 0.08332,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.34152,
+              "y": 0.46475,
+              "r": 0.05594,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "imageB": "img/kids-10-b2.jpg",
+          "differences": [
+            {
+              "x": 0.57159,
+              "y": 0.68345,
+              "r": 0.07716,
+              "type": "shrink-grow",
+              "what": "subject shrink-grow of coloured detail"
+            },
+            {
+              "x": 0.46635,
+              "y": 0.5253,
+              "r": 0.05549,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.78161,
+              "y": 0.73614,
+              "r": 0.05381,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.15166,
+              "y": 0.56152,
+              "r": 0.12882,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.18549,
+              "y": 0.83729,
+              "r": 0.0531,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "imageB": "img/kids-10-b3.jpg",
+          "differences": [
+            {
+              "x": 0.42539,
+              "y": 0.74298,
+              "r": 0.11348,
+              "type": "shrink-grow",
+              "what": "subject shrink-grow of coloured detail"
+            },
+            {
+              "x": 0.54141,
+              "y": 0.56534,
+              "r": 0.05612,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.25989,
+              "y": 0.31218,
+              "r": 0.05903,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.62164,
+              "y": 0.72922,
+              "r": 0.05448,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.17314,
+              "y": 0.42748,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "imageB": "img/kids-10-b4.jpg",
+          "differences": [
+            {
+              "x": 0.46878,
+              "y": 0.62012,
+              "r": 0.05239,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.66674,
+              "y": 0.72697,
+              "r": 0.05193,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.21918,
+              "y": 0.1563,
+              "r": 0.0559,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.18369,
+              "y": 0.45282,
+              "r": 0.05263,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.30797,
+              "y": 0.76635,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        }
+      ],
+      "variants": {
+        "easy": {
+          "imageB": "img/kids-10-b-easy.jpg",
+          "differences": [
+            {
+              "x": 0.17356,
+              "y": 0.44916,
+              "r": 0.05002,
+              "type": "add-object",
+              "what": "an extra pink spot is on the face",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.31438,
+              "y": 0.64083,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the mane is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.24306,
+              "y": 0.22926,
+              "r": 0.05002,
+              "type": "resize-object",
+              "what": "the spot on the face changed size",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.12436,
+              "y": 0.70417,
+              "r": 0.05002,
+              "type": "add-object",
+              "what": "an extra grey spot is on the mane",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.44814,
+              "y": 0.74479,
+              "r": 0.06799,
+              "type": "remove-object",
+              "what": "one spot on the front paw is missing",
+              "difficulty": "easy"
+            }
+          ]
+        },
+        "medium": {
+          "imageB": "img/kids-10-b-medium.jpg",
+          "differences": [
+            {
+              "x": 0.24311,
+              "y": 0.70417,
+              "r": 0.05002,
+              "type": "resize-object",
+              "what": "the spot on the mane changed size",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.64687,
+              "y": 0.64083,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the back moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.12437,
+              "y": 0.5775,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the mane is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.32939,
+              "y": 0.33188,
+              "r": 0.07596,
+              "type": "resize-object",
+              "what": "the spot on the face changed size",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.45687,
+              "y": 0.60917,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the front paw moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.19369,
+              "y": 0.19658,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the face is flipped",
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "hard": {
+          "imageB": "img/kids-10-b-hard.jpg",
+          "differences": [
+            {
+              "x": 0.48063,
+              "y": 0.54583,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the back moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.14712,
+              "y": 0.48167,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the face is flipped",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.2194,
+              "y": 0.6725,
+              "r": 0.05002,
+              "type": "tiny-add",
+              "what": "a small grey spot is on the mane",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.12436,
+              "y": 0.26083,
+              "r": 0.05002,
+              "type": "resize-object",
+              "what": "the spot on the face changed size",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.26683,
+              "y": 0.32387,
+              "r": 0.05002,
+              "type": "tiny-add",
+              "what": "a small green spot is on the face",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.67063,
+              "y": 0.6725,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the back leg is green now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.31511,
+              "y": 0.48271,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the mane is flipped",
+              "difficulty": "medium"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "kids-05",
+      "mode": "kids",
+      "level": 9,
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon owl",
+      "imageA": "img/kids-05-a.jpg",
+      "imageB": "img/kids-05-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.5306,
+          "y": 0.3131,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "beak colour"
+        },
+        {
+          "x": 0.4794,
+          "y": 0.7811,
+          "r": 0.0482,
+          "type": "recolor",
+          "what": "foot colour"
+        },
+        {
+          "x": 0.529,
+          "y": 0.5473,
+          "r": 0.1444,
+          "type": "recolor",
+          "what": "belly colour"
+        },
+        {
+          "x": 0.5851,
+          "y": 0.7805,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "right foot colour"
+        },
+        {
+          "x": 0.5642,
+          "y": 0.2514,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "eye colour"
+        }
+      ],
+      "credit": {
+        "author": "Kurt Kaiser",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Owl_Animation_Clip_Art_-_Low_Poly_Sprite.png"
+      },
+      "daily": true,
+      "sets": [
+        {
+          "id": 1,
+          "imageB": "img/kids-05-b1.jpg",
+          "differences": [
+            {
+              "x": 0.54302,
+              "y": 0.46201,
+              "r": 0.05361,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.5106,
+              "y": 0.70787,
+              "r": 0.06127,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.46956,
+              "y": 0.56648,
+              "r": 0.05059,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.54599,
+              "y": 0.1956,
+              "r": 0.06478,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.4657,
+              "y": 0.35958,
+              "r": 0.05213,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "imageB": "img/kids-05-b2.jpg",
+          "differences": [
+            {
+              "x": 0.47848,
+              "y": 0.66644,
+              "r": 0.05097,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.49116,
+              "y": 0.44823,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.58882,
+              "y": 0.35145,
+              "r": 0.05636,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.57616,
+              "y": 0.56593,
+              "r": 0.05002,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.54599,
+              "y": 0.1956,
+              "r": 0.06478,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        }
+      ],
+      "variants": {
+        "easy": {
+          "imageB": "img/kids-05-b-easy.jpg",
+          "differences": [
+            {
+              "x": 0.50438,
+              "y": 0.3875,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the beak is flipped",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.59937,
+              "y": 0.54583,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the right wing is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.45686,
+              "y": 0.51417,
+              "r": 0.05002,
+              "type": "add-object",
+              "what": "an extra green spot is on the belly",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.57764,
+              "y": 0.25998,
+              "r": 0.05892,
+              "type": "remove-object",
+              "what": "one spot on the right eye is missing",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.49662,
+              "y": 0.749,
+              "r": 0.0913,
+              "type": "remove-object",
+              "what": "one spot on the claws is missing",
+              "difficulty": "easy"
+            }
+          ]
+        },
+        "medium": {
+          "imageB": "img/kids-05-b-medium.jpg",
+          "differences": [
+            {
+              "x": 0.45687,
+              "y": 0.64083,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the left wing is flipped",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.52813,
+              "y": 0.38762,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the beak is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.57412,
+              "y": 0.25053,
+              "r": 0.06232,
+              "type": "change-count",
+              "what": "one mark on the right eye is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.55195,
+              "y": 0.69974,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the claws moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.57563,
+              "y": 0.54583,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the right wing is green now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.45686,
+              "y": 0.4825,
+              "r": 0.05002,
+              "type": "resize-object",
+              "what": "the spot on the belly changed size",
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "hard": {
+          "imageB": "img/kids-05-b-hard.jpg",
+          "differences": [
+            {
+              "x": 0.55188,
+              "y": 0.54583,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the belly is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.43982,
+              "y": 0.67679,
+              "r": 0.0613,
+              "type": "pattern-swap",
+              "what": "the pattern on the left wing is green now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.4569,
+              "y": 0.4825,
+              "r": 0.05002,
+              "type": "tiny-add",
+              "what": "a small green spot is on the belly",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.55195,
+              "y": 0.69974,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the claws is flipped",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.59937,
+              "y": 0.41917,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the beak is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.50403,
+              "y": 0.35604,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the beak moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.57498,
+              "y": 0.26069,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the right eye is brown now",
+              "difficulty": "hard"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "kids-09",
+      "mode": "kids",
+      "level": 10,
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon bat",
+      "imageA": "img/kids-09-a.jpg",
+      "imageB": "img/kids-09-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.4322,
+          "y": 0.2594,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "ear colour"
+        },
+        {
+          "x": 0.5005,
+          "y": 0.3099,
+          "r": 0.0598,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.473,
+          "y": 0.7926,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "feet colour"
+        },
+        {
+          "x": 0.7551,
+          "y": 0.5059,
+          "r": 0.115,
+          "type": "recolor",
+          "what": "wing colour"
+        },
+        {
+          "x": 0.2441,
+          "y": 0.5061,
+          "r": 0.1151,
+          "type": "recolor",
+          "what": "left wing colour"
+        }
+      ],
+      "credit": {
+        "author": "StudioFibonacci",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:StudioFibonacci_Cartoon_Bat.png"
+      },
+      "daily": true,
+      "sets": [
+        {
+          "id": 1,
+          "imageB": "img/kids-09-b1.jpg",
+          "differences": [
+            {
+              "x": 0.50467,
+              "y": 0.61991,
+              "r": 0.05285,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.86319,
+              "y": 0.4465,
+              "r": 0.16202,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.18081,
+              "y": 0.44385,
+              "r": 0.05297,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.45596,
+              "y": 0.46376,
+              "r": 0.05331,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.32033,
+              "y": 0.44937,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "imageB": "img/kids-09-b2.jpg",
+          "differences": [
+            {
+              "x": 0.505,
+              "y": 0.56667,
+              "r": 0.05252,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.46618,
+              "y": 0.69504,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.09929,
+              "y": 0.51544,
+              "r": 0.05102,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.86184,
+              "y": 0.5038,
+              "r": 0.16748,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.21118,
+              "y": 0.52537,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "imageB": "img/kids-09-b3.jpg",
+          "differences": [
+            {
+              "x": 0.35965,
+              "y": 0.51161,
+              "r": 0.05101,
+              "type": "add-spot",
+              "what": "subject add-spot of coloured detail"
+            },
+            {
+              "x": 0.81738,
+              "y": 0.45383,
+              "r": 0.05209,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.14145,
+              "y": 0.51373,
+              "r": 0.05182,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.72752,
+              "y": 0.52141,
+              "r": 0.05002,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            },
+            {
+              "x": 0.49974,
+              "y": 0.3092,
+              "r": 0.05439,
+              "type": "recolor",
+              "what": "subject recolor of coloured detail"
+            }
+          ]
+        }
+      ],
+      "variants": {
+        "easy": {
+          "imageB": "img/kids-09-b-easy.jpg",
+          "differences": [
+            {
+              "x": 0.24409,
+              "y": 0.50629,
+              "r": 0.11761,
+              "type": "strong-recolor",
+              "what": "the left wing is grey now",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.50037,
+              "y": 0.30997,
+              "r": 0.05479,
+              "type": "remove-object",
+              "what": "one spot on the eyes is missing",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.45503,
+              "y": 0.76914,
+              "r": 0.09054,
+              "type": "remove-object",
+              "what": "one spot on the claws is missing",
+              "difficulty": "easy"
+            },
+            {
+              "x": 0.55188,
+              "y": 0.54583,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the belly moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.76562,
+              "y": 0.4825,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the right wing moved",
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "medium": {
+          "imageB": "img/kids-09-b-medium.jpg",
+          "differences": [
+            {
+              "x": 0.50438,
+              "y": 0.64083,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the belly is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.59937,
+              "y": 0.54583,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the belly is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.26687,
+              "y": 0.41917,
+              "r": 0.05002,
+              "type": "rotate-subrect",
+              "what": "the mark on the left wing is turned",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.48063,
+              "y": 0.4825,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the belly moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.74187,
+              "y": 0.4825,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the right wing moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.17188,
+              "y": 0.51417,
+              "r": 0.05002,
+              "type": "mirror-subrect",
+              "what": "the mark on the left wing is flipped",
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "hard": {
+          "imageB": "img/kids-09-b-hard.jpg",
+          "differences": [
+            {
+              "x": 0.74186,
+              "y": 0.4825,
+              "r": 0.05002,
+              "type": "resize-object",
+              "what": "the spot on the right wing changed size",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.31438,
+              "y": 0.51417,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the left wing is missing",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.64687,
+              "y": 0.54583,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the belly is grey now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.50438,
+              "y": 0.54583,
+              "r": 0.05002,
+              "type": "move-object",
+              "what": "the mark on the belly moved",
+              "difficulty": "medium"
+            },
+            {
+              "x": 0.86062,
+              "y": 0.51417,
+              "r": 0.05002,
+              "type": "pattern-swap",
+              "what": "the pattern on the right wing is grey now",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.50037,
+              "y": 0.30997,
+              "r": 0.05479,
+              "type": "remove-thin-detail",
+              "what": "a stripe on the eyes is missing",
+              "difficulty": "hard"
+            },
+            {
+              "x": 0.19562,
+              "y": 0.45083,
+              "r": 0.05002,
+              "type": "change-count",
+              "what": "one mark on the left wing is missing",
+              "difficulty": "medium"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "kids-04-m",
+      "mode": "kids",
+      "category": "vehicles-space",
+      "categoryConfidence": "high",
+      "title": "Toy train",
+      "imageA": "img/kids-04-a.jpg",
+      "imageB": "img/kids-04-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.3125,
+          "y": 0.2875,
+          "r": 0.1342,
+          "type": "recolor",
+          "what": "chimney colour"
+        },
+        {
+          "x": 0.2908,
+          "y": 0.6959,
+          "r": 0.0868,
+          "type": "recolor",
+          "what": "left wheel colour"
+        },
+        {
+          "x": 0.5153,
+          "y": 0.6938,
+          "r": 0.143,
+          "type": "recolor",
+          "what": "wood base colour"
+        },
+        {
+          "x": 0.6702,
+          "y": 0.2014,
+          "r": 0.1511,
+          "type": "recolor",
+          "what": "cab roof colour"
+        },
+        {
+          "x": 0.7393,
+          "y": 0.6963,
+          "r": 0.088,
+          "type": "recolor",
+          "what": "right wheel colour"
+        }
+      ],
+      "credit": {
+        "author": "gnokii at openclipart.org",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Toy_train.svg"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-04",
+      "daily": true
+    },
+    {
+      "id": "kids-01-m",
+      "mode": "kids",
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon fish",
+      "imageA": "img/kids-01-a.jpg",
+      "imageB": "img/kids-01-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.5618,
+          "y": 0.2618,
+          "r": 0.0693,
+          "type": "recolor",
+          "what": "top fin colour"
+        },
+        {
+          "x": 0.6607,
+          "y": 0.3543,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.549,
+          "y": 0.7122,
+          "r": 0.0586,
+          "type": "recolor",
+          "what": "bottom fin colour"
+        },
+        {
+          "x": 0.4898,
+          "y": 0.482,
+          "r": 0.158,
+          "type": "recolor",
+          "what": "stripe colour"
+        },
+        {
+          "x": 0.2415,
+          "y": 0.5014,
+          "r": 0.1911,
+          "type": "recolor",
+          "what": "tail colour"
+        }
+      ],
+      "credit": {
+        "author": "Kurtkaiser",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Cartoon_fish_yellow.png"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-01",
+      "daily": true
+    },
+    {
+      "id": "kids-03-m",
+      "mode": "kids",
+      "category": "vehicles-space",
+      "categoryConfidence": "high",
+      "title": "Cartoon space rocket",
+      "imageA": "img/kids-03-a.jpg",
+      "imageB": "img/kids-03-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.6464,
+          "y": 0.3134,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "window colour"
+        },
+        {
+          "x": 0.7765,
+          "y": 0.1506,
+          "r": 0.1008,
+          "type": "recolor",
+          "what": "nose colour"
+        },
+        {
+          "x": 0.4029,
+          "y": 0.3718,
+          "r": 0.1112,
+          "type": "recolor",
+          "what": "fin colour"
+        },
+        {
+          "x": 0.3327,
+          "y": 0.7304,
+          "r": 0.2022,
+          "type": "recolor",
+          "what": "flame colour"
+        },
+        {
+          "x": 0.5981,
+          "y": 0.6382,
+          "r": 0.1119,
+          "type": "recolor",
+          "what": "right fin colour"
+        }
+      ],
+      "credit": {
+        "author": "Rygle, based on Purzen",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Cartoon_space_rocket.png"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-03",
+      "daily": true
+    },
+    {
+      "id": "kids-02-m",
+      "mode": "kids",
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon turtle",
+      "imageA": "img/kids-02-a.jpg",
+      "imageB": "img/kids-02-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.844,
+          "y": 0.384,
+          "r": 0.077,
+          "type": "remove"
+        },
+        {
+          "x": 0.4333,
+          "y": 0.7413,
+          "r": 0.087,
+          "type": "recolor"
+        },
+        {
+          "x": 0.4986,
+          "y": 0.1794,
+          "r": 0.1185,
+          "type": "recolor"
+        },
+        {
+          "x": 0.6074,
+          "y": 0.8538,
+          "r": 0.045,
+          "type": "remove"
+        },
+        {
+          "x": 0.2494,
+          "y": 0.5012,
+          "r": 0.1173,
+          "type": "recolor"
+        }
+      ],
+      "credit": {
+        "author": "badaman",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Turtle_clip_art.svg"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-02",
+      "daily": true
+    },
+    {
+      "id": "kids-08-m",
+      "mode": "kids",
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon walrus",
+      "imageA": "img/kids-08-a.jpg",
+      "imageB": "img/kids-08-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.4282,
+          "y": 0.1642,
+          "r": 0.0511,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.4374,
+          "y": 0.4658,
+          "r": 0.0652,
+          "type": "recolor",
+          "what": "tusk colour"
+        },
+        {
+          "x": 0.345,
+          "y": 0.8509,
+          "r": 0.073,
+          "type": "recolor",
+          "what": "fish colour"
+        },
+        {
+          "x": 0.8123,
+          "y": 0.4947,
+          "r": 0.1115,
+          "type": "recolor",
+          "what": "flipper colour"
+        },
+        {
+          "x": 0.561,
+          "y": 0.1643,
+          "r": 0.0509,
+          "type": "recolor",
+          "what": "right eye colour"
+        }
+      ],
+      "credit": {
+        "author": "StudioFibonacci@openclipart.org",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Lemmling_walrus.svg"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-08",
+      "daily": true
+    },
+    {
+      "id": "kids-06-m",
+      "mode": "kids",
+      "category": "animals",
+      "categoryConfidence": "high",
+      "title": "Cartoon snail",
+      "imageA": "img/kids-06-a.jpg",
+      "imageB": "img/kids-06-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.2418,
+          "y": 0.7518,
+          "r": 0.0773,
+          "type": "recolor",
+          "what": "cheek colour"
+        },
+        {
+          "x": 0.1782,
+          "y": 0.2615,
+          "r": 0.0668,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.6107,
+          "y": 0.4218,
+          "r": 0.2813,
+          "type": "recolor",
+          "what": "shell colour"
+        },
+        {
+          "x": 0.0537,
+          "y": 0.2675,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "small eye colour"
+        },
+        {
+          "x": 0.8173,
+          "y": 0.8661,
+          "r": 0.085,
+          "type": "clone",
+          "what": "add spot on tail"
+        }
+      ],
+      "credit": {
+        "author": "Sarka Slukova / Machovka",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Machovka_snail.svg"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-06",
+      "daily": true
+    },
+    {
+      "id": "kids-07-m",
+      "mode": "kids",
+      "category": "animals",
+      "categoryConfidence": "high",
+      "title": "Cartoon monkey",
+      "imageA": "img/kids-07-a.jpg",
+      "imageB": "img/kids-07-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.4738,
+          "y": 0.5235,
+          "r": 0.0514,
+          "type": "recolor",
+          "what": "nose colour"
+        },
+        {
+          "x": 0.2271,
+          "y": 0.3512,
+          "r": 0.0546,
+          "type": "recolor",
+          "what": "left ear colour"
+        },
+        {
+          "x": 0.7406,
+          "y": 0.2932,
+          "r": 0.0564,
+          "type": "recolor",
+          "what": "right ear colour"
+        },
+        {
+          "x": 0.3434,
+          "y": 0.3838,
+          "r": 0.065,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.5833,
+          "y": 0.3871,
+          "r": 0.079,
+          "type": "recolor",
+          "what": "right eye colour"
+        }
+      ],
+      "credit": {
+        "author": "Nicu Buculei & odder",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Sailor_monkey_without_hat.svg"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-07",
+      "daily": true
+    },
+    {
+      "id": "kids-10-m",
+      "mode": "kids",
+      "category": "animals",
+      "categoryConfidence": "high",
+      "title": "Cartoon lion",
+      "imageA": "img/kids-10-a.jpg",
+      "imageB": "img/kids-10-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.2113,
+          "y": 0.3602,
+          "r": 0.1825,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.9543,
+          "y": 0.6482,
+          "r": 0.0457,
+          "type": "recolor",
+          "what": "tail tuft colour"
+        },
+        {
+          "x": 0.0697,
+          "y": 0.7667,
+          "r": 0.0536,
+          "type": "recolor",
+          "what": "paw colour"
+        },
+        {
+          "x": 0.0809,
+          "y": 0.5648,
+          "r": 0.073,
+          "type": "recolor",
+          "what": "lower mane colour"
+        },
+        {
+          "x": 0.7148,
+          "y": 0.8106,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "back paw colour"
+        }
+      ],
+      "credit": {
+        "author": "Francesco 'Architetto' Rollandin",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Leone_02_architetto_fran_01.svg"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-10",
+      "daily": true
+    },
+    {
+      "id": "kids-05-m",
+      "mode": "kids",
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon owl",
+      "imageA": "img/kids-05-a.jpg",
+      "imageB": "img/kids-05-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.5306,
+          "y": 0.3131,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "beak colour"
+        },
+        {
+          "x": 0.4794,
+          "y": 0.7811,
+          "r": 0.0482,
+          "type": "recolor",
+          "what": "foot colour"
+        },
+        {
+          "x": 0.529,
+          "y": 0.5473,
+          "r": 0.1444,
+          "type": "recolor",
+          "what": "belly colour"
+        },
+        {
+          "x": 0.5851,
+          "y": 0.7805,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "right foot colour"
+        },
+        {
+          "x": 0.5642,
+          "y": 0.2514,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "eye colour"
+        }
+      ],
+      "credit": {
+        "author": "Kurt Kaiser",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Owl_Animation_Clip_Art_-_Low_Poly_Sprite.png"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-05",
+      "daily": true
+    },
+    {
+      "id": "kids-09-m",
+      "mode": "kids",
+      "category": "sea-sky",
+      "categoryConfidence": "high",
+      "title": "Cartoon bat",
+      "imageA": "img/kids-09-a.jpg",
+      "imageB": "img/kids-09-b.jpg",
+      "width": 800,
+      "height": 600,
+      "differences": [
+        {
+          "x": 0.4322,
+          "y": 0.2594,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "ear colour"
+        },
+        {
+          "x": 0.5005,
+          "y": 0.3099,
+          "r": 0.0598,
+          "type": "recolor",
+          "what": "eye colour"
+        },
+        {
+          "x": 0.473,
+          "y": 0.7926,
+          "r": 0.045,
+          "type": "recolor",
+          "what": "feet colour"
+        },
+        {
+          "x": 0.7551,
+          "y": 0.5059,
+          "r": 0.115,
+          "type": "recolor",
+          "what": "wing colour"
+        },
+        {
+          "x": 0.2441,
+          "y": 0.5061,
+          "r": 0.1151,
+          "type": "recolor",
+          "what": "left wing colour"
+        }
+      ],
+      "credit": {
+        "author": "StudioFibonacci",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:StudioFibonacci_Cartoon_Bat.png"
+      },
+      "mirrored": true,
+      "mirrorOf": "kids-09",
+      "daily": true
+    }
+  ]
+}
