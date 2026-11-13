@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="theme-color" content="#FBF6EC">
+  <meta name="description" content="Choose Easy, Medium or Hard in colorful, family-friendly picture puzzles.">
+  <title>Spot the Difference</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <script src="ui-v11.js" defer></script>
+</head>
+<body class="theme-neutral home-screen">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="app-shell">
+    <header class="site-header">
+      <div class="brand-lockup" aria-label="Spot the Difference">
+        <span id="brandSymbol" class="brand-symbol" data-icon="spyglass" aria-hidden="true"></span>
+        <span id="homeHeading">Spot the Difference</span>
+      </div>
+      <nav class="top-actions" aria-label="Main navigation">
+        <button type="button" id="homeNav" class="nav-button">Home</button>
+        <button type="button" id="soundToggle" class="sound-toggle-button" data-icon="speaker-on" aria-pressed="true" aria-label="Sound effects: On" title="Sound effects: On"></button>
+        <button type="button" id="grownNav" class="nav-button" data-icon="shield-key"><span class="visually-hidden">Grown-ups</span></button>
+      </nav>
+    </header>
+
+    <p id="storageNotice" class="notice warning" role="status" hidden>
+      Saving is unavailable on this device. You can still play, but scores and stats won't be saved.
+    </p>
+    <p id="appStatus" class="notice" role="status" aria-live="polite" hidden></p>
+
+    <main id="main">
+      <section id="homeView" class="view home-view" aria-labelledby="homeHeading">
+        <div class="welcome-panel home-hero">
+          <p id="homeDifferenceCopy" class="visually-hidden" aria-hidden="true">Find 5 differences in every picture.</p>
+
+          <div class="hero-play-cluster">
+            <div id="homePipMascot" class="pip-mascot pip-curious" aria-hidden="true"></div>
+
+            <button type="button" id="playNowButton" class="primary-button hero-play-button" aria-label="Play now - Medium, untimed">
+              <span class="hero-play-glyph" aria-hidden="true">
+                <svg class="hero-play-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M7.5 5.25L18.25 12L7.5 18.75V5.25Z" fill="#FFFDF9" stroke="#1F2438" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <span class="hero-play-word">Play</span>
+            </button>
+          </div>
+
+          <div class="choice-grid mode-tiles-row" role="group" aria-label="Game mode">
+            <button type="button" id="modeUntimed" class="choice-button mode-tile mode-tile-untimed is-selected" aria-pressed="true" aria-label="Play without a clock">
+              <span class="mode-icon" data-icon="sun-compass" aria-hidden="true">
+                <svg class="svg-icon icon-sun-compass" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="#1F2438" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="5.8" fill="#F5A623" stroke="#1F2438" stroke-width="1.1"></circle>
+                  <path d="M10.75 4.8L12 1.3L13.25 4.8Z" fill="#F5A623" stroke="#1F2438" stroke-width="0.9"></path>
+                  <path d="M16.21 6.02L19.56 4.44L17.98 7.79Z" fill="#F5A623" stroke="#1F2438" stroke-width="0.9"></path>
+                  <path d="M19.2 10.75L22.7 12L19.2 13.25Z" fill="#F5A623" stroke="#1F2438" stroke-width="0.9"></path>
+                  <path d="M17.98 16.21L19.56 19.56L16.21 17.98Z" fill="#F5A623" stroke="#1F2438" stroke-width="0.9"></path>
+                  <path d="M13.25 19.2L12 22.7L10.75 19.2Z" fill="#F5A623" stroke="#1F2438" stroke-width="0.9"></path>
+                  <path d="M7.79 17.98L4.44 19.56L6.02 16.21Z" fill="#F5A623" stroke="#1F2438" stroke-width="0.9"></path>
+                  <path d="M4.8 13.25L1.3 12L4.8 10.75Z" fill="#F5A623" stroke="#1F2438" stroke-width="0.9"></path>
+                  <path d="M6.02 7.79L4.44 4.44L7.79 6.02Z" fill="#F5A623" stroke="#1F2438" stroke-width="0.9"></path>
+                </svg>
+              </span>
+              <span class="visually-hidden" aria-hidden="true">
+                <span class="choice-description">Explore every level at your own pace with regenerating hints.</span>
+                <span id="untimedStars">0 stars</span>
+                <span id="untimedRank" class="explorer-rank-badge">New Explorer</span>
+              </span>
+            </button>
+
+            <button type="button" id="modeTimed" class="choice-button mode-tile mode-tile-timed" aria-pressed="false" aria-label="Play against the clock">
+              <span class="mode-icon" data-icon="stopwatch" aria-hidden="true">
+                <svg class="svg-icon icon-stopwatch" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="#1F2438" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9.5 2.5h5M12 2.5v2.5M18.2 5.8l1.6-1.6M5.8 5.8L4.2 4.2"></path>
+                  <circle cx="12" cy="13" r="8" fill="#FFF7DC"></circle>
+                  <g class="stopwatch-hand">
+                    <path d="M12 9v4.2l2.8 1.8" stroke="#C73C24"></path>
+                  </g>
+                </svg>
+              </span>
+              <span class="visually-hidden" aria-hidden="true">
+                <span class="choice-description">Always starts at Level 1 · Best level 0 · Best score 0</span>
+                <span id="timedStars">0 stars</span>
+                <span id="timedRank" class="explorer-rank-badge">New Explorer</span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <section id="grownUpsSection" class="grown-ups-section" aria-labelledby="grownUpsHeading">
+          <h2 id="grownUpsHeading" class="grown-ups-heading">For grown-ups</h2>
+
+          <div class="welcome-actions grown-button-row">
+            <button type="button" id="homeLevelsButton" class="quiet-button levels-trigger">Levels</button>
+            <button type="button" id="tipsNav" class="nav-button">How to play</button>
+            <button type="button" id="boardsNav" class="nav-button" data-icon="trophy"><span>Leaderboards</span></button>
+          </div>
+
+          <div class="home-extras">
+            <div class="daily-card">
+              <div class="daily-card-head">
+                <div>
+                  <p class="eyebrow">DAILY EXPLORER POSTCARD</p>
+                  <h2>Today's picture</h2>
+                </div>
+                <p id="dailyStreak" class="daily-streak" hidden></p>
+              </div>
+              <p class="helper-text">Spot every difference in today's featured picture to earn a collector stamp.</p>
+              <div class="daily-actions">
+                <button type="button" id="dailyButton" class="daily-hunt-button" data-icon="spyglass" disabled>Daily Hunt</button>
+                <button type="button" id="stickerBookButton" class="sticker-chip" data-icon="sticker-peel">Stickers: 0</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="setup-card">
+            <div class="difficulty-picker" role="group" aria-labelledby="difficultyHeading">
+              <h2 id="difficultyHeading">Choose difficulty</h2>
+              <div class="difficulty-options">
+                <button type="button" id="difficultyEasy" class="difficulty-option" aria-pressed="false"><strong>Easy</strong></button>
+                <button type="button" id="difficultyMedium" class="difficulty-option is-selected" aria-pressed="true"><strong>Medium</strong></button>
+                <button type="button" id="difficultyHard" class="difficulty-option" aria-pressed="false"><strong>Hard</strong></button>
+              </div>
+            </div>
+
+            <div class="home-categories">
+              <h2 id="categoryHeading">Choose a category</h2>
+              <div id="categoryChoices" class="category-choices" role="group" aria-labelledby="categoryHeading">
+                <button type="button" class="category-button is-selected" data-category="all" aria-pressed="true">All</button>
+                <button type="button" class="category-button" data-category="animals" aria-pressed="false">Animals</button>
+                <button type="button" class="category-button" data-category="sea-sky" aria-pressed="false">Sea &amp; Sky</button>
+                <button type="button" class="category-button" data-category="vehicles-space" aria-pressed="false">Vehicles &amp; Space</button>
+              </div>
+              <p id="levelOrderNote" class="helper-text">Levels follow the supplied difficulty order, from 1 to 22.</p>
+            </div>
+          </div>
+
+          <p class="privacy-note">No account. No ads. Your scores stay on this device.</p>
+        </section>
+      </section>
+
+      <div id="demoOverlay" class="demo-overlay" hidden role="dialog" aria-modal="true" aria-label="How to play: tap the differences">
+        <div class="demo-stage-card">
+          <div class="demo-scenes-pair" aria-hidden="true">
+            <div class="demo-picture demo-picture-left">
+              <svg class="demo-scene-svg" viewBox="0 0 220 170" aria-hidden="true" focusable="false">
+                <rect x="0" y="0" width="220" height="170" rx="14" fill="#FFF7DC"></rect>
+                <path d="M0 128Q58 112 115 126T220 124V170H0Z" fill="#84CC6E"></path>
+                <circle cx="38" cy="36" r="15" fill="#F5A623" stroke="#1F2438" stroke-width="2.5"></circle>
+                <path d="M38 14V18M38 54V58M16 36H20M56 36H60M23 21L26 24M50 48L53 51M53 21L50 24M26 48L23 51" stroke="#1F2438" stroke-width="2.5" stroke-linecap="round"></path>
+                <rect x="64" y="84" width="52" height="44" rx="4" fill="#FFFDF9" stroke="#1F2438" stroke-width="2.5"></rect>
+                <polygon points="56,86 90,56 124,86" fill="#C73C24" stroke="#1F2438" stroke-width="2.5" stroke-linejoin="round"></polygon>
+                <rect x="83" y="102" width="14" height="26" rx="2" fill="#B88256" stroke="#1F2438" stroke-width="2.5"></rect>
+                <rect x="148" y="96" width="12" height="32" rx="3" fill="#9E6B43" stroke="#1F2438" stroke-width="2.5"></rect>
+                <circle cx="154" cy="82" r="22" fill="#1E9E5A" stroke="#1F2438" stroke-width="2.5"></circle>
+                <path d="M174 62Q172 78 176 92" fill="none" stroke="#1F2438" stroke-width="2.5" stroke-linecap="round"></path>
+                <circle cx="174" cy="44" r="16" fill="#F5A623" stroke="#1F2438" stroke-width="2.5"></circle>
+              </svg>
+            </div>
+
+            <div class="demo-picture demo-picture-right">
+              <svg class="demo-scene-svg" viewBox="0 0 220 170" aria-hidden="true" focusable="false">
+                <rect x="0" y="0" width="220" height="170" rx="14" fill="#FFF7DC"></rect>
+                <path d="M0 128Q58 112 115 126T220 124V170H0Z" fill="#84CC6E"></path>
+                <circle cx="38" cy="36" r="15" fill="#F5A623" stroke="#1F2438" stroke-width="2.5"></circle>
+                <path d="M38 14V18M38 54V58M16 36H20M56 36H60M23 21L26 24M50 48L53 51M53 21L50 24M26 48L23 51" stroke="#1F2438" stroke-width="2.5" stroke-linecap="round"></path>
+                <rect x="64" y="84" width="52" height="44" rx="4" fill="#FFFDF9" stroke="#1F2438" stroke-width="2.5"></rect>
+                <polygon points="56,86 90,56 124,86" fill="#C73C24" stroke="#1F2438" stroke-width="2.5" stroke-linejoin="round"></polygon>
+                <rect x="83" y="102" width="14" height="26" rx="2" fill="#B88256" stroke="#1F2438" stroke-width="2.5"></rect>
+                <rect x="148" y="96" width="12" height="32" rx="3" fill="#9E6B43" stroke="#1F2438" stroke-width="2.5"></rect>
+                <circle cx="154" cy="82" r="22" fill="#1E9E5A" stroke="#1F2438" stroke-width="2.5"></circle>
+                <path d="M174 62Q172 78 176 92" fill="none" stroke="#1F2438" stroke-width="2.5" stroke-linecap="round"></path>
+                <circle cx="174" cy="44" r="16" fill="#1B7A6E" stroke="#1F2438" stroke-width="2.5"></circle>
+              </svg>
+
+              <span class="find-ring found-ring demo-found-ring" aria-hidden="true"></span>
+
+              <span class="demo-star-burst" aria-hidden="true">
+                <svg class="demo-star-svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                  <path d="M24 4L29.6 16.2L43 18L33 27.4L35.5 40.8L24 34.4L12.5 40.8L15 27.4L5 18L18.4 16.2L24 4Z" fill="#F5A623" stroke="#1F2438" stroke-width="2.5" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+
+              <span class="demo-finger" aria-hidden="true">
+                <svg class="demo-finger-svg" viewBox="0 0 56 56" aria-hidden="true" focusable="false">
+                  <path d="M22 8C22 5.2 24.2 3 27 3C29.8 3 32 5.2 32 8V23H35C37.2 23 39 24.8 39 27V28.5H41.5C43.7 28.5 45.5 30.3 45.5 32.5V39C45.5 46.2 39.7 52 32.5 52H23.5C17.4 52 12.5 47.1 12.5 41V31C12.5 28.5 14.5 26.5 17 26.5H22V8Z" fill="#FFF7DC" stroke="#1F2438" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="demo-bottom-bar">
+            <div class="demo-pip" aria-hidden="true">
+              <div id="demoPipCurious" class="pip-mascot demo-pip-svg demo-pip-curious"></div>
+              <div id="demoPipCheer" class="pip-mascot demo-pip-svg demo-pip-cheer"></div>
+            </div>
+
+            <button type="button" id="demoGo" class="primary-button demo-go-button" aria-label="Start">
+              <svg class="demo-go-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M7.5 5.25L18.25 12L7.5 18.75V5.25Z" fill="#FFFDF9" stroke="#1F2438" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <section id="gameView" class="view game-view" aria-labelledby="puzzleHeading" hidden>
+        <div class="game-topline">
+          <div>
+            <p id="gameModeLabel" class="eyebrow">Untimed · All</p>
+            <h1 id="puzzleHeading">Level 1</h1>
+            <p id="puzzleTitle" class="puzzle-title"></p>
+          </div>
+          <div class="game-badges" aria-label="Game progress">
+            <div class="star-progress" aria-hidden="true"><span class="star-slot"></span><span class="star-slot"></span><span class="star-slot"></span><span class="star-slot"></span><span class="star-slot"></span></div>
+            <div id="duelClock" class="duel-clock" hidden aria-live="off">0:00</div>
+            <div class="metric"><span class="metric-name">Found</span><strong id="foundCount">0 / 5</strong></div>
+            <div class="metric"><span class="metric-name">Level</span><strong id="levelCount">1 / 10</strong></div>
+            <div class="metric" id="scoreMetric" hidden><span class="metric-name">Score</span><strong id="scoreCount">0</strong></div>
+          </div>
+        </div>
+
+        <div id="timerPanel" class="timer-panel" hidden>
+          <div class="timer-text"><span id="timerIcon" data-icon="stopwatch" aria-hidden="true"></span><span>Time left</span><strong id="timerText" aria-live="off">90 s</strong></div>
+          <div id="timerTrack" class="timer-track" role="progressbar" aria-label="Time remaining" aria-valuemin="0" aria-valuemax="90" aria-valuenow="90">
+            <div id="timerFill" class="timer-fill"></div>
+          </div>
+        </div>
+
+        <div class="image-instructions" id="imageInstructions">Tap a difference in either picture. It will be marked in both.</div>
+        <div class="puzzle-grid" id="puzzleGrid">
+          <figure class="puzzle-figure">
+            <figcaption>Picture A</figcaption>
+            <div id="imageStageA" class="image-stage" role="group" aria-label="Picture A: tap differences">
+              <img id="imageA" alt="First version of the current puzzle" width="800" height="600" decoding="async" fetchpriority="high" draggable="false">
+              <div id="marksA" class="marks-layer" aria-hidden="true"></div>
+              <div id="glowA" class="hint-layer" aria-hidden="true"></div>
+              <button type="button" id="tapSurfaceA" class="image-tap-surface" aria-label="Tap Picture A to find a difference"></button>
+            </div>
+          </figure>
+          <figure class="puzzle-figure">
+            <figcaption>Picture B</figcaption>
+            <div id="imageStageB" class="image-stage" role="group" aria-label="Picture B: tap differences">
+              <img id="imageB" alt="Second version of the current puzzle" width="800" height="600" decoding="async" draggable="false">
+              <div id="marksB" class="marks-layer" aria-hidden="true"></div>
+              <div id="glowB" class="hint-layer" aria-hidden="true"></div>
+              <button type="button" id="tapSurfaceB" class="image-tap-surface" aria-label="Tap Picture B to find a difference"></button>
+            </div>
+          </figure>
+        </div>
+        <p id="gameMessage" class="feedback-message" role="status" aria-live="polite">Find all five!</p>
+        <p id="missingImagesNotice" class="notice warning" role="alert" hidden>
+          A puzzle image couldn't load. Add the matching files to the img folder, then reload.
+        </p>
+        <div class="game-actions" role="group" aria-label="Play controls">
+          <button type="button" id="hintButton" class="primary-button hint-dock-button" data-icon="lantern-bulb"><span>Hint</span><span id="hintCooldownLabel" class="hint-count-badge">• Ready</span></button>
+          <div id="playMoreWrap" class="play-more-wrap">
+            <button type="button" id="playMoreButton" class="quiet-button play-more-button" data-icon="menu-dots" aria-haspopup="true" aria-expanded="false" aria-controls="playMoreMenu" aria-label="More game options"></button>
+            <div id="playMoreMenu" class="play-more-menu" role="group" aria-label="More game options" hidden>
+              <button type="button" id="stopButton" class="quiet-button">End run</button>
+              <button type="button" id="menuTipsButton" class="quiet-button">How to play</button>
+              <button type="button" id="revealButton" class="quiet-button caution-button" disabled>Reveal all</button>
+              <p id="revealStatus" class="reveal-status" role="status">Available after 60 seconds without a find.</p>
+            </div>
+          </div>
+        </div>
+        <div class="run-metrics" aria-label="Run details">
+          <span>Finds: <strong id="totalFinds">0</strong></span>
+          <span>Misses: <strong id="totalMisses">0</strong></span>
+          <span>Hints: <strong id="totalHints">0</strong></span>
+          <span>Cleared: <strong id="totalCleared">0</strong></span>
+        </div>
+      </section>
+
+      <section id="betweenView" class="view result-view" aria-labelledby="betweenHeading" hidden>
+        <div class="result-card">
+          <div class="result-card-inner">
+            <div id="betweenBanner" class="result-banner-ribbon">
+              <div id="betweenPipMascot" class="pip-mascot pip-cheering" aria-hidden="true"></div>
+              <p class="eyebrow">Puzzle complete</p>
+              <h1 id="betweenHeading">All differences found!</h1>
+            </div>
+            <p id="betweenSummary"></p>
+            <p id="betweenScore" class="large-score"></p>
+            <button type="button" id="nextLevelButton" class="primary-button wide">Next level</button>
+            <button type="button" id="betweenHomeButton" class="quiet-button wide">Home</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="resultView" class="view result-view" aria-labelledby="resultHeading" hidden>
+        <div class="result-card">
+          <div class="result-card-inner">
+            <div id="resultBanner" class="result-banner-ribbon">
+              <div id="resultPipMascot" class="pip-mascot pip-cheering" aria-hidden="true"></div>
+              <p id="resultEyebrow" class="eyebrow">Run complete</p>
+              <h1 id="resultHeading">Well played!</h1>
+            </div>
+            <p id="resultDescription"></p>
+            <p id="dailyStickerMessage" class="sticker-added" data-icon="sticker-peel" hidden>Sticker added!</p>
+            <p id="resultScore" class="large-score"></p>
+            <p id="duelComparison" class="duel-result" hidden></p>
+            <div id="tomorrowTeaser" class="tomorrow-teaser" hidden></div>
+            <dl class="result-stats">
+              <div><dt>Level reached</dt><dd id="resultLevel">1</dd></div>
+              <div><dt>Levels cleared</dt><dd id="resultCleared">0</dd></div>
+              <div><dt>Differences found</dt><dd id="resultFinds">0</dd></div>
+              <div><dt>Misses</dt><dd id="resultMisses">0</dd></div>
+              <div><dt>Hints</dt><dd id="resultHints">0</dd></div>
+            </dl>
+            <p id="resultEligibility" class="helper-text"></p>
+            <button type="button" id="playAgainButton" class="primary-button wide">Play again</button>
+            <button type="button" id="resultSaveButton" class="secondary-button wide" data-icon="trophy" hidden>Save to this device's leaderboard</button>
+            <button type="button" id="duelButton" class="secondary-button wide" hidden>Grown-up's turn</button>
+            <button type="button" id="resultStickerButton" class="secondary-button wide" data-icon="sticker-peel" hidden>Sticker Book</button>
+            <div class="result-secondary-row">
+              <button type="button" id="resultHomeButton" class="quiet-button">Choose another mode</button>
+              <button type="button" id="resultLevelsButton" class="quiet-button levels-trigger">Levels</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="stickerBookView" class="view sticker-book-view" aria-labelledby="stickerBookHeading" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Daily Hunt rewards</p>
+            <h1 id="stickerBookHeading">Sticker Book</h1>
+          </div>
+          <button type="button" id="stickerBackButton" class="quiet-button">Back</button>
+        </div>
+        <p class="helper-text">Each Daily Hunt you complete earns a picture sticker on this device.</p>
+        <div id="stickerGrid" class="sticker-grid" aria-label="Earned stickers and tomorrow's sticker"></div>
+      </section>
+
+      <section id="boardsView" class="view boards-view" aria-labelledby="boardsHeading" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Only on this device</p>
+            <h1 id="boardsHeading">Leaderboards</h1>
+          </div>
+          <button type="button" id="boardsBackButton" class="quiet-button">Back</button>
+        </div>
+        <p class="helper-text">These scores are private to this browser. Only preset nicknames are shown.</p>
+        <div class="board-filters" role="group" aria-label="Leaderboard mode">
+          <button type="button" id="boardUntimed" class="filter-button is-selected" aria-pressed="true">Untimed</button>
+          <button type="button" id="boardTimed" class="filter-button" aria-pressed="false">Timed</button>
+        </div>
+        <div class="board-columns">
+          <section class="board-card" aria-labelledby="allTimeHeading">
+            <h2 id="allTimeHeading">All-time top 5</h2>
+            <ol id="allTimeBoard" class="score-list"></ol>
+          </section>
+          <section class="board-card" aria-labelledby="dailyHeading">
+            <h2 id="dailyHeading">Today's top 5</h2>
+            <p id="dailyDateLabel" class="helper-text"></p>
+            <ol id="dailyBoard" class="score-list"></ol>
+          </section>
+        </div>
+      </section>
+
+      <section id="grownView" class="view grown-view" aria-labelledby="grownHeading" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Protected area</p>
+            <h1 id="grownHeading">Grown-ups</h1>
+          </div>
+          <button type="button" id="grownBackButton" class="quiet-button">Back</button>
+        </div>
+        <p>Scores and play statistics stay on this device. The game does not send them anywhere.</p>
+        <div class="grown-grid">
+          <div class="settings-card">
+            <h2>Nickname</h2>
+            <p id="currentNickname">No nickname selected</p>
+            <p class="helper-text">Don't use your real name.</p>
+            <button type="button" id="changeNicknameButton" class="secondary-button">Choose a preset nickname</button>
+          </div>
+          <div class="settings-card">
+            <h2>Level testing</h2>
+            <button type="button" id="testUnlockButton" class="secondary-button" aria-pressed="false">Unlock all levels (testing): Off</button>
+            <p class="helper-text">Testing plays do not count toward completion metrics. Testing mode is session-only.</p>
+          </div>
+          <div class="settings-card">
+            <h2>Credits and feedback</h2>
+            <button type="button" id="creditsButton" class="secondary-button">Image credits</button>
+            <button type="button" id="feedbackButton" class="secondary-button">Open feedback form</button>
+            <p class="helper-text">Feedback opens a separate page. Only grown-ups should use that link.</p>
+          </div>
+          <div class="settings-card">
+            <h2>Local scores</h2>
+            <button type="button" id="clearBoardsButton" class="danger-button">Clear leaderboards</button>
+            <p class="helper-text">Clearing leaderboards resets level unlocks but preserves play statistics.</p>
+          </div>
+        </div>
+        <div class="settings-card">
+          <h2>Play statistics</h2>
+          <pre id="statsText" class="stats-block" tabindex="0" aria-label="Read-only play statistics"></pre>
+          <button type="button" id="copyStatsButton" class="secondary-button">Copy stats</button>
+          <button type="button" id="sendStatsButton" class="secondary-button" hidden>Send stats via form</button>
+          <p id="copyStatus" class="helper-text" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section id="creditsView" class="view grown-view" aria-labelledby="creditsHeading" hidden>
+        <div class="section-heading">
+          <h1 id="creditsHeading">Image credits</h1>
+          <button type="button" id="creditsBackButton" class="quiet-button">Back to Grown-ups</button>
+        </div>
+        <p class="helper-text">Creator, licence, and source are read directly from the puzzle catalogue. Source addresses are shown as text only.</p>
+        <ol id="creditsList" class="credits-list"></ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">Made for curious eyes · No accounts or tracking</footer>
+  </div>
+
+  <dialog id="gateDialog" class="app-dialog" aria-labelledby="gateHeading">
+    <div class="dialog-header">
+      <h2 id="gateHeading">Grown-ups check</h2>
+      <button type="button" id="gateClose" class="close-button" aria-label="Close">Close</button>
+    </div>
+    <p id="gateQuestion">For grown-ups: solve the multiplication.</p>
+    <div class="answer-grid" role="group" aria-label="Choose the answer">
+      <button type="button" class="answer-button" data-answer="30">30</button>
+      <button type="button" class="answer-button" data-answer="42">42</button>
+      <button type="button" class="answer-button" data-answer="48">48</button>
+      <button type="button" class="answer-button" data-answer="36">36</button>
+    </div>
+    <p id="gateMessage" class="dialog-feedback" role="status" aria-live="polite"></p>
+  </dialog>
+
+  <dialog id="levelsDialog" class="app-dialog" aria-labelledby="levelsHeading">
+    <div class="dialog-header">
+      <h2 id="levelsHeading">Choose an Untimed level</h2>
+      <button type="button" id="levelsClose" class="close-button" aria-label="Close">Close</button>
+    </div>
+    <p class="helper-text">Clear a level to unlock the next one.</p>
+    <div id="levelChoices" class="levels-grid" role="group" aria-label="Untimed levels"></div>
+  </dialog>
+
+  <dialog id="tipsDialog" class="app-dialog" aria-labelledby="tipsHeading">
+    <div class="dialog-header">
+      <h2 id="tipsHeading">How to play</h2>
+      <button type="button" id="tipsClose" class="close-button" aria-label="Close">Close</button>
+    </div>
+    <ol class="tip-list">
+      <li>Compare Picture A and Picture B.</li>
+      <li>Tap either picture where something is different.</li>
+      <li id="tipsDifferenceCount">Find all 5 to finish the level.</li>
+      <li>A hint lights up one part of the pictures. Reveal all ends your run without saving a score.</li>
+      <li>Untimed is relaxed. Timed gives you a score and a countdown.</li>
+    </ol>
+    <button type="button" id="tipsDone" class="primary-button wide">Got it</button>
+  </dialog>
+
+  <dialog id="saveDialog" class="app-dialog" aria-labelledby="saveHeading">
+    <div class="dialog-header">
+      <h2 id="saveHeading">Save this run?</h2>
+      <button type="button" id="saveClose" class="close-button" aria-label="Close">Close</button>
+    </div>
+    <p id="saveSummary"></p>
+    <p id="saveNickname"></p>
+    <p class="helper-text">Don't use your real name. Scores are saved only on this device.</p>
+    <button type="button" id="saveChangeName" class="secondary-button wide">Choose a nickname</button>
+    <button type="button" id="saveConfirm" class="primary-button wide">Save score</button>
+    <button type="button" id="saveSkip" class="quiet-button wide">Skip for this session</button>
+  </dialog>
+
+  <dialog id="nicknameDialog" class="app-dialog nickname-dialog" aria-labelledby="nicknameHeading">
+    <div class="dialog-header">
+      <h2 id="nicknameHeading">Choose a nickname</h2>
+      <button type="button" id="nicknameClose" class="close-button" aria-label="Close">Close</button>
+    </div>
+    <p class="helper-text">Don't use your real name. Pick one word from each group and a number.</p>
+    <h3>First word</h3>
+    <div id="adjectiveChoices" class="word-picker" role="group" aria-label="Choose an adjective"></div>
+    <h3>Animal</h3>
+    <div id="animalChoices" class="word-picker" role="group" aria-label="Choose an animal"></div>
+    <h3>Number</h3>
+    <div class="number-picker">
+      <button type="button" id="numberDown" aria-label="Decrease number">-</button>
+      <output id="nicknameNumber">1</output>
+      <button type="button" id="numberUp" aria-label="Increase number">+</button>
+    </div>
+    <p>Selected: <strong id="nicknamePreview">Bright Otter 1</strong></p>
+    <button type="button" id="nicknameConfirm" class="primary-button wide">Use this nickname</button>
+  </dialog>
+
+  <dialog id="creditsConfirmDialog" class="app-dialog" aria-labelledby="clearHeading">
+    <div class="dialog-header">
+      <h2 id="clearHeading">Clear local leaderboards?</h2>
+      <button type="button" id="clearClose" class="close-button" aria-label="Close">Close</button>
+    </div>
+    <p>This removes saved scores from this browser. Play statistics remain.</p>
+    <button type="button" id="clearConfirm" class="danger-button wide">Yes, clear scores</button>
+    <button type="button" id="clearCancel" class="quiet-button wide">Cancel</button>
+  </dialog>
+</body>
+</html>
