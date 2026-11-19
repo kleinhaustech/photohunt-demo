@@ -1,0 +1,592 @@
+/* ==========================================================================
+   kid-v14.3.css — Spot the Difference v14.3 (loaded last)
+   - Item 2: #homePipMascot + bubble fully in frame at 390 / 768 / 1280
+   - Item 3: #playNowButton hidden; #modeUntimed / #modeTimed as primary Play CTAs
+   - Item 6: Play-screen [data-v143-music-toggle] and Grown-up [data-v143-music-parent]
+   - Item 7: #tipsNav next to #dailyStreak inside .hero-daily-cluster
+   - Item 8: Hidden Pip overlay (.hidden-pip-layer / .hidden-pip-target / .hidden-pip-toast)
+   ========================================================================== */
+
+:root {
+  --v143-cluster-width: min(100%, 326px);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --v143-cluster-width: 360px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --v143-cluster-width: 400px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Item 3: Hide singular #playNowButton (keep id in DOM)
+   -------------------------------------------------------------------------- */
+#playNowButton,
+#playNowButton.hero-play-button {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Item 2: Home Hero & #homePipMascot perched in frame on the play-button cluster
+   -------------------------------------------------------------------------- */
+#homeView > .welcome-panel.home-hero {
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-4) var(--space-3);
+  overflow: visible;
+}
+
+.hero-play-cluster[data-v143-play-cluster],
+.hero-daily-cluster,
+.hero-stickers-cluster {
+  width: var(--v143-cluster-width);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-play-cluster[data-v143-play-cluster] {
+  position: relative;
+  margin-top: 0;
+  padding-top: 56px;
+}
+
+.hero-play-cluster[data-v143-play-cluster] .choice-grid.mode-tiles-row {
+  width: 100%;
+  max-width: 100%;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+#homePipMascot {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  z-index: 10;
+  width: 68px;
+  height: 68px;
+  min-width: 48px;
+  min-height: 48px;
+  margin: 0;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+#homePipMascot [data-v142-pip-bubble] {
+  top: 12px;
+  bottom: auto;
+  left: calc(100% + 6px);
+  transform: none;
+  z-index: 35;
+}
+
+@media (min-width: 768px) {
+  .hero-play-cluster[data-v143-play-cluster] {
+    margin-top: 0;
+    padding-top: 62px;
+  }
+
+  #homePipMascot {
+    top: 0;
+    left: 10px;
+    width: 76px;
+    height: 76px;
+  }
+
+  #homePipMascot [data-v142-pip-bubble] {
+    top: 16px;
+    left: calc(100% + 8px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-play-cluster[data-v143-play-cluster] {
+    margin-top: 0;
+    padding-top: 72px;
+  }
+
+  #homePipMascot {
+    top: 0;
+    left: 12px;
+    width: 88px;
+    height: 88px;
+  }
+
+  #homePipMascot [data-v142-pip-bubble] {
+    top: 20px;
+    left: calc(100% + 10px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Item 3: #modeUntimed & #modeTimed as primary, kid-facing Play buttons
+   -------------------------------------------------------------------------- */
+#modeUntimed[data-v143-play-tile],
+#modeTimed[data-v143-play-tile],
+#modeUntimed[data-v143-play-tile]:not(.is-selected),
+#modeTimed[data-v143-play-tile]:not(.is-selected) {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  height: 124px;
+  min-width: 120px;
+  min-height: 124px;
+  padding: 10px 8px;
+  border-radius: 26px;
+  border: 3px solid var(--color-ink);
+  color: var(--color-ink-inverse);
+  opacity: 1;
+  transform: none;
+}
+
+#modeUntimed[data-v143-play-tile],
+#modeUntimed[data-v143-play-tile].is-selected,
+#modeUntimed[data-v143-play-tile]:not(.is-selected) {
+  background-color: var(--color-accent);
+  box-shadow: var(--shadow-hero);
+}
+
+#modeUntimed[data-v143-play-tile]:hover:not(:disabled) {
+  background-color: #D4432A;
+  border-color: var(--color-ink);
+  box-shadow: var(--shadow-hero);
+}
+
+#modeUntimed[data-v143-play-tile]:active:not(:disabled) {
+  box-shadow: var(--shadow-hero-active);
+}
+
+#modeTimed[data-v143-play-tile],
+#modeTimed[data-v143-play-tile].is-selected,
+#modeTimed[data-v143-play-tile]:not(.is-selected) {
+  background-color: var(--color-accent-secondary);
+  box-shadow: 0 6px 0 var(--color-accent-secondary-lip), 0 10px 20px rgba(27, 122, 110, 0.24);
+}
+
+#modeTimed[data-v143-play-tile]:hover:not(:disabled) {
+  background-color: var(--color-accent-secondary-lip);
+  border-color: var(--color-ink);
+  box-shadow: 0 6px 0 var(--color-accent-secondary-lip), 0 10px 20px rgba(27, 122, 110, 0.24);
+}
+
+#modeTimed[data-v143-play-tile]:active:not(:disabled) {
+  box-shadow: var(--shadow-btn-secondary-active);
+}
+
+#modeUntimed[data-v143-play-tile] .mode-check,
+#modeTimed[data-v143-play-tile] .mode-check {
+  display: none;
+}
+
+.mode-play-icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.mode-play-glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-pill);
+  background-color: rgba(255, 253, 249, 0.22);
+  flex: 0 0 44px;
+}
+
+.mode-play-svg {
+  width: 30px;
+  height: 30px;
+  transform: translateX(1.5px);
+}
+
+[data-v143-play-tile] .mode-icon,
+[data-v143-play-tile]:not(.is-selected) .mode-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface-warm);
+  border: 2px solid var(--color-ink);
+  box-shadow: 0 2px 0 rgba(31, 36, 56, 0.25);
+  opacity: 1;
+}
+
+#modeTimed[data-v143-play-tile] .mode-icon {
+  background-color: #D9F2EE;
+}
+
+[data-v143-play-tile] .mode-icon .svg-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.mode-play-label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  color: var(--color-ink-inverse);
+  pointer-events: none;
+}
+
+#modeUntimed[data-v143-play-tile] .mode-caption,
+#modeTimed[data-v143-play-tile] .mode-caption,
+#modeUntimed[data-v143-play-tile].is-selected .mode-caption,
+#modeTimed[data-v143-play-tile].is-selected .mode-caption,
+#modeUntimed[data-v143-play-tile]:not(.is-selected) .mode-caption,
+#modeTimed[data-v143-play-tile]:not(.is-selected) .mode-caption {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: var(--radius-pill);
+  background-color: rgba(31, 36, 56, 0.22);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-ink-inverse);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #modeTimed[data-v143-play-tile] .stopwatch-hand {
+    animation: stopwatchSweep 4s linear infinite;
+  }
+
+  #modeUntimed[data-v143-play-tile]:active:not(:disabled),
+  #modeTimed[data-v143-play-tile]:active:not(:disabled) {
+    transform: translateY(3px);
+  }
+}
+
+@media (min-width: 768px) {
+  #modeUntimed[data-v143-play-tile],
+  #modeTimed[data-v143-play-tile],
+  #modeUntimed[data-v143-play-tile]:not(.is-selected),
+  #modeTimed[data-v143-play-tile]:not(.is-selected) {
+    height: 136px;
+    min-height: 136px;
+    border-radius: 30px;
+    gap: 5px;
+  }
+
+  .mode-play-glyph {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+  }
+
+  .mode-play-svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  [data-v143-play-tile] .mode-icon,
+  [data-v143-play-tile]:not(.is-selected) .mode-icon {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+  }
+
+  [data-v143-play-tile] .mode-icon .svg-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .mode-play-label {
+    font-size: 1.5rem;
+  }
+
+  [data-v143-play-tile] .mode-caption {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #modeUntimed[data-v143-play-tile],
+  #modeTimed[data-v143-play-tile],
+  #modeUntimed[data-v143-play-tile]:not(.is-selected),
+  #modeTimed[data-v143-play-tile]:not(.is-selected) {
+    height: 148px;
+    min-height: 148px;
+    border-radius: 34px;
+    gap: 6px;
+  }
+
+  .mode-play-glyph {
+    width: 54px;
+    height: 54px;
+    flex: 0 0 54px;
+  }
+
+  .mode-play-svg {
+    width: 38px;
+    height: 38px;
+  }
+
+  [data-v143-play-tile] .mode-icon,
+  [data-v143-play-tile]:not(.is-selected) .mode-icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+  }
+
+  [data-v143-play-tile] .mode-icon .svg-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .mode-play-label {
+    font-size: 1.65rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Item 7: #tipsNav next to #dailyStreak inside .hero-daily-cluster
+   -------------------------------------------------------------------------- */
+.hero-daily-meta[data-v143-daily-meta] {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.hero-daily-meta[data-v143-daily-meta] #dailyStreak {
+  min-height: 48px;
+  padding: 6px 12px;
+  flex: 0 1 auto;
+}
+
+.hero-daily-meta[data-v143-daily-meta] #dailyStreak[hidden] {
+  display: none !important;
+}
+
+#tipsNav[data-v143-how-to-play] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex: 1 1 auto;
+  min-width: 128px;
+  min-height: 48px;
+  height: 48px;
+  margin: 0;
+  padding: 8px 14px;
+  background-color: var(--color-surface-warm);
+  color: var(--color-ink);
+  border: 2.5px solid var(--color-ink);
+  border-radius: var(--radius-md);
+  box-shadow: 0 3px 0 var(--color-border-lip);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.1;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+#tipsNav[data-v143-how-to-play]:hover:not(:disabled) {
+  background-color: var(--color-surface);
+  border-color: var(--color-ink);
+}
+
+#tipsNav[data-v143-how-to-play] .svg-icon {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+}
+
+/* --------------------------------------------------------------------------
+   Item 6: Play-screen music toggle & Grown-ups music toggle
+   -------------------------------------------------------------------------- */
+.music-toggle-button[data-v143-music-toggle] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  flex: 0 0 48px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-surface-warm);
+  color: var(--color-ink);
+  border: 2.5px solid var(--color-ink);
+  border-radius: var(--radius-md);
+  box-shadow: 0 3px 0 var(--color-border-lip);
+  cursor: pointer;
+}
+
+.music-toggle-button[data-v143-music-toggle]:hover:not(:disabled) {
+  background-color: var(--color-surface);
+}
+
+.music-toggle-button[data-v143-music-toggle].is-muted {
+  background-color: var(--color-well);
+  border-color: var(--color-border-lip);
+  box-shadow: none;
+}
+
+.music-toggle-button[data-v143-music-toggle] .svg-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.music-parent-toggle[data-v143-music-parent] {
+  min-height: 48px;
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Item 8: Hidden Pip overlay & "You found Pip!" toast
+   -------------------------------------------------------------------------- */
+.hidden-pip-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  transform-origin: center center;
+}
+
+.hidden-pip-target {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: none;
+  pointer-events: auto;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.hidden-pip-target:focus-visible {
+  outline: 3px solid var(--color-reward);
+  outline-offset: 1px;
+}
+
+.hidden-pip-art {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  opacity: 0.82;
+  filter: drop-shadow(0 1px 2px rgba(31, 36, 56, 0.35));
+  pointer-events: none;
+}
+
+.hidden-pip-art svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.hidden-pip-target.is-found .hidden-pip-art {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hidden-pip-target.is-found .hidden-pip-art {
+    animation: v143PipFoundPop 480ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+}
+
+@keyframes v143PipFoundPop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.28) translateY(-3px);
+  }
+}
+
+.hidden-pip-toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(82px + env(safe-area-inset-bottom, 0px));
+  transform: translateX(-50%);
+  z-index: 95;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: var(--color-surface-warm);
+  color: var(--color-ink);
+  border: 2.5px solid var(--color-ink);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 0 var(--color-reward-lip), 0 8px 20px rgba(31, 36, 56, 0.22);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.hidden-pip-toast-icon {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+}
+
+.hidden-pip-toast-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 820px) {
+  .hidden-pip-toast {
+    bottom: 92px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hidden-pip-toast {
+    animation: v143ToastIn 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+@keyframes v143ToastIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

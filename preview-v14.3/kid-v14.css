@@ -1,0 +1,780 @@
+/* ==========================================================================
+   kid-v14.css — Spot the Difference v14 (loaded after style.css)
+   Kid lobby, mode captions + tile alignment, 1280 cluster scale, progressive
+   hints, Level 1 ghost hand, hidden Misses, flying star, lobby peek (R1).
+   Tokens: ART-DIRECTION section 2 only (declared in style.css :root).
+   New motion is opted in via (prefers-reduced-motion: no-preference).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Hero cluster: one width token so Play, mode tiles and Daily stay flush
+   -------------------------------------------------------------------------- */
+:root {
+  --kid-cluster-width: 224px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --kid-cluster-width: 240px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --kid-cluster-width: 312px;
+  }
+}
+
+.hero-play-cluster,
+.choice-grid.mode-tiles-row,
+.hero-daily-cluster {
+  width: var(--kid-cluster-width);
+  max-width: 100%;
+}
+
+/* R3: Play's own box never scales, so the tile row stays flush (<= 0.5px)
+   with Play at every moment. The breathing pulse moves to Play's contents. */
+#playNowButton.hero-play-button {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #playNowButton.hero-play-button .hero-play-glyphs {
+    animation: kidPlayContentBreathe 2.8s ease-in-out infinite;
+  }
+
+  #playNowButton.hero-play-button:active:not(:disabled) .hero-play-glyphs {
+    animation: none;
+  }
+}
+
+@keyframes kidPlayContentBreathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Mode tiles: R1 captions, R2 tops aligned (raised = ledge + shadow only)
+   -------------------------------------------------------------------------- */
+.choice-grid.mode-tiles-row {
+  align-items: start;
+}
+
+.choice-button.mode-tile {
+  gap: var(--space-1);
+  height: 104px;
+  min-height: 104px;
+}
+
+#modeUntimed.mode-tile.is-selected,
+#modeTimed.mode-tile.is-selected,
+#modeUntimed.mode-tile:not(.is-selected),
+#modeTimed.mode-tile:not(.is-selected) {
+  transform: none;
+}
+
+#modeUntimed.mode-tile:hover:not(:disabled),
+#modeTimed.mode-tile:hover:not(:disabled) {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #modeUntimed.mode-tile:active:not(:disabled),
+  #modeTimed.mode-tile:active:not(:disabled) {
+    transform: translateY(3px);
+  }
+}
+
+.mode-tile .mode-icon {
+  width: 52px;
+  height: 52px;
+}
+
+.mode-tile .mode-icon .svg-icon {
+  width: 46px;
+  height: 46px;
+}
+
+.mode-caption {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0;
+  white-space: nowrap;
+  color: var(--color-ink-muted);
+  pointer-events: none;
+}
+
+.choice-button.mode-tile.is-selected .mode-caption {
+  color: var(--color-ink);
+}
+
+@media (min-width: 768px) {
+  .choice-button.mode-tile {
+    height: 112px;
+    min-height: 112px;
+  }
+
+  .mode-tile .mode-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .mode-tile .mode-icon .svg-icon {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. >= 1024px: hero cluster at ~1.3x (Play 312px wide), still above the fold
+   -------------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+  .home-view {
+    gap: var(--space-4);
+  }
+
+  .hero-play-cluster {
+    margin-top: var(--space-7);
+  }
+
+  #homePipMascot {
+    top: -66px;
+    left: -20px;
+    width: 100px;
+    height: 100px;
+  }
+
+  #playNowButton.hero-play-button {
+    height: 224px;
+    min-width: 224px;
+    min-height: 224px;
+    border-radius: 56px;
+    gap: var(--space-3);
+  }
+
+  .hero-play-glyphs {
+    gap: var(--space-3);
+  }
+
+  .hero-play-glyph {
+    width: 110px;
+    height: 110px;
+  }
+
+  .hero-play-svg {
+    width: 72px;
+    height: 72px;
+  }
+
+  .hero-play-mode-icon {
+    width: 62px;
+    height: 62px;
+    flex: 0 0 62px;
+  }
+
+  .hero-play-mode-icon .svg-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero-play-word {
+    font-size: 2.4rem;
+  }
+
+  .choice-button.mode-tile {
+    height: 124px;
+    min-height: 124px;
+  }
+
+  .mode-tile .mode-icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .mode-tile .mode-icon .svg-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .mode-check {
+    width: 28px;
+    height: 28px;
+  }
+
+  .mode-check-svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  #dailyButton.hero-daily-button {
+    min-height: 68px;
+    font-size: 1.5rem;
+  }
+
+  #dailyButton.hero-daily-button .svg-icon {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Kid lobby (#kidLobby): difficulty stars, picture categories, stickers
+   -------------------------------------------------------------------------- */
+.kid-lobby {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  width: 100%;
+  margin: 0;
+  padding: var(--space-4);
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+.kid-lobby .difficulty-picker,
+.kid-lobby .home-categories {
+  grid-column: 1 / -1;
+  justify-content: flex-start;
+  margin: 0;
+  padding: var(--space-3);
+}
+
+.kid-lobby .difficulty-options {
+  flex: 1 1 auto;
+  align-items: stretch;
+  gap: var(--space-2);
+}
+
+.kid-lobby .difficulty-option,
+.kid-lobby .category-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  color: var(--color-ink);
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-btn-quiet);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.kid-lobby .difficulty-option {
+  min-height: 76px;
+  padding: var(--space-5) var(--space-1) var(--space-2);
+}
+
+.kid-lobby .category-button {
+  min-height: 88px;
+  padding: var(--space-2);
+}
+
+.kid-lobby .difficulty-option:hover:not(:disabled),
+.kid-lobby .category-button:hover:not(:disabled) {
+  background-color: var(--color-surface-warm);
+  border-color: var(--color-border-lip);
+}
+
+.kid-lobby .difficulty-option:active:not(:disabled),
+.kid-lobby .category-button:active:not(:disabled) {
+  box-shadow: var(--shadow-btn-quiet-active);
+}
+
+.kid-lobby .difficulty-option.is-selected,
+.kid-lobby .category-button.is-selected,
+.kid-lobby .difficulty-option.is-selected:hover:not(:disabled),
+.kid-lobby .category-button.is-selected:hover:not(:disabled) {
+  color: var(--color-ink);
+  background-color: var(--color-surface-warm);
+  border: 3px solid var(--color-accent-secondary);
+  box-shadow: var(--shadow-btn-secondary);
+}
+
+.kid-lobby .difficulty-option.is-selected:active:not(:disabled),
+.kid-lobby .category-button.is-selected:active:not(:disabled) {
+  box-shadow: var(--shadow-btn-secondary-active);
+}
+
+.kid-lobby .difficulty-option strong {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.difficulty-stars {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  height: 22px;
+}
+
+.difficulty-star {
+  display: block;
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.kid-lobby .category-choices {
+  display: grid;
+  flex: 1 1 auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: var(--space-2);
+}
+
+.category-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  pointer-events: none;
+}
+
+.category-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.category-label {
+  display: block;
+  max-width: 100%;
+}
+
+/* Selected-pick badge (same check language as the mode tiles) */
+.pick-check {
+  position: absolute;
+  top: var(--space-1);
+  right: var(--space-1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-success);
+  border: 2px solid var(--color-ink);
+  box-shadow: 0 2px 0 rgba(31, 36, 56, 0.22);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pick-check-svg {
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+
+.kid-lobby .is-selected > .pick-check {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pick-check {
+    transform: scale(0.4);
+    transition: opacity 120ms ease, transform 120ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .kid-lobby .is-selected > .pick-check {
+    transform: scale(1);
+  }
+}
+
+/* Sticker Book: a kid tile, not a grown-up chip */
+.kid-lobby-stickers {
+  grid-column: 1 / -1;
+  display: flex;
+}
+
+.kid-lobby .kid-sticker-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  min-width: 0;
+  min-height: 64px;
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-ink);
+  background-color: var(--color-surface-warm);
+  border: 2px solid var(--color-reward-lip);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card-warm);
+  font-family: var(--font-display);
+  font-size: var(--text-body);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.kid-lobby .kid-sticker-button:hover:not(:disabled) {
+  background-color: var(--color-surface);
+  border-color: var(--color-reward-lip);
+}
+
+.kid-lobby .kid-sticker-button:active:not(:disabled) {
+  box-shadow: 0 1px 0 var(--color-reward-lip), 0 2px 4px rgba(31, 36, 56, 0.08);
+}
+
+.kid-lobby .kid-sticker-button .svg-icon {
+  width: 32px;
+  height: 32px;
+}
+
+@media (min-width: 768px) {
+  .kid-lobby {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    padding: var(--space-5);
+  }
+
+  .kid-lobby .difficulty-picker {
+    grid-column: 1 / span 8;
+    grid-row: 1;
+  }
+
+  .kid-lobby-stickers {
+    grid-column: 9 / span 4;
+    grid-row: 1;
+  }
+
+  .kid-lobby .home-categories {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .kid-lobby .category-choices {
+    grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
+  }
+
+  .kid-lobby .kid-sticker-button {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .kid-lobby .kid-sticker-button .svg-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .category-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .difficulty-stars {
+    height: 26px;
+  }
+
+  .difficulty-star {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .kid-lobby {
+    padding: var(--space-4);
+  }
+
+  .kid-lobby .difficulty-picker {
+    grid-column: 1 / span 4;
+  }
+
+  .kid-lobby .home-categories {
+    grid-column: 5 / span 6;
+    grid-row: 1;
+  }
+
+  .kid-lobby .category-button {
+    min-height: 76px;
+  }
+
+  .kid-lobby-stickers {
+    grid-column: 11 / span 2;
+  }
+}
+
+/* Grown-ups keeps the level-order note (moved out of the old setup card) */
+.grown-ups-section #levelOrderNote {
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. Progressive hints: idle nudge on #hintButton + exact .hint-spot
+   -------------------------------------------------------------------------- */
+#hintButton.is-nudge:not(:disabled) {
+  box-shadow: var(--shadow-btn-secondary), 0 0 0 3px var(--color-reward);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #hintButton.is-nudge:not(:disabled) {
+    position: relative;
+    overflow: hidden;
+  }
+
+  #hintButton.is-nudge:not(:disabled) > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  #hintButton.is-nudge:not(:disabled)::after {
+    content: "";
+    position: absolute;
+    top: -10%;
+    bottom: -10%;
+    left: 0;
+    width: 36%;
+    background-color: rgba(255, 253, 249, 0.24);
+    transform: translateX(-140%) skewX(-20deg);
+    animation: kidHintShimmer 2.2s ease-in-out infinite;
+    pointer-events: none;
+  }
+}
+
+@keyframes kidHintShimmer {
+  0% {
+    transform: translateX(-140%) skewX(-20deg);
+  }
+  60%,
+  100% {
+    transform: translateX(380%) skewX(-20deg);
+  }
+}
+
+.hint-spot {
+  position: absolute;
+  border: 4px solid var(--color-reward);
+  outline: 3px solid var(--color-ink);
+  border-radius: 50%;
+  background-color: rgba(245, 166, 35, 0.18);
+  box-shadow: 0 0 0 6px rgba(255, 253, 249, 0.55);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hint-spot {
+    animation: kidHintSpotPulse 900ms ease-in-out infinite;
+  }
+}
+
+@keyframes kidHintSpotPulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(0.94);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. Level 1 ghost hand (.ghost-layer in #imageStageA / #imageStageB)
+   -------------------------------------------------------------------------- */
+.ghost-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.ghost-ring {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border: 4px solid var(--color-ink-inverse);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--color-accent-secondary), inset 0 0 0 2px var(--color-accent-secondary);
+  background-color: rgba(27, 122, 110, 0.16);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.ghost-hand {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  margin-left: -25px;
+  margin-top: -3px;
+  transform-origin: 25px 3px;
+  pointer-events: none;
+}
+
+.ghost-hand svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 4px 6px rgba(31, 36, 56, 0.32));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ghost-hand {
+    animation: kidGhostTap 2.4s ease-in-out infinite;
+  }
+
+  .ghost-ring {
+    animation: kidGhostRing 2.4s ease-out infinite;
+  }
+}
+
+@keyframes kidGhostTap {
+  0% {
+    opacity: 0;
+    transform: translate(40px, 48px) scale(1);
+  }
+  14% {
+    opacity: 1;
+    transform: translate(32px, 38px) scale(1);
+  }
+  42% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0, 0) scale(0.84);
+  }
+  60%,
+  86% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes kidGhostRing {
+  0%,
+  46% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  54% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.92);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. Misses stay counted but are not shown during play
+   -------------------------------------------------------------------------- */
+body.playing-screen .run-metric-misses {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   8. Flying star to the next HUD star slot
+   -------------------------------------------------------------------------- */
+.fly-star {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 80;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.fly-star svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 3px 0 rgba(184, 112, 9, 0.45));
+}
+
+/* The slot stays empty until its star lands, then pops */
+.star-slot.filled.is-awaiting {
+  background-color: var(--color-star-empty);
+  transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .star-slot.is-landed {
+    animation: kidStarLand 360ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+}
+
+@keyframes kidStarLand {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.45);
+  }
+  100% {
+    transform: scale(1.12);
+  }
+}
+
+/* Phones: the star tray is the wordless progress readout, so keep it in the
+   HUD at a compact size; the title truncates so the bar never grows. */
+@media (max-width: 819px) {
+  body.playing-screen .game-topline .star-progress {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 3px;
+    margin: 0;
+    padding: 3px var(--space-1);
+  }
+
+  body.playing-screen .game-topline .star-slot {
+    width: 16px;
+    height: 16px;
+  }
+
+  body.playing-screen .game-topline > div:first-child {
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. Lobby peek: natural hero height so difficulty stars show above the fold
+   -------------------------------------------------------------------------- */
+#homeView > .welcome-panel.home-hero {
+  box-sizing: border-box;
+  height: auto;
+  max-height: none;
+  min-height: 0;
+}
