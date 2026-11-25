@@ -1,0 +1,2301 @@
+{
+ "version": 5,
+ "hitRadiusUnits": "fraction of image width",
+ "modes": {
+  "untimed": {
+   "name": "Untimed Mode",
+   "timed": false
+  },
+  "timed": {
+   "name": "Timed Mode",
+   "timed": true,
+   "timeLimitSec": 90,
+   "stepDecaySec": 6,
+   "minTimeLimitSec": 40
+  }
+ },
+ "categories": {
+  "kids": [
+   {
+    "id": "animals",
+    "label": "Animals"
+   },
+   {
+    "id": "sea-sky",
+    "label": "Sea & Sky"
+   },
+   {
+    "id": "vehicles-space",
+    "label": "Vehicles & Space"
+   }
+  ]
+ },
+ "puzzles": [
+  {
+   "id": "eng-classroom",
+   "mode": "kids",
+   "level": 1,
+   "category": "all",
+   "categoryConfidence": "high",
+   "title": "Classroom",
+   "imageA": "img/eng-classroom-a.jpg",
+   "imageB": "img/eng-classroom-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.29954,
+     "y": 0.34009,
+     "r": 0.06619,
+     "type": "remove-object",
+     "what": "the clock is gone"
+    },
+    {
+     "x": 0.86469,
+     "y": 0.44422,
+     "r": 0.08026,
+     "type": "part-change",
+     "what": "the lamp is yellow"
+    },
+    {
+     "x": 0.17786,
+     "y": 0.63239,
+     "r": 0.07921,
+     "type": "color-swap",
+     "what": "the books are red"
+    },
+    {
+     "x": 0.40136,
+     "y": 0.63578,
+     "r": 0.08255,
+     "type": "resize",
+     "what": "the apple is smaller"
+    },
+    {
+     "x": 0.61351,
+     "y": 0.64205,
+     "r": 0.08126,
+     "type": "add-object",
+     "what": "there is an extra paint palette"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v12 engine r1",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-classroom-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.29954,
+       "y": 0.34009,
+       "r": 0.06619,
+       "type": "remove-object",
+       "what": "the clock is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.86469,
+       "y": 0.44422,
+       "r": 0.08026,
+       "type": "part-change",
+       "what": "the lamp is yellow",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.17786,
+       "y": 0.63239,
+       "r": 0.07921,
+       "type": "color-swap",
+       "what": "the books are red",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.40136,
+       "y": 0.63578,
+       "r": 0.08255,
+       "type": "resize",
+       "what": "the apple is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.61351,
+       "y": 0.64205,
+       "r": 0.08126,
+       "type": "add-object",
+       "what": "there is an extra paint palette",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-bakery",
+   "mode": "kids",
+   "level": 2,
+   "category": "all",
+   "categoryConfidence": "high",
+   "title": "Little bakery",
+   "imageA": "img/eng-bakery-a.jpg",
+   "imageB": "img/eng-bakery-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.25998,
+     "y": 0.22107,
+     "r": 0.07875,
+     "type": "add-object",
+     "what": "there is an extra bread"
+    },
+    {
+     "x": 0.50343,
+     "y": 0.22079,
+     "r": 0.08068,
+     "type": "remove-object",
+     "what": "the croissant is gone"
+    },
+    {
+     "x": 0.76244,
+     "y": 0.22432,
+     "r": 0.07365,
+     "type": "part-change",
+     "what": "the cake is chocolate"
+    },
+    {
+     "x": 0.61939,
+     "y": 0.52521,
+     "r": 0.08187,
+     "type": "color-swap",
+     "what": "the pie has blueberry filling"
+    },
+    {
+     "x": 0.84714,
+     "y": 0.5449,
+     "r": 0.08678,
+     "type": "resize",
+     "what": "the pretzel is smaller"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v12 engine r1",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-bakery-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.25998,
+       "y": 0.22107,
+       "r": 0.07875,
+       "type": "add-object",
+       "what": "there is an extra bread",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.50343,
+       "y": 0.22079,
+       "r": 0.08068,
+       "type": "remove-object",
+       "what": "the croissant is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.76244,
+       "y": 0.22432,
+       "r": 0.07365,
+       "type": "part-change",
+       "what": "the cake is chocolate",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.61939,
+       "y": 0.52521,
+       "r": 0.08187,
+       "type": "color-swap",
+       "what": "the pie has blueberry filling",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.84714,
+       "y": 0.5449,
+       "r": 0.08678,
+       "type": "resize",
+       "what": "the pretzel is smaller",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-campsite",
+   "mode": "kids",
+   "level": 3,
+   "category": "animals",
+   "categoryConfidence": "high",
+   "title": "Campsite",
+   "imageA": "img/eng-campsite-a.jpg",
+   "imageB": "img/eng-campsite-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.38374,
+     "y": 0.64381,
+     "r": 0.11069,
+     "type": "resize",
+     "what": "the campfire is smaller"
+    },
+    {
+     "x": 0.86524,
+     "y": 0.6439,
+     "r": 0.08996,
+     "type": "add-object",
+     "what": "there is an extra owl"
+    },
+    {
+     "x": 0.12855,
+     "y": 0.668,
+     "r": 0.08546,
+     "type": "remove-object",
+     "what": "the tent is gone"
+    },
+    {
+     "x": 0.50037,
+     "y": 0.89318,
+     "r": 0.09161,
+     "type": "part-change",
+     "what": "the sleeping bag is green"
+    },
+    {
+     "x": 0.75231,
+     "y": 0.93463,
+     "r": 0.09006,
+     "type": "color-swap",
+     "what": "the kettle is brown"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v12 engine r1",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-campsite-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.38374,
+       "y": 0.64381,
+       "r": 0.11069,
+       "type": "resize",
+       "what": "the campfire is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.86524,
+       "y": 0.6439,
+       "r": 0.08996,
+       "type": "add-object",
+       "what": "there is an extra owl",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.12855,
+       "y": 0.668,
+       "r": 0.08546,
+       "type": "remove-object",
+       "what": "the tent is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.50037,
+       "y": 0.89318,
+       "r": 0.09161,
+       "type": "part-change",
+       "what": "the sleeping bag is green",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.75231,
+       "y": 0.93463,
+       "r": 0.09006,
+       "type": "color-swap",
+       "what": "the kettle is brown",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-farm",
+   "mode": "kids",
+   "level": 4,
+   "category": "animals",
+   "categoryConfidence": "high",
+   "title": "Happy farm",
+   "imageA": "img/eng-farm-a.jpg",
+   "imageB": "img/eng-farm-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.38543,
+     "y": 0.62303,
+     "r": 0.09136,
+     "type": "resize",
+     "what": "the chick is smaller"
+    },
+    {
+     "x": 0.86498,
+     "y": 0.62736,
+     "r": 0.10175,
+     "type": "remove-object",
+     "what": "the horse is gone"
+    },
+    {
+     "x": 0.24924,
+     "y": 0.88563,
+     "r": 0.09667,
+     "type": "add-object",
+     "what": "there is an extra sheep"
+    },
+    {
+     "x": 0.4889,
+     "y": 0.88191,
+     "r": 0.0813,
+     "type": "color-swap",
+     "what": "the hen is white"
+    },
+    {
+     "x": 0.755,
+     "y": 0.90728,
+     "r": 0.09374,
+     "type": "part-change",
+     "what": "the apple crate is green"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v12 engine r1",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-farm-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.38543,
+       "y": 0.62303,
+       "r": 0.09136,
+       "type": "resize",
+       "what": "the chick is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.86498,
+       "y": 0.62736,
+       "r": 0.10175,
+       "type": "remove-object",
+       "what": "the horse is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.24924,
+       "y": 0.88563,
+       "r": 0.09667,
+       "type": "add-object",
+       "what": "there is an extra sheep",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.4889,
+       "y": 0.88191,
+       "r": 0.0813,
+       "type": "color-swap",
+       "what": "the hen is white",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.755,
+       "y": 0.90728,
+       "r": 0.09374,
+       "type": "part-change",
+       "what": "the apple crate is green",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-garden",
+   "mode": "kids",
+   "level": 5,
+   "category": "animals",
+   "categoryConfidence": "high",
+   "title": "Sunny garden",
+   "imageA": "img/eng-garden-a.jpg",
+   "imageB": "img/eng-garden-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.14917,
+     "y": 0.28725,
+     "r": 0.08642,
+     "type": "resize",
+     "what": "the butterfly is smaller"
+    },
+    {
+     "x": 0.38183,
+     "y": 0.56842,
+     "r": 0.06717,
+     "type": "part-change",
+     "what": "the sunflower has white petals"
+    },
+    {
+     "x": 0.13873,
+     "y": 0.65687,
+     "r": 0.0909,
+     "type": "color-swap",
+     "what": "the watering can is green"
+    },
+    {
+     "x": 0.6324,
+     "y": 0.67293,
+     "r": 0.08883,
+     "type": "remove-object",
+     "what": "the snail is gone"
+    },
+    {
+     "x": 0.25007,
+     "y": 0.87257,
+     "r": 0.09938,
+     "type": "add-object",
+     "what": "there is an extra birdhouse"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v12 engine r1",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-garden-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.14917,
+       "y": 0.28725,
+       "r": 0.08642,
+       "type": "resize",
+       "what": "the butterfly is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.38183,
+       "y": 0.56842,
+       "r": 0.06717,
+       "type": "part-change",
+       "what": "the sunflower has white petals",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.13873,
+       "y": 0.65687,
+       "r": 0.0909,
+       "type": "color-swap",
+       "what": "the watering can is green",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.6324,
+       "y": 0.67293,
+       "r": 0.08883,
+       "type": "remove-object",
+       "what": "the snail is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.25007,
+       "y": 0.87257,
+       "r": 0.09938,
+       "type": "add-object",
+       "what": "there is an extra birdhouse",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-trainstation",
+   "mode": "kids",
+   "level": 6,
+   "category": "vehicles-space",
+   "categoryConfidence": "high",
+   "title": "Train station",
+   "imageA": "img/eng-trainstation-a.jpg",
+   "imageB": "img/eng-trainstation-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.46919,
+     "y": 0.59827,
+     "r": 0.10436,
+     "type": "color-swap",
+     "what": "the carriage is green"
+    },
+    {
+     "x": 0.7494,
+     "y": 0.78452,
+     "r": 0.08879,
+     "type": "remove-object",
+     "what": "the suitcase is gone"
+    },
+    {
+     "x": 0.12498,
+     "y": 0.89358,
+     "r": 0.08288,
+     "type": "part-change",
+     "what": "the bench is red"
+    },
+    {
+     "x": 0.34449,
+     "y": 0.91211,
+     "r": 0.09089,
+     "type": "resize",
+     "what": "the luggage trolley is smaller"
+    },
+    {
+     "x": 0.58453,
+     "y": 0.90164,
+     "r": 0.09449,
+     "type": "add-object",
+     "what": "there is an extra pigeon"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v13 engine (v12 engine r1)",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-trainstation-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.46919,
+       "y": 0.59827,
+       "r": 0.10436,
+       "type": "color-swap",
+       "what": "the carriage is green",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.7494,
+       "y": 0.78452,
+       "r": 0.08879,
+       "type": "remove-object",
+       "what": "the suitcase is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.12498,
+       "y": 0.89358,
+       "r": 0.08288,
+       "type": "part-change",
+       "what": "the bench is red",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.34449,
+       "y": 0.91211,
+       "r": 0.09089,
+       "type": "resize",
+       "what": "the luggage trolley is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.58453,
+       "y": 0.90164,
+       "r": 0.09449,
+       "type": "add-object",
+       "what": "there is an extra pigeon",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-snowtown",
+   "mode": "kids",
+   "level": 7,
+   "category": "animals",
+   "categoryConfidence": "medium",
+   "title": "Snowy town",
+   "imageA": "img/eng-snowtown-a.jpg",
+   "imageB": "img/eng-snowtown-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.37811,
+     "y": 0.6536,
+     "r": 0.08936,
+     "type": "color-swap",
+     "what": "the sled is green"
+    },
+    {
+     "x": 0.13001,
+     "y": 0.64471,
+     "r": 0.09319,
+     "type": "resize",
+     "what": "the snowman is smaller"
+    },
+    {
+     "x": 0.25022,
+     "y": 0.88503,
+     "r": 0.08999,
+     "type": "add-object",
+     "what": "there is an extra street lamp"
+    },
+    {
+     "x": 0.4964,
+     "y": 0.88885,
+     "r": 0.09837,
+     "type": "remove-object",
+     "what": "the polar bear is gone"
+    },
+    {
+     "x": 0.78751,
+     "y": 0.8967,
+     "r": 0.07472,
+     "type": "part-change",
+     "what": "there is only one mitten"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v12 engine r1",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-snowtown-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.37811,
+       "y": 0.6536,
+       "r": 0.08936,
+       "type": "color-swap",
+       "what": "the sled is green",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.13001,
+       "y": 0.64471,
+       "r": 0.09319,
+       "type": "resize",
+       "what": "the snowman is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.25022,
+       "y": 0.88503,
+       "r": 0.08999,
+       "type": "add-object",
+       "what": "there is an extra street lamp",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.4964,
+       "y": 0.88885,
+       "r": 0.09837,
+       "type": "remove-object",
+       "what": "the polar bear is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.78751,
+       "y": 0.8967,
+       "r": 0.07472,
+       "type": "part-change",
+       "what": "there is only one mitten",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-zoo",
+   "mode": "kids",
+   "level": 8,
+   "category": "animals",
+   "categoryConfidence": "high",
+   "title": "Zoo day",
+   "imageA": "img/eng-zoo-a.jpg",
+   "imageB": "img/eng-zoo-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.37786,
+     "y": 0.68047,
+     "r": 0.08551,
+     "type": "resize",
+     "what": "the elephant is smaller"
+    },
+    {
+     "x": 0.86525,
+     "y": 0.667,
+     "r": 0.08803,
+     "type": "part-change",
+     "what": "the zebra has brown stripes"
+    },
+    {
+     "x": 0.62221,
+     "y": 0.70293,
+     "r": 0.07958,
+     "type": "color-swap",
+     "what": "the lion is white"
+    },
+    {
+     "x": 0.24521,
+     "y": 0.89389,
+     "r": 0.08813,
+     "type": "remove-object",
+     "what": "the monkey is gone"
+    },
+    {
+     "x": 0.49747,
+     "y": 0.915,
+     "r": 0.07973,
+     "type": "add-object",
+     "what": "there is an extra hippo"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v13 engine (v12 engine r1)",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-zoo-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.37786,
+       "y": 0.68047,
+       "r": 0.08551,
+       "type": "resize",
+       "what": "the elephant is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.86525,
+       "y": 0.667,
+       "r": 0.08803,
+       "type": "part-change",
+       "what": "the zebra has brown stripes",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.62221,
+       "y": 0.70293,
+       "r": 0.07958,
+       "type": "color-swap",
+       "what": "the lion is white",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.24521,
+       "y": 0.89389,
+       "r": 0.08813,
+       "type": "remove-object",
+       "what": "the monkey is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.49747,
+       "y": 0.915,
+       "r": 0.07973,
+       "type": "add-object",
+       "what": "there is an extra hippo",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-kitchen",
+   "mode": "kids",
+   "level": 9,
+   "category": "all",
+   "categoryConfidence": "high",
+   "title": "Busy kitchen",
+   "imageA": "img/eng-kitchen-a.jpg",
+   "imageB": "img/eng-kitchen-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.1217,
+     "y": 0.46293,
+     "r": 0.07813,
+     "type": "color-swap",
+     "what": "the teapot is green"
+    },
+    {
+     "x": 0.37064,
+     "y": 0.4628,
+     "r": 0.10087,
+     "type": "resize",
+     "what": "the mixing bowl is smaller"
+    },
+    {
+     "x": 0.62956,
+     "y": 0.46609,
+     "r": 0.07808,
+     "type": "add-object",
+     "what": "there is an extra cooking pot"
+    },
+    {
+     "x": 0.26009,
+     "y": 0.89762,
+     "r": 0.09197,
+     "type": "remove-object",
+     "what": "the bananas is gone"
+    },
+    {
+     "x": 0.79047,
+     "y": 0.90084,
+     "r": 0.0656,
+     "type": "part-change",
+     "what": "the jug has a yellow label"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v12 engine r1",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-kitchen-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.1217,
+       "y": 0.46293,
+       "r": 0.07813,
+       "type": "color-swap",
+       "what": "the teapot is green",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.37064,
+       "y": 0.4628,
+       "r": 0.10087,
+       "type": "resize",
+       "what": "the mixing bowl is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.62956,
+       "y": 0.46609,
+       "r": 0.07808,
+       "type": "add-object",
+       "what": "there is an extra cooking pot",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.26009,
+       "y": 0.89762,
+       "r": 0.09197,
+       "type": "remove-object",
+       "what": "the bananas is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.79047,
+       "y": 0.90084,
+       "r": 0.0656,
+       "type": "part-change",
+       "what": "the jug has a yellow label",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-playground",
+   "mode": "kids",
+   "level": 10,
+   "category": "all",
+   "categoryConfidence": "high",
+   "title": "Playground",
+   "imageA": "img/eng-playground-a.jpg",
+   "imageB": "img/eng-playground-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.37929,
+     "y": 0.67513,
+     "r": 0.09677,
+     "type": "remove-object",
+     "what": "the swing is gone"
+    },
+    {
+     "x": 0.62671,
+     "y": 0.70934,
+     "r": 0.08401,
+     "type": "color-swap",
+     "what": "the seesaw is red"
+    },
+    {
+     "x": 0.24909,
+     "y": 0.9319,
+     "r": 0.08183,
+     "type": "part-change",
+     "what": "the roundabout is green"
+    },
+    {
+     "x": 0.49039,
+     "y": 0.92662,
+     "r": 0.11274,
+     "type": "add-object",
+     "what": "there is an extra scooter"
+    },
+    {
+     "x": 0.74955,
+     "y": 0.88936,
+     "r": 0.08882,
+     "type": "resize",
+     "what": "the beach ball is smaller"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v13 engine (v12 engine r1)",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-playground-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.37929,
+       "y": 0.67513,
+       "r": 0.09677,
+       "type": "remove-object",
+       "what": "the swing is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.62671,
+       "y": 0.70934,
+       "r": 0.08401,
+       "type": "color-swap",
+       "what": "the seesaw is red",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.24909,
+       "y": 0.9319,
+       "r": 0.08183,
+       "type": "part-change",
+       "what": "the roundabout is green",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.49039,
+       "y": 0.92662,
+       "r": 0.11274,
+       "type": "add-object",
+       "what": "there is an extra scooter",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.74955,
+       "y": 0.88936,
+       "r": 0.08882,
+       "type": "resize",
+       "what": "the beach ball is smaller",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-underwater",
+   "mode": "kids",
+   "level": 11,
+   "category": "sea-sky",
+   "categoryConfidence": "high",
+   "title": "Under the sea",
+   "imageA": "img/eng-underwater-a.jpg",
+   "imageB": "img/eng-underwater-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.41911,
+     "y": 0.24362,
+     "r": 0.06647,
+     "type": "resize",
+     "what": "the sea turtle is smaller"
+    },
+    {
+     "x": 0.69941,
+     "y": 0.2894,
+     "r": 0.07038,
+     "type": "color-swap",
+     "what": "the octopus is purple"
+    },
+    {
+     "x": 0.88304,
+     "y": 0.51794,
+     "r": 0.06655,
+     "type": "part-change",
+     "what": "the seahorse is yellow"
+    },
+    {
+     "x": 0.15003,
+     "y": 0.8868,
+     "r": 0.08313,
+     "type": "add-object",
+     "what": "there is an extra crab"
+    },
+    {
+     "x": 0.44923,
+     "y": 0.88033,
+     "r": 0.08265,
+     "type": "remove-object",
+     "what": "the treasure chest is gone"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v13 engine (v12 engine r1)",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-underwater-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.41911,
+       "y": 0.24362,
+       "r": 0.06647,
+       "type": "resize",
+       "what": "the sea turtle is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.69941,
+       "y": 0.2894,
+       "r": 0.07038,
+       "type": "color-swap",
+       "what": "the octopus is purple",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.88304,
+       "y": 0.51794,
+       "r": 0.06655,
+       "type": "part-change",
+       "what": "the seahorse is yellow",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.15003,
+       "y": 0.8868,
+       "r": 0.08313,
+       "type": "add-object",
+       "what": "there is an extra crab",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.44923,
+       "y": 0.88033,
+       "r": 0.08265,
+       "type": "remove-object",
+       "what": "the treasure chest is gone",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-space",
+   "mode": "kids",
+   "level": 12,
+   "category": "vehicles-space",
+   "categoryConfidence": "high",
+   "title": "Space trip",
+   "imageA": "img/eng-space-a.jpg",
+   "imageB": "img/eng-space-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.40048,
+     "y": 0.24676,
+     "r": 0.06559,
+     "type": "color-swap",
+     "what": "the planet is red"
+    },
+    {
+     "x": 0.87962,
+     "y": 0.24924,
+     "r": 0.06167,
+     "type": "remove-object",
+     "what": "the flying saucer is gone"
+    },
+    {
+     "x": 0.27041,
+     "y": 0.573,
+     "r": 0.06521,
+     "type": "resize",
+     "what": "the star is smaller"
+    },
+    {
+     "x": 0.74939,
+     "y": 0.56006,
+     "r": 0.08604,
+     "type": "part-change",
+     "what": "the satellite is yellow"
+    },
+    {
+     "x": 0.1796,
+     "y": 0.86139,
+     "r": 0.0755,
+     "type": "add-object",
+     "what": "there is an extra robot"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v13 engine (v12 engine r1)",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-space-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.40048,
+       "y": 0.24676,
+       "r": 0.06559,
+       "type": "color-swap",
+       "what": "the planet is red",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.87962,
+       "y": 0.24924,
+       "r": 0.06167,
+       "type": "remove-object",
+       "what": "the flying saucer is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.27041,
+       "y": 0.573,
+       "r": 0.06521,
+       "type": "resize",
+       "what": "the star is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.74939,
+       "y": 0.56006,
+       "r": 0.08604,
+       "type": "part-change",
+       "what": "the satellite is yellow",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.1796,
+       "y": 0.86139,
+       "r": 0.0755,
+       "type": "add-object",
+       "what": "there is an extra robot",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-library",
+   "mode": "kids",
+   "level": 13,
+   "category": "all",
+   "categoryConfidence": "high",
+   "title": "Story library",
+   "imageA": "img/eng-library-a.jpg",
+   "imageB": "img/eng-library-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.29628,
+     "y": 0.24171,
+     "r": 0.07748,
+     "type": "part-change",
+     "what": "the middle book is red"
+    },
+    {
+     "x": 0.69904,
+     "y": 0.22345,
+     "r": 0.08126,
+     "type": "resize",
+     "what": "the owl toy is smaller"
+    },
+    {
+     "x": 0.38164,
+     "y": 0.75609,
+     "r": 0.08569,
+     "type": "remove-object",
+     "what": "the potted plant is gone"
+    },
+    {
+     "x": 0.12511,
+     "y": 0.754,
+     "r": 0.09796,
+     "type": "color-swap",
+     "what": "the armchair is green"
+    },
+    {
+     "x": 0.6303,
+     "y": 0.7672,
+     "r": 0.08833,
+     "type": "add-object",
+     "what": "there is an extra step ladder"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v13 engine (v12 engine r1)",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-library-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.29628,
+       "y": 0.24171,
+       "r": 0.07748,
+       "type": "part-change",
+       "what": "the middle book is red",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.69904,
+       "y": 0.22345,
+       "r": 0.08126,
+       "type": "resize",
+       "what": "the owl toy is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.38164,
+       "y": 0.75609,
+       "r": 0.08569,
+       "type": "remove-object",
+       "what": "the potted plant is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.12511,
+       "y": 0.754,
+       "r": 0.09796,
+       "type": "color-swap",
+       "what": "the armchair is green",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.6303,
+       "y": 0.7672,
+       "r": 0.08833,
+       "type": "add-object",
+       "what": "there is an extra step ladder",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-birthday",
+   "mode": "kids",
+   "level": 14,
+   "category": "all",
+   "categoryConfidence": "high",
+   "title": "Birthday party",
+   "imageA": "img/eng-birthday-a.jpg",
+   "imageB": "img/eng-birthday-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.36886,
+     "y": 0.52297,
+     "r": 0.07821,
+     "type": "color-swap",
+     "what": "the present is green"
+    },
+    {
+     "x": 0.62919,
+     "y": 0.52098,
+     "r": 0.07164,
+     "type": "resize",
+     "what": "the cupcake is smaller"
+    },
+    {
+     "x": 0.8797,
+     "y": 0.53916,
+     "r": 0.07286,
+     "type": "add-object",
+     "what": "there is an extra jelly"
+    },
+    {
+     "x": 0.19911,
+     "y": 0.81324,
+     "r": 0.08955,
+     "type": "part-change",
+     "what": "one balloon is purple"
+    },
+    {
+     "x": 0.49974,
+     "y": 0.92117,
+     "r": 0.08939,
+     "type": "remove-object",
+     "what": "the party hat is gone"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v13 engine (v12 engine r1)",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-birthday-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.36886,
+       "y": 0.52297,
+       "r": 0.07821,
+       "type": "color-swap",
+       "what": "the present is green",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.62919,
+       "y": 0.52098,
+       "r": 0.07164,
+       "type": "resize",
+       "what": "the cupcake is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.8797,
+       "y": 0.53916,
+       "r": 0.07286,
+       "type": "add-object",
+       "what": "there is an extra jelly",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.19911,
+       "y": 0.81324,
+       "r": 0.08955,
+       "type": "part-change",
+       "what": "one balloon is purple",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.49974,
+       "y": 0.92117,
+       "r": 0.08939,
+       "type": "remove-object",
+       "what": "the party hat is gone",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-rainystreet",
+   "mode": "kids",
+   "level": 15,
+   "category": "all",
+   "categoryConfidence": "high",
+   "title": "Rainy street",
+   "imageA": "img/eng-rainystreet-a.jpg",
+   "imageB": "img/eng-rainystreet-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.13211,
+     "y": 0.6522,
+     "r": 0.09978,
+     "type": "color-swap",
+     "what": "the umbrella is yellow"
+    },
+    {
+     "x": 0.6271,
+     "y": 0.69365,
+     "r": 0.09253,
+     "type": "resize",
+     "what": "the duck is smaller"
+    },
+    {
+     "x": 0.25166,
+     "y": 0.93661,
+     "r": 0.07856,
+     "type": "remove-object",
+     "what": "the red car is gone"
+    },
+    {
+     "x": 0.49869,
+     "y": 0.88285,
+     "r": 0.08634,
+     "type": "part-change",
+     "what": "the post box is red"
+    },
+    {
+     "x": 0.74882,
+     "y": 0.89219,
+     "r": 0.09292,
+     "type": "add-object",
+     "what": "there is an extra frog"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v13 engine (v12 engine r1)",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-rainystreet-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.13211,
+       "y": 0.6522,
+       "r": 0.09978,
+       "type": "color-swap",
+       "what": "the umbrella is yellow",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.6271,
+       "y": 0.69365,
+       "r": 0.09253,
+       "type": "resize",
+       "what": "the duck is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.25166,
+       "y": 0.93661,
+       "r": 0.07856,
+       "type": "remove-object",
+       "what": "the red car is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.49869,
+       "y": 0.88285,
+       "r": 0.08634,
+       "type": "part-change",
+       "what": "the post box is red",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.74882,
+       "y": 0.89219,
+       "r": 0.09292,
+       "type": "add-object",
+       "what": "there is an extra frog",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-toys",
+   "mode": "kids",
+   "level": 16,
+   "category": "vehicles-space",
+   "categoryConfidence": "medium",
+   "title": "Toy shelf",
+   "imageA": "img/eng-toys-a.jpg",
+   "imageB": "img/eng-toys-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.21178,
+     "y": 0.19475,
+     "r": 0.08839,
+     "type": "color-swap",
+     "what": "the dinosaur is yellow"
+    },
+    {
+     "x": 0.51682,
+     "y": 0.20106,
+     "r": 0.08729,
+     "type": "remove-object",
+     "what": "the rubber duck is gone"
+    },
+    {
+     "x": 0.22366,
+     "y": 0.43647,
+     "r": 0.08735,
+     "type": "add-object",
+     "what": "there is an extra teddy bear"
+    },
+    {
+     "x": 0.29938,
+     "y": 0.87636,
+     "r": 0.06698,
+     "type": "color-swap",
+     "what": "the ring tower is red"
+    },
+    {
+     "x": 0.70099,
+     "y": 0.88346,
+     "r": 0.07476,
+     "type": "resize",
+     "what": "the toy car is smaller"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v12 engine r1",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-toys-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.21178,
+       "y": 0.19475,
+       "r": 0.08839,
+       "type": "color-swap",
+       "what": "the dinosaur is yellow",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.51682,
+       "y": 0.20106,
+       "r": 0.08729,
+       "type": "remove-object",
+       "what": "the rubber duck is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.22366,
+       "y": 0.43647,
+       "r": 0.08735,
+       "type": "add-object",
+       "what": "there is an extra teddy bear",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.29938,
+       "y": 0.87636,
+       "r": 0.06698,
+       "type": "color-swap",
+       "what": "the ring tower is red",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.70099,
+       "y": 0.88346,
+       "r": 0.07476,
+       "type": "resize",
+       "what": "the toy car is smaller",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-market",
+   "mode": "kids",
+   "level": 17,
+   "category": "all",
+   "categoryConfidence": "high",
+   "title": "Market day",
+   "imageA": "img/eng-market-a.jpg",
+   "imageB": "img/eng-market-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.22027,
+     "y": 0.49213,
+     "r": 0.07727,
+     "type": "resize",
+     "what": "the watermelon is smaller"
+    },
+    {
+     "x": 0.50047,
+     "y": 0.48301,
+     "r": 0.07219,
+     "type": "part-change",
+     "what": "the tomatoes are yellow"
+    },
+    {
+     "x": 0.37791,
+     "y": 0.68838,
+     "r": 0.08423,
+     "type": "remove-object",
+     "what": "the sunflowers are gone"
+    },
+    {
+     "x": 0.12623,
+     "y": 0.73455,
+     "r": 0.08169,
+     "type": "color-swap",
+     "what": "the pumpkins are white"
+    },
+    {
+     "x": 0.61584,
+     "y": 0.73968,
+     "r": 0.08152,
+     "type": "add-object",
+     "what": "there is an extra wheelbarrow"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v13 engine (v12 engine r1)",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-market-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.22027,
+       "y": 0.49213,
+       "r": 0.07727,
+       "type": "resize",
+       "what": "the watermelon is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.50047,
+       "y": 0.48301,
+       "r": 0.07219,
+       "type": "part-change",
+       "what": "the tomatoes are yellow",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.37791,
+       "y": 0.68838,
+       "r": 0.08423,
+       "type": "remove-object",
+       "what": "the sunflowers are gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.12623,
+       "y": 0.73455,
+       "r": 0.08169,
+       "type": "color-swap",
+       "what": "the pumpkins are white",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.61584,
+       "y": 0.73968,
+       "r": 0.08152,
+       "type": "add-object",
+       "what": "there is an extra wheelbarrow",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-park",
+   "mode": "kids",
+   "level": 18,
+   "category": "animals",
+   "categoryConfidence": "high",
+   "title": "Park picnic",
+   "imageA": "img/eng-park-a.jpg",
+   "imageB": "img/eng-park-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.85074,
+     "y": 0.21775,
+     "r": 0.08293,
+     "type": "part-change",
+     "what": "the balloon has red stripes"
+    },
+    {
+     "x": 0.15452,
+     "y": 0.25437,
+     "r": 0.08535,
+     "type": "resize",
+     "what": "the kite is smaller"
+    },
+    {
+     "x": 0.379,
+     "y": 0.61013,
+     "r": 0.09994,
+     "type": "remove-object",
+     "what": "the tree is gone"
+    },
+    {
+     "x": 0.86206,
+     "y": 0.61411,
+     "r": 0.09676,
+     "type": "color-swap",
+     "what": "the puppy is white"
+    },
+    {
+     "x": 0.24881,
+     "y": 0.89135,
+     "r": 0.09531,
+     "type": "add-object",
+     "what": "there is an extra squirrel"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v12 engine r1",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-park-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.85074,
+       "y": 0.21775,
+       "r": 0.08293,
+       "type": "part-change",
+       "what": "the balloon has red stripes",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.15452,
+       "y": 0.25437,
+       "r": 0.08535,
+       "type": "resize",
+       "what": "the kite is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.379,
+       "y": 0.61013,
+       "r": 0.09994,
+       "type": "remove-object",
+       "what": "the tree is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.86206,
+       "y": 0.61411,
+       "r": 0.09676,
+       "type": "color-swap",
+       "what": "the puppy is white",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.24881,
+       "y": 0.89135,
+       "r": 0.09531,
+       "type": "add-object",
+       "what": "there is an extra squirrel",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-beach",
+   "mode": "kids",
+   "level": 19,
+   "category": "sea-sky",
+   "categoryConfidence": "high",
+   "title": "Beach day",
+   "imageA": "img/eng-beach-a.jpg",
+   "imageB": "img/eng-beach-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.61855,
+     "y": 0.55502,
+     "r": 0.08586,
+     "type": "remove-object",
+     "what": "the sailboat is gone"
+    },
+    {
+     "x": 0.37819,
+     "y": 0.70381,
+     "r": 0.07984,
+     "type": "part-change",
+     "what": "the bucket is red"
+    },
+    {
+     "x": 0.11948,
+     "y": 0.71299,
+     "r": 0.0826,
+     "type": "add-object",
+     "what": "there is an extra beach ball"
+    },
+    {
+     "x": 0.88021,
+     "y": 0.73935,
+     "r": 0.0828,
+     "type": "resize",
+     "what": "the crab is smaller"
+    },
+    {
+     "x": 0.24953,
+     "y": 0.90191,
+     "r": 0.08019,
+     "type": "color-swap",
+     "what": "the starfish is purple"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v13 engine (v12 engine r1)",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-beach-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.61855,
+       "y": 0.55502,
+       "r": 0.08586,
+       "type": "remove-object",
+       "what": "the sailboat is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.37819,
+       "y": 0.70381,
+       "r": 0.07984,
+       "type": "part-change",
+       "what": "the bucket is red",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.11948,
+       "y": 0.71299,
+       "r": 0.0826,
+       "type": "add-object",
+       "what": "there is an extra beach ball",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.88021,
+       "y": 0.73935,
+       "r": 0.0828,
+       "type": "resize",
+       "what": "the crab is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.24953,
+       "y": 0.90191,
+       "r": 0.08019,
+       "type": "color-swap",
+       "what": "the starfish is purple",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-firestation",
+   "mode": "kids",
+   "level": 20,
+   "category": "vehicles-space",
+   "categoryConfidence": "high",
+   "title": "Fire station",
+   "imageA": "img/eng-firestation-a.jpg",
+   "imageB": "img/eng-firestation-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.22582,
+     "y": 0.27623,
+     "r": 0.08871,
+     "type": "color-swap",
+     "what": "the helmet is red"
+    },
+    {
+     "x": 0.50052,
+     "y": 0.24332,
+     "r": 0.08447,
+     "type": "part-change",
+     "what": "the hose is yellow"
+    },
+    {
+     "x": 0.7876,
+     "y": 0.25545,
+     "r": 0.08062,
+     "type": "resize",
+     "what": "the fire extinguisher is smaller"
+    },
+    {
+     "x": 0.3789,
+     "y": 0.73415,
+     "r": 0.08386,
+     "type": "remove-object",
+     "what": "the fire hydrant is gone"
+    },
+    {
+     "x": 0.62311,
+     "y": 0.74815,
+     "r": 0.09121,
+     "type": "add-object",
+     "what": "there is an extra spotty dog"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v13 engine (v12 engine r1)",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-firestation-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.22582,
+       "y": 0.27623,
+       "r": 0.08871,
+       "type": "color-swap",
+       "what": "the helmet is red",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.50052,
+       "y": 0.24332,
+       "r": 0.08447,
+       "type": "part-change",
+       "what": "the hose is yellow",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.7876,
+       "y": 0.25545,
+       "r": 0.08062,
+       "type": "resize",
+       "what": "the fire extinguisher is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.3789,
+       "y": 0.73415,
+       "r": 0.08386,
+       "type": "remove-object",
+       "what": "the fire hydrant is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.62311,
+       "y": 0.74815,
+       "r": 0.09121,
+       "type": "add-object",
+       "what": "there is an extra spotty dog",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-bedroom",
+   "mode": "kids",
+   "level": 21,
+   "category": "all",
+   "categoryConfidence": "high",
+   "title": "Cosy bedroom",
+   "imageA": "img/eng-bedroom-a.jpg",
+   "imageB": "img/eng-bedroom-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.26982,
+     "y": 0.18442,
+     "r": 0.08675,
+     "type": "color-swap",
+     "what": "the desk lamp is green"
+    },
+    {
+     "x": 0.73225,
+     "y": 0.19767,
+     "r": 0.07306,
+     "type": "resize",
+     "what": "the toy robot is smaller"
+    },
+    {
+     "x": 0.38127,
+     "y": 0.75189,
+     "r": 0.08096,
+     "type": "part-change",
+     "what": "the pillow has green stripes"
+    },
+    {
+     "x": 0.11877,
+     "y": 0.80114,
+     "r": 0.07655,
+     "type": "remove-object",
+     "what": "the slippers are gone"
+    },
+    {
+     "x": 0.62889,
+     "y": 0.77627,
+     "r": 0.08432,
+     "type": "add-object",
+     "what": "there is an extra backpack"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v13 engine (v12 engine r1)",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-bedroom-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.26982,
+       "y": 0.18442,
+       "r": 0.08675,
+       "type": "color-swap",
+       "what": "the desk lamp is green",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.73225,
+       "y": 0.19767,
+       "r": 0.07306,
+       "type": "resize",
+       "what": "the toy robot is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.38127,
+       "y": 0.75189,
+       "r": 0.08096,
+       "type": "part-change",
+       "what": "the pillow has green stripes",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.11877,
+       "y": 0.80114,
+       "r": 0.07655,
+       "type": "remove-object",
+       "what": "the slippers are gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.62889,
+       "y": 0.77627,
+       "r": 0.08432,
+       "type": "add-object",
+       "what": "there is an extra backpack",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "eng-petshop",
+   "mode": "kids",
+   "level": 22,
+   "category": "animals",
+   "categoryConfidence": "high",
+   "title": "Pet shop",
+   "imageA": "img/eng-petshop-a.jpg",
+   "imageB": "img/eng-petshop-b.jpg",
+   "width": 800,
+   "height": 600,
+   "differences": [
+    {
+     "x": 0.49965,
+     "y": 0.20141,
+     "r": 0.08186,
+     "type": "color-swap",
+     "what": "the birdcage is green"
+    },
+    {
+     "x": 0.72823,
+     "y": 0.19983,
+     "r": 0.09569,
+     "type": "resize",
+     "what": "the hamster cage is smaller"
+    },
+    {
+     "x": 0.37799,
+     "y": 0.72763,
+     "r": 0.09459,
+     "type": "part-change",
+     "what": "the parrot is green"
+    },
+    {
+     "x": 0.11528,
+     "y": 0.7722,
+     "r": 0.0885,
+     "type": "remove-object",
+     "what": "the puppy is gone"
+    },
+    {
+     "x": 0.62477,
+     "y": 0.78139,
+     "r": 0.08708,
+     "type": "add-object",
+     "what": "there is an extra bunny"
+    }
+   ],
+   "credit": {
+    "author": "AI-generated layers (Grok Bot image tool), composed by v13 engine (v12 engine r1)",
+    "license": "AI-generated (SPEC-POST-V10)",
+    "source_url": ""
+   },
+   "daily": true,
+   "sets": [],
+   "variants": {
+    "easy": {
+     "imageB": "img/eng-petshop-b-easy.jpg",
+     "differences": [
+      {
+       "x": 0.49965,
+       "y": 0.20141,
+       "r": 0.08186,
+       "type": "color-swap",
+       "what": "the birdcage is green",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.72823,
+       "y": 0.19983,
+       "r": 0.09569,
+       "type": "resize",
+       "what": "the hamster cage is smaller",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.37799,
+       "y": 0.72763,
+       "r": 0.09459,
+       "type": "part-change",
+       "what": "the parrot is green",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.11528,
+       "y": 0.7722,
+       "r": 0.0885,
+       "type": "remove-object",
+       "what": "the puppy is gone",
+       "difficulty": "easy"
+      },
+      {
+       "x": 0.62477,
+       "y": 0.78139,
+       "r": 0.08708,
+       "type": "add-object",
+       "what": "there is an extra bunny",
+       "difficulty": "easy"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

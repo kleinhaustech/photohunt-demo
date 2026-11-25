@@ -1,0 +1,1340 @@
+/* ==========================================================================
+   kid-v14.1.css — Spot the Difference v14.1 (loaded after style.css & kid-v14.css)
+   Items 1-6: Twin synchronized .loupe + pinch-zoom, Sticker Worlds (.sticker-world,
+   [data-sticker]) + Freeze Shield, Offline Road-Trip Pack ([data-offline-save]),
+   Postcard & Challenge Sharing ([data-share], [data-challenge-banner]).
+   Tokens: ART-DIRECTION section 2 only (declared in style.css :root).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Twin Synchronized Loupes (.loupe) & Pinch-Zoom Stage
+   -------------------------------------------------------------------------- */
+.image-stage,
+.image-tap-surface {
+  touch-action: pan-x pan-y;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.image-stage.is-zoomed,
+.image-stage.is-zoomed .image-tap-surface,
+.image-tap-surface.is-zoomed {
+  touch-action: none;
+  cursor: grab;
+}
+
+.image-stage.is-zoomed:active,
+.image-stage.is-zoomed .image-tap-surface:active,
+.image-tap-surface.is-zoomed:active {
+  cursor: grabbing;
+}
+
+.image-stage img,
+.image-stage .marks-layer,
+.image-stage .hint-layer {
+  transform-origin: 50% 50%;
+}
+
+.loupe {
+  position: absolute;
+  z-index: 42;
+  width: 124px;
+  height: 124px;
+  border-radius: var(--radius-pill);
+  border: 4px solid var(--color-ink-inverse);
+  outline: 3px solid var(--color-accent-secondary);
+  box-shadow: var(--shadow-dialog);
+  background-color: var(--color-surface);
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .loupe {
+    width: 108px;
+    height: 108px;
+  }
+}
+
+.loupe-glass {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-pill);
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.loupe-glass.is-mirrored {
+  transform: scaleX(-1);
+}
+
+.loupe::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  border-radius: var(--radius-pill);
+  border: 2px dashed var(--color-accent-secondary);
+  box-shadow: 0 0 0 1.5px var(--color-ink-inverse);
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   3. Sticker Worlds (.sticker-world, [data-sticker], Freeze Shield)
+   -------------------------------------------------------------------------- */
+.sticker-worlds-studio {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin: var(--space-4) 0;
+  padding: var(--space-4);
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.sticker-worlds-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.streak-freeze-bar {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.streak-freeze-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-surface-warm);
+  color: var(--color-ink);
+  border: 2px solid var(--color-reward-lip);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sticker-world-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  flex-wrap: nowrap;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.sticker-world-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  min-height: 48px;
+  min-width: 0;
+  padding: var(--space-2) var(--space-2);
+  background-color: var(--color-well);
+  color: var(--color-ink);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-btn-quiet);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sticker-world-tab:hover:not(:disabled) {
+  background-color: var(--color-surface-warm);
+  border-color: var(--color-border-lip);
+}
+
+.sticker-world-tab:active:not(:disabled) {
+  box-shadow: var(--shadow-btn-quiet-active);
+}
+
+.sticker-world-tab.is-selected {
+  background-color: var(--color-accent-secondary);
+  color: var(--color-ink-inverse);
+  border-color: var(--color-accent-secondary-lip);
+  box-shadow: var(--shadow-btn-secondary);
+}
+
+.sticker-worlds-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+@media (max-width: 819px) {
+  .sticker-worlds-studio {
+    padding: var(--space-2);
+  }
+
+  .sticker-world-tabs {
+    gap: var(--space-1);
+  }
+
+  .sticker-world-tab {
+    padding: var(--space-1) var(--space-1);
+    font-size: var(--text-xs);
+    gap: 4px;
+  }
+
+  .sticker-world-tab .svg-icon {
+    width: 14px;
+    height: 14px;
+    flex: 0 0 14px;
+  }
+
+  .sticker-worlds-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sticker-world:not(.is-active) {
+    display: none;
+  }
+}
+
+.sticker-world {
+  position: relative;
+  width: 100%;
+  min-height: 220px;
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-well);
+  border: 3px solid var(--color-border-lip);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-frame);
+  overflow: hidden;
+  touch-action: none;
+  user-select: none;
+}
+
+.sticker-world.is-active {
+  border-color: var(--color-accent-secondary);
+  box-shadow: var(--shadow-card-timed);
+}
+
+.sticker-world.is-drag-origin {
+  overflow: visible;
+  z-index: 25;
+}
+
+.sticker-world-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+.sticker-world-title {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.world-sticker {
+  position: absolute;
+  z-index: 5;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 0;
+  background-color: var(--color-surface);
+  border: 3px solid var(--color-ink-inverse);
+  outline: 2.5px solid var(--color-reward-lip);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sticker);
+  transform: translate(-50%, -50%);
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.world-sticker:hover:not(:disabled) {
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+.world-sticker:active:not(:disabled),
+.world-sticker.is-dragging {
+  z-index: 12;
+  cursor: grabbing;
+  transform: translate(-50%, -50%) scale(1.12);
+}
+
+.world-sticker.is-fixed-drag {
+  position: fixed;
+  z-index: 95;
+  pointer-events: none;
+}
+
+.world-sticker.is-selected,
+.world-sticker:focus-visible {
+  outline: 3px solid var(--color-accent-secondary);
+  outline-offset: 2px;
+}
+
+.world-sticker-circle {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  background-color: var(--color-surface-warm);
+  pointer-events: none;
+}
+
+.world-sticker-circle.is-mirrored {
+  transform: scaleX(-1);
+}
+
+.world-sticker-img {
+  position: absolute;
+  display: block;
+  max-width: none;
+  max-height: none;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   4. Offline Road-Trip Pack ([data-offline-save])
+   -------------------------------------------------------------------------- */
+.offline-pack-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.offline-pack-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.offline-pack-head h2 {
+  margin: 0;
+}
+
+.offline-pack-status {
+  margin: 0;
+}
+
+.offline-progress-wrap {
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   5. Postcard + Challenge Sharing ([data-share], [data-challenge-banner])
+   -------------------------------------------------------------------------- */
+.challenge-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  width: 100%;
+  margin: 0 0 var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-surface-warm);
+  color: var(--color-ink);
+  border: 2px solid var(--color-reward-lip);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card-warm);
+}
+
+.challenge-banner-main {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.challenge-banner-thumb {
+  width: 96px;
+  height: 72px;
+  flex: 0 0 96px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-ink);
+  object-fit: cover;
+  background-color: var(--color-well);
+}
+
+.challenge-banner-copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  text-align: left;
+}
+
+.challenge-banner-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.challenge-stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 2px var(--space-2);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-size: var(--text-body);
+  font-weight: 700;
+}
+
+.challenge-banner-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-body);
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.challenge-banner-sub {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-ink-muted);
+}
+
+.share-fallback-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  max-width: 640px;
+  margin: var(--space-3) auto;
+  padding: var(--space-4);
+  background-color: var(--color-surface-warm);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.postcard-preview-canvas {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-frame);
+  background-color: var(--color-ground);
+}
+
+.share-fallback-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.share-status-text {
+  margin: 0;
+}
+
+/* ==========================================================================
+   v14.2 — Items 1-8 & Joy J1-J5
+   ========================================================================== */
+
+/* 1. Home Hero & Near-Primary Sticker Book Card ([data-v142-home-stickers]) */
+.home-view {
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+#homeView > .welcome-panel.home-hero {
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  min-height: 0;
+  height: auto;
+}
+
+.hero-play-cluster {
+  margin-top: var(--space-5);
+}
+
+#playNowButton.hero-play-button {
+  height: 152px;
+  min-height: 152px;
+}
+
+.choice-button.mode-tile {
+  height: 88px;
+  min-height: 88px;
+}
+
+#dailyButton.hero-daily-button {
+  min-height: 52px;
+}
+
+.hero-stickers-cluster {
+  display: flex;
+  width: 224px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#stickerBookButton[data-v142-home-stickers] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  width: 100%;
+  min-height: 62px;
+  margin: 0;
+  padding: 8px 8px;
+  background-color: var(--color-surface-warm);
+  color: var(--color-ink);
+  border: 2.5px solid var(--color-ink);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 0 var(--color-reward-lip), 0 8px 16px rgba(31, 36, 56, 0.12);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+#stickerBookButton[data-v142-home-stickers]:hover:not(:disabled) {
+  background-color: var(--color-surface);
+  border-color: var(--color-ink);
+}
+
+.home-sticker-card-head {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 auto;
+  min-width: auto;
+}
+
+.home-sticker-label {
+  flex: 0 0 auto;
+}
+
+.home-sticker-card-head .svg-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+}
+
+.home-sticker-thumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  flex: 0 0 auto;
+}
+
+.home-sticker-thumb {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 50%;
+  border: 2px solid var(--color-ink);
+  background-color: var(--color-surface);
+  overflow: hidden;
+}
+
+.home-sticker-thumb + .home-sticker-thumb {
+  margin-left: -6px;
+}
+
+.home-sticker-thumb.is-mirrored .home-sticker-thumb-img,
+.home-sticker-thumb-img.is-mirrored {
+  transform: scaleX(-1);
+}
+
+.home-sticker-thumb-img {
+  position: absolute;
+  display: block;
+  max-width: none;
+  max-height: none;
+  pointer-events: none;
+}
+
+.home-sticker-thumb.is-tomorrow .home-sticker-thumb-img {
+  filter: brightness(0.24) contrast(1.25);
+  opacity: 0.78;
+}
+
+.home-sticker-silhouette-q {
+  position: relative;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+}
+
+@media (min-width: 768px) {
+  .hero-stickers-cluster {
+    width: 240px;
+    max-width: 360px;
+  }
+
+  #stickerBookButton[data-v142-home-stickers] {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  .home-sticker-card-head .svg-icon {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+  }
+
+  .home-sticker-thumb + .home-sticker-thumb {
+    margin-left: -4px;
+  }
+
+  #playNowButton.hero-play-button {
+    height: 164px;
+    min-height: 164px;
+  }
+
+  .choice-button.mode-tile {
+    height: 94px;
+    min-height: 94px;
+  }
+
+  .kid-lobby .difficulty-picker {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .kid-lobby .home-categories {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-stickers-cluster {
+    width: var(--kid-cluster-width);
+    max-width: 100%;
+  }
+
+  #stickerBookButton[data-v142-home-stickers] {
+    min-height: 68px;
+    padding: var(--space-2) var(--space-4);
+    background-color: var(--color-surface-warm);
+    border: 3px solid var(--color-ink);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 0 var(--color-reward-lip), 0 8px 16px rgba(31, 36, 56, 0.12);
+    font-size: 1.05rem;
+    gap: var(--space-2);
+  }
+
+  .home-sticker-card-head {
+    gap: 6px;
+  }
+
+  .home-sticker-card-head .svg-icon {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+  }
+
+  .home-sticker-thumbs {
+    gap: 4px;
+  }
+
+  .home-sticker-thumb + .home-sticker-thumb {
+    margin-left: 0;
+  }
+
+  .kid-lobby .difficulty-picker {
+    grid-column: 1 / span 5;
+    grid-row: 1;
+  }
+
+  .kid-lobby .home-categories {
+    grid-column: 6 / span 7;
+    grid-row: 1;
+  }
+}
+
+/* 2. Play Dock: [data-v142-play-pip], #hintButton, #replayDemoButton, #playMoreWrap */
+#demoOverlay {
+  z-index: 120;
+}
+
+.game-actions {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.game-actions > [data-v142-play-pip] {
+  width: 44px;
+  min-width: 44px;
+  height: 48px;
+  min-height: 48px;
+  flex: 0 0 44px;
+  margin: 0;
+  pointer-events: none;
+}
+
+.game-actions > #hintButton,
+.game-actions > #replayDemoButton,
+.game-actions > #playMoreWrap,
+.game-actions > #playMoreWrap > #playMoreButton {
+  height: 48px;
+  min-height: 48px;
+  margin: 0;
+}
+
+.game-actions > #replayDemoButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 48px;
+  padding: 6px 12px;
+  flex: 0 0 auto;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.game-actions > #replayDemoButton .icon-show-me-hand {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+}
+
+@media (max-width: 819px) {
+  body.playing-screen .game-actions {
+    gap: 3px;
+    padding: 6px
+             calc(124px + env(safe-area-inset-right, 0px))
+             calc(8px + env(safe-area-inset-bottom, 0px))
+             max(4px, env(safe-area-inset-left, 0px));
+  }
+
+  body.playing-screen .game-actions > [data-v142-play-pip] {
+    width: 44px;
+    min-width: 44px;
+    height: 48px;
+    min-height: 48px;
+    flex: 0 0 44px;
+  }
+
+  body.playing-screen .game-actions > .hint-dock-button {
+    flex: 1 1 auto;
+    min-width: 72px;
+    height: 48px;
+    min-height: 48px;
+    padding: 4px 5px;
+    font-size: 0.78rem;
+    gap: 3px;
+  }
+
+  body.playing-screen .game-actions > .hint-dock-button .svg-icon {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+  }
+
+  body.playing-screen .game-actions > .hint-dock-button .hint-count-badge {
+    padding: 1px 4px;
+    font-size: 0.72rem;
+  }
+
+  body.playing-screen .game-actions > #replayDemoButton {
+    min-width: 56px;
+    height: 48px;
+    min-height: 48px;
+    padding: 4px 6px;
+    font-size: 0.76rem;
+    gap: 3px;
+  }
+
+  body.playing-screen .game-actions > #replayDemoButton .icon-show-me-hand {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+  }
+
+  body.playing-screen .game-actions > .play-more-wrap {
+    flex: 0 0 48px;
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    min-height: 48px;
+  }
+
+  body.playing-screen .play-more-button {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    min-height: 48px;
+    padding: 4px;
+  }
+
+  body.playing-screen #soundToggle {
+    right: calc(72px + env(safe-area-inset-right, 0px));
+    bottom: calc(11px + env(safe-area-inset-bottom, 0px));
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  body.playing-screen #homeNav {
+    right: max(4px, env(safe-area-inset-right, 0px));
+    bottom: calc(11px + env(safe-area-inset-bottom, 0px));
+    width: 64px;
+    height: 48px;
+    min-height: 48px;
+    padding: 4px 6px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 390px) {
+  body.playing-screen .game-actions > #replayDemoButton {
+    position: relative;
+    width: 48px;
+    min-width: 48px;
+    max-width: 48px;
+    height: 48px;
+    min-height: 48px;
+    padding: 0;
+    gap: 0;
+    overflow: visible;
+  }
+
+  body.playing-screen .game-actions > #replayDemoButton .icon-show-me-hand {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+  }
+
+  body.playing-screen .game-actions > #replayDemoButton .demo-replay-label {
+    display: none;
+  }
+
+  body.playing-screen .game-actions > #replayDemoButton.is-first-session-label .demo-replay-label {
+    display: block;
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2px 8px;
+    background-color: var(--color-surface-warm);
+    color: var(--color-ink);
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-pill);
+    box-shadow: 0 2px 0 rgba(31, 36, 56, 0.2);
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 30;
+  }
+}
+
+/* 3. Upward-Opening ⋯ Menu (Item 6) */
+.play-more-menu {
+  position: absolute;
+  right: 0;
+  left: auto;
+  bottom: calc(100% + var(--space-2));
+  top: auto;
+  width: min(204px, calc(100vw - 16px));
+}
+
+/* 4. Final 10s Timer Pulse (Item 7) */
+@keyframes timerFinalPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.35);
+  }
+}
+
+#timerPanel.is-final #timerText {
+  display: inline-block;
+  color: var(--color-timer-urgent);
+  font-weight: 800;
+  transform-origin: center center;
+  animation: timerFinalPulse 1s ease-in-out infinite;
+}
+
+/* 5. J1 Pip Reactions & Speech Bubble ([data-v142-pip-bubble]) */
+#homePipMascot {
+  z-index: 10;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+#betweenPipMascot,
+#resultPipMascot {
+  position: relative;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+@keyframes pipHopAnim {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  35% {
+    transform: translateY(-10px) scale(1.08);
+  }
+  65% {
+    transform: translateY(-4px) scale(1.03);
+  }
+}
+
+@keyframes pipTiltAnim {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(-14deg);
+  }
+  75% {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes pipLeanLeftAnim {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  40%,
+  75% {
+    transform: translateX(-6px) rotate(-12deg);
+  }
+}
+
+@keyframes pipLeanRightAnim {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  40%,
+  75% {
+    transform: translateX(6px) rotate(12deg);
+  }
+}
+
+.pip-mascot.is-hop {
+  animation: pipHopAnim 560ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.pip-mascot.is-tilt {
+  animation: pipTiltAnim 500ms ease-in-out;
+}
+
+.pip-mascot.is-lean-left {
+  animation: pipLeanLeftAnim 800ms ease-in-out;
+}
+
+.pip-mascot.is-lean-right {
+  animation: pipLeanRightAnim 800ms ease-in-out;
+}
+
+[data-v142-pip-bubble] {
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 35;
+  padding: 4px 10px;
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 3px 0 rgba(31, 36, 56, 0.22);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+#homePipMascot [data-v142-pip-bubble] {
+  top: calc(100% - 22px);
+  bottom: auto;
+  left: calc(100% - 6px);
+  transform: none;
+}
+
+/* 6. Daily End in Sticker Book ([data-v142-daily-stats], [data-v142-grownup-invite], J2/J3) */
+#stickerBookView {
+  margin-top: var(--space-2);
+}
+
+#stickerBookView > .section-heading {
+  margin-bottom: var(--space-1);
+}
+
+#stickerBookView > .helper-text {
+  margin: 0 0 var(--space-2);
+}
+
+.sticker-worlds-studio {
+  gap: var(--space-2);
+  margin: var(--space-2) 0;
+  padding: var(--space-2) var(--space-3);
+}
+
+.daily-book-stats-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin: var(--space-2) 0;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-surface-warm);
+  border: 2px solid var(--color-reward-lip);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card-warm);
+}
+
+.daily-stats-pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.daily-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.daily-stat-streak {
+  background-color: var(--color-reward);
+}
+
+.daily-tomorrow-peek {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.daily-peek-thumb {
+  width: 40px;
+  height: 30px;
+  border-radius: 6px;
+  border: 1.5px solid var(--color-ink);
+  object-fit: cover;
+  filter: blur(2px) brightness(0.85);
+}
+
+.daily-peek-thumb.is-mirrored {
+  transform: scaleX(-1);
+}
+
+.daily-peek-label {
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--color-ink-muted);
+}
+
+.daily-grownup-invite {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: var(--space-2) 0;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-surface);
+  border: 2.5px solid var(--color-accent-secondary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card-timed);
+}
+
+.daily-grownup-invite.is-pending {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.grownup-invite-flourish {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.invite-pip {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+}
+
+.grownup-invite-turn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  color: var(--color-ink);
+}
+
+.icon-pip-heart {
+  width: 20px;
+  height: 20px;
+}
+
+.grownup-invite-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.grownup-invite-actions > button {
+  flex: 1 1 auto;
+  min-height: 48px;
+  margin: 0;
+  padding: 6px 12px;
+  width: auto;
+}
+
+@keyframes stickerNewPop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.88);
+  }
+  65% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes stickerWiggle {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(-15deg) scale(1.08);
+  }
+  55% {
+    transform: translate(-50%, -50%) rotate(15deg) scale(1.08);
+  }
+  80% {
+    transform: translate(-50%, -50%) rotate(-8deg) scale(1.03);
+  }
+}
+
+.world-sticker.is-new-pop {
+  animation: stickerNewPop 280ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.world-sticker.is-wiggle {
+  animation: stickerWiggle 520ms ease-in-out;
+}
+
+.sticker-star-pop {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  z-index: 15;
+}
+
+/* 7. Result Screen: Above-the-Fold Try Again + Home (Item 8), J3 High Five, J4 Talk, J5 Misses Hidden */
+.result-view {
+  margin-top: var(--space-2);
+}
+
+.result-card {
+  padding: var(--space-3) var(--space-4);
+}
+
+.result-banner-ribbon {
+  margin-bottom: var(--space-2);
+  padding: var(--space-3);
+  gap: var(--space-1);
+}
+
+.result-banner-ribbon .pip-mascot {
+  width: 76px;
+  height: 76px;
+  flex: 0 0 76px;
+}
+
+.result-primary-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  width: 100%;
+  margin: var(--space-2) 0;
+}
+
+.result-primary-actions > button {
+  width: 100%;
+  min-height: 52px;
+  margin: 0;
+}
+
+.result-primary-actions > #playAgainButton[hidden] + #resultHomeButton {
+  grid-column: 1 / -1;
+}
+
+.result-secondary-row > :only-child,
+.result-secondary-row > #resultLevelsButton:first-child:last-child {
+  grid-column: 1 / -1;
+}
+
+.result-stats {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.result-stats > div,
+.result-stats > div:nth-child(1),
+.result-stats > div:nth-child(2) {
+  grid-column: span 1;
+}
+
+.talk-about-it-card {
+  margin: var(--space-2) 0;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-surface-warm);
+  color: var(--color-ink);
+  border: 2px solid var(--color-reward-lip);
+  border-radius: var(--radius-md);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.high-five-button {
+  position: relative;
+  margin: var(--space-2) 0;
+  overflow: visible;
+}
+
+.high-five-star-burst {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.burst-star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+}
+
+[data-v142-misses-row] {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loupe,
+  .world-sticker,
+  .world-sticker.is-new-pop,
+  .world-sticker.is-wiggle,
+  .sticker-world-tab,
+  [data-v142-play-pip],
+  .pip-mascot,
+  .pip-mascot.is-hop,
+  .pip-mascot.is-tilt,
+  .pip-mascot.is-lean-left,
+  .pip-mascot.is-lean-right,
+  [data-v142-pip-bubble] {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  #timerPanel.is-final #timerText {
+    animation: none !important;
+    transform: none !important;
+    color: var(--color-timer-urgent);
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .world-sticker:hover:not(:disabled),
+  .world-sticker:active:not(:disabled),
+  .world-sticker.is-dragging {
+    transform: translate(-50%, -50%) !important;
+  }
+}
